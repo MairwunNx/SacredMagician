@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>$SacredMagician/logs/latest.log</file>
+        <append>false</append>
+        <encoder>
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss.SSSS}] [%thread/%level]: %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <root>
+        <appender-ref ref="file" />
+    </root>
+</configuration>
