@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox>
+            <children>
+                <MenuBar VBox.vgrow="NEVER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" fx:id="newFileMenuItem"/>
+                                <MenuItem mnemonicParsing="false" fx:id="openMenuItem" text="Open"/>
+                                <Menu mnemonicParsing="false" text="Open Recent" fx:id="openRecentMenu"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Save"/>
+                                <MenuItem mnemonicParsing="false" text="Save As"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Settings"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" fx:id="exitMenuItem" text="Exit"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="How to Use"/>
+                                <MenuItem mnemonicParsing="false" text="Licenses"/>
+                                <MenuItem mnemonicParsing="false" text="Change Log"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Check for Updates"/>
+                                <MenuItem mnemonicParsing="false" text="Support Mail"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Donate"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="Open latest.log"/>
+                                <MenuItem mnemonicParsing="false" text="Open settings.json"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem mnemonicParsing="false" text="About"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Pane prefHeight="500.0" prefWidth="799.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="76.0" text="Current Path"/>
+                        <TextField layoutX="103.0" layoutY="10.0" prefHeight="25.0" prefWidth="965.0"
+                                   fx:id="filePathTextField"/>
+                        <TitledPane collapsible="false" layoutX="14.0" layoutY="50.0" prefHeight="421.0"
+                                    prefWidth="740.0" text="Balance Settings">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="580.0">
+                                    <children>
+                                        <TitledPane cache="true" collapsible="false" layoutX="14.0" layoutY="14.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="Bronze">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane cache="true" collapsible="false" layoutX="254.0" layoutY="14.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="Silver">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane cache="true" collapsible="false" layoutX="14.0" layoutY="203.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="Platinum">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane cache="true" collapsible="false" layoutX="494.0" layoutY="14.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="Gold">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane cache="true" collapsible="false" layoutX="254.0" layoutY="203.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="Niobium">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane cache="true" collapsible="false" layoutX="494.0" layoutY="203.0"
+                                                    prefHeight="179.0" prefWidth="230.0" text="MultiPlayer">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0"
+                                                            prefWidth="599.0">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
+                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
+                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
+                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                        <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
+                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
+                                                                   prefWidth="139.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane cache="true" collapsible="false" layoutX="767.0" layoutY="50.0" prefHeight="334.0"
+                                    prefWidth="301.0" text="Regions Counters">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="599.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="14.0" text="South Center Region"/>
+                                        <TextField layoutX="133.0" layoutY="10.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="46.0" text="North Center Region"/>
+                                        <TextField layoutX="133.0" layoutY="42.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="79.0" text="Swamp Base Region"/>
+                                        <TextField layoutX="133.0" layoutY="75.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="111.0" text="West Base Region"/>
+                                        <TextField layoutX="133.0" layoutY="107.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="144.0" text="North Base Region"/>
+                                        <TextField layoutX="133.0" layoutY="140.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="177.0" text="Lava Base Region"/>
+                                        <TextField layoutX="133.0" layoutY="173.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="210.0" text="Shaddar-Nur Region"/>
+                                        <TextField layoutX="133.0" layoutY="206.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="243.0" text="Upper Underworld"/>
+                                        <TextField layoutX="133.0" layoutY="239.0" prefHeight="25.0" prefWidth="156.0"/>
+                                        <Label layoutX="14.0" layoutY="276.0" text="Lower Underworld"/>
+                                        <TextField layoutX="133.0" layoutY="272.0" prefHeight="25.0" prefWidth="156.0"/>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <Label layoutX="855.0" layoutY="405.0" text="SacredMagician" textFill="#787878">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="816.0" layoutY="436.0" text="MairwunNx. 2018.">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Hyperlink layoutX="953.0" layoutY="432.0" fx:id="sourceLink" text="Sources">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </center>
+    <effect>
+        <Blend/>
+    </effect>
+</BorderPane>
