@@ -6,6 +6,10 @@
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/logback-classic-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/logback-core-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tornadofx-1.7.17.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
