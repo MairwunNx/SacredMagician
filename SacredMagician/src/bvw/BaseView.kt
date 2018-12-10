@@ -4,6 +4,7 @@ import ApplicationLogger
 import ApplicationSummary
 import bin.GetBinDataByOffset
 import bin.SetBinDataToOffset
+import javafx.fxml.FXML
 import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
 import tornadofx.*
@@ -58,15 +59,22 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
     private val newFileMenuItem: MenuItem by fxid("newFileMenuItem")
-    private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
+    private val openFileMenuItem: MenuItem by fxid("openFileMenuItem")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
     init {
         subscribeEvent()
 
-        sourceHyperLink.action {
-            ApplicationLogger().logger.info("Clicked on HyperLink!")
+        lowerBaseRegionTextField.action {
+            ApplicationLogger().logger.info("Hello!")
+        }
+    }
+
+    @FXML
+    private fun handleChangesBalanceBin() {
+        if (filePathTextField.text != "") {
+            balanceBinFileChanged = true
         }
     }
 
@@ -130,7 +138,7 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
                     alert.buttonTypes.setAll(okButton, noButton, cancelButton)
 
                     alert.showAndWait().ifPresent { type ->
-                        if (type == ButtonType.OK) {
+                        if (type == okButton) {
                             val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
 
                             saveDialog.file = "balance.bin"
@@ -139,7 +147,7 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
                             if (saveDialog.directory != null || saveDialog.file != null) {
                                 val filePath = saveDialog.directory + saveDialog.file
 
-                                val initialStream = (javaClass.getResourceAsStream("etc/balance.bin"))
+                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
 
                                 ApplicationSummary.binPath = filePath
 
@@ -156,10 +164,71 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
                         if (type == noButton) openCreateNewFileDialog()
                     }
-                }
-                else openCreateNewFileDialog()
-            }
-            else openCreateNewFileDialog()
+                } else openCreateNewFileDialog()
+            } else openCreateNewFileDialog()
+        }
+
+        openFileMenuItem.action {
+            if (balanceBinFileOpened) {
+                if (balanceBinFileChanged) {
+                    val alert = Alert(Alert.AlertType.CONFIRMATION)
+
+                    alert.title = "Closing Current Balance File"
+                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
+
+                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
+                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
+                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
+
+                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
+
+                    alert.showAndWait().ifPresent { type ->
+                        if (type == okButton) {
+                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+
+                            saveDialog.file = "balance.bin"
+                            saveDialog.isVisible = true
+
+                            if (saveDialog.directory != null || saveDialog.file != null) {
+                                val filePath = saveDialog.directory + saveDialog.file
+
+                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
+
+                                ApplicationSummary.binPath = filePath
+
+                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
+
+                                balanceBinFileChanged = false
+                                balanceBinFileOpened = false
+
+                                saveDataToBalanceBin()
+
+                                openFileDialog()
+                            }
+                        }
+
+                        if (type == noButton) openFileDialog()
+                    }
+                } else openFileDialog()
+            } else openFileDialog()
+        }
+    }
+
+    private fun openFileDialog() {
+        val openDialog = FileDialog(Frame(), "Select Open File Directory", FileDialog.LOAD)
+
+        openDialog.file = "*.bin"
+        openDialog.isVisible = true
+
+        if (openDialog.directory != null || openDialog.file != null) {
+            val filePath = openDialog.directory + openDialog.file
+
+            ApplicationSummary.binPath = filePath
+            filePathTextField.text = ApplicationSummary.binPath
+            balanceBinFileOpened = true
+            balanceBinFileChanged = false
+
+            loadBalanceData()
         }
     }
 
@@ -227,3 +296,4 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
         multiPlayerDamageTextField.text = GetBinDataByOffset().get(1876, true).toString()
     }
 }
+

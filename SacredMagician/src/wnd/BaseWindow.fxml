@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.Blend?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-
 <BorderPane xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
     <center>
         <VBox>
@@ -24,16 +12,16 @@
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="New" fx:id="newFileMenuItem"/>
-                                <MenuItem mnemonicParsing="false" fx:id="openMenuItem" text="Open"/>
-                                <Menu mnemonicParsing="false" text="Open Recent" fx:id="openRecentMenu"/>
+                                <MenuItem fx:id="newFileMenuItem" mnemonicParsing="false" text="New"/>
+                                <MenuItem fx:id="openFileMenuItem" mnemonicParsing="false" text="Open"/>
+                                <Menu fx:id="openRecentMenu" mnemonicParsing="false" text="Open Recent"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Save"/>
                                 <MenuItem mnemonicParsing="false" text="Save As"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Settings"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" fx:id="exitMenuItem" text="Exit"/>
+                                <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" text="Exit"/>
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">
@@ -58,8 +46,8 @@
                 <Pane prefHeight="500.0" prefWidth="799.0">
                     <children>
                         <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="76.0" text="Current Path"/>
-                        <TextField layoutX="103.0" layoutY="10.0" prefHeight="25.0" prefWidth="965.0"
-                                   fx:id="filePathTextField"/>
+                        <TextField fx:id="filePathTextField" disable="true" layoutX="103.0" layoutY="10.0"
+                                   prefHeight="25.0" prefWidth="965.0"/>
                         <TitledPane collapsible="false" layoutX="14.0" layoutY="50.0" prefHeight="421.0"
                                     prefWidth="740.0" text="Balance Settings">
                             <content>
@@ -72,17 +60,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="bronzeAwVwTextField"/>
+                                                        <TextField fx:id="bronzeAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="bronzeHitPointsTextField"/>
+                                                        <TextField fx:id="bronzeHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="bronzeResistanceTextField"/>
+                                                        <TextField fx:id="bronzeResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="bronzeDamageTextField"/>
+                                                        <TextField fx:id="bronzeDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -94,17 +86,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="silverAwVwTextField"/>
+                                                        <TextField fx:id="silverAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="silverHitPointsTextField"/>
+                                                        <TextField fx:id="silverHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="silverResistanceTextField"/>
+                                                        <TextField fx:id="silverResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="silverDamageTextField"/>
+                                                        <TextField fx:id="silverDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -116,17 +112,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="platinumAwVwTextField"/>
+                                                        <TextField fx:id="platinumAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="platinumHitPointsTextField"/>
+                                                        <TextField fx:id="platinumHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="platinumResistanceTextField"/>
+                                                        <TextField fx:id="platinumResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="platinumDamageTextField"/>
+                                                        <TextField fx:id="platinumDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -138,17 +138,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="goldAwVwTextField"/>
+                                                        <TextField fx:id="goldAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="goldHitPointsTextField"/>
+                                                        <TextField fx:id="goldHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="goldResistanceTextField"/>
+                                                        <TextField fx:id="goldResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="goldDamageTextField"/>
+                                                        <TextField fx:id="goldDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -160,17 +164,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="niobiumAwVwTextField"/>
+                                                        <TextField fx:id="niobiumAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="niobiumHitPointsTextField"/>
+                                                        <TextField fx:id="niobiumHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="niobiumResistanceTextField"/>
+                                                        <TextField fx:id="niobiumResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="niobiumDamageTextField"/>
+                                                        <TextField fx:id="niobiumDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -182,17 +190,21 @@
                                                             prefWidth="599.0">
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
-                                                        <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="multiPlayerAwVwTextField"/>
+                                                        <TextField fx:id="multiPlayerAwVwTextField" layoutX="79.0"
+                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
-                                                        <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="multiPlayerHitPointsTextField"/>
+                                                        <TextField fx:id="multiPlayerHitPointsTextField" layoutX="79.0"
+                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
-                                                        <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="multiPlayerResistanceTextField"/>
+                                                        <TextField fx:id="multiPlayerResistanceTextField" layoutX="79.0"
+                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
-                                                        <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0" fx:id="multiPlayerDamageTextField"/>
+                                                        <TextField fx:id="multiPlayerDamageTextField" layoutX="79.0"
+                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -207,23 +219,41 @@
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="599.0">
                                     <children>
                                         <Label layoutX="14.0" layoutY="14.0" text="South Center Region"/>
-                                        <TextField layoutX="133.0" layoutY="10.0" prefHeight="25.0" prefWidth="156.0" fx:id="southCenterRegionTextField"/>
+                                        <TextField fx:id="southCenterRegionTextField" layoutX="133.0" layoutY="10.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="46.0" text="North Center Region"/>
-                                        <TextField layoutX="133.0" layoutY="42.0" prefHeight="25.0" prefWidth="156.0" fx:id="northCenterRegionTextField"/>
+                                        <TextField fx:id="northCenterRegionTextField" layoutX="133.0" layoutY="42.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="79.0" text="Swamp Base Region"/>
-                                        <TextField layoutX="133.0" layoutY="75.0" prefHeight="25.0" prefWidth="156.0" fx:id="swampBaseRegionTextField"/>
+                                        <TextField fx:id="swampBaseRegionTextField" layoutX="133.0" layoutY="75.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="111.0" text="West Base Region"/>
-                                        <TextField layoutX="133.0" layoutY="107.0" prefHeight="25.0" prefWidth="156.0" fx:id="westBaseRegionTextField"/>
+                                        <TextField fx:id="westBaseRegionTextField" layoutX="133.0" layoutY="107.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="144.0" text="North Base Region"/>
-                                        <TextField layoutX="133.0" layoutY="140.0" prefHeight="25.0" prefWidth="156.0" fx:id="northBaseRegionTextField"/>
+                                        <TextField fx:id="northBaseRegionTextField" layoutX="133.0" layoutY="140.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="177.0" text="Lava Base Region"/>
-                                        <TextField layoutX="133.0" layoutY="173.0" prefHeight="25.0" prefWidth="156.0" fx:id="lavaBaseRegionTextField"/>
+                                        <TextField fx:id="lavaBaseRegionTextField" layoutX="133.0" layoutY="173.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="210.0" text="Shaddar-Nur Region"/>
-                                        <TextField layoutX="133.0" layoutY="206.0" prefHeight="25.0" prefWidth="156.0" fx:id="shaddarBaseRegionTextField"/>
+                                        <TextField fx:id="shaddarBaseRegionTextField" layoutX="133.0" layoutY="206.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="243.0" text="Upper Underworld"/>
-                                        <TextField layoutX="133.0" layoutY="239.0" prefHeight="25.0" prefWidth="156.0" fx:id="upperUnderworldTextField"/>
+                                        <TextField fx:id="upperUnderworldTextField" layoutX="133.0" layoutY="239.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="276.0" text="Lower Underworld"/>
-                                        <TextField layoutX="133.0" layoutY="272.0" prefHeight="25.0" prefWidth="156.0" fx:id="lowerBaseRegionTextField"/>
+                                        <TextField fx:id="lowerBaseRegionTextField" layoutX="133.0" layoutY="272.0"
+                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   prefWidth="156.0"/>
                                     </children>
                                 </AnchorPane>
                             </content>
@@ -238,7 +268,7 @@
                                 <Font size="16.0"/>
                             </font>
                         </Label>
-                        <Hyperlink layoutX="953.0" layoutY="432.0" fx:id="sourceHyperLink" text="Sources">
+                        <Hyperlink fx:id="sourceHyperLink" layoutX="953.0" layoutY="432.0" text="Sources">
                             <font>
                                 <Font size="16.0"/>
                             </font>
