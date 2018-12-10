@@ -59,8 +59,8 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
         loadBalanceData()
 
         sourceHyperLink.action {
-            SetBinDataToOffset().setInt(7400, 22392) // success
-            SetBinDataToOffset().setFloat(1.6, 1832) // success
+            SetBinDataToOffset().setInt(7403, 22392) // success
+            SetBinDataToOffset().setFloat(1.83, 1832) // success
         }
     }
 
