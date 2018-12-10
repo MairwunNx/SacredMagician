@@ -1,17 +1,21 @@
 package bvw
 
+import ApplicationLogger
 import ApplicationSummary
 import bin.GetBinDataByOffset
 import bin.SetBinDataToOffset
-import javafx.scene.control.Hyperlink
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
 import tornadofx.*
+import java.awt.FileDialog
+import java.awt.Frame
+import java.io.File
 
 class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
 
-    private val balanceBinFileChanged = false
+    private var balanceBinFileOpened = false
+    private var balanceBinFileChanged = false
 
     private val bronzeAwVwTextField: TextField by fxid("bronzeAwVwTextField")
     private val bronzeHitPointsTextField: TextField by fxid("bronzeHitPointsTextField")
@@ -53,14 +57,131 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val upperUnderworldTextField: TextField by fxid("upperUnderworldTextField")
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
+    private val newFileMenuItem: MenuItem by fxid("newFileMenuItem")
     private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
 
+    private val filePathTextField: TextField by fxid("filePathTextField")
+
     init {
-        loadBalanceData()
+        subscribeEvent()
 
         sourceHyperLink.action {
-            SetBinDataToOffset().setInt(7403, 22392) // success
-            SetBinDataToOffset().setFloat(1.83, 1832) // success
+            ApplicationLogger().logger.info("Clicked on HyperLink!")
+        }
+    }
+
+    private fun saveDataToBalanceBin() {
+        SetBinDataToOffset().setInt(southCenterRegionTextField.text.toInt(), 22392)
+        SetBinDataToOffset().setInt(northCenterRegionTextField.text.toInt(), 22456)
+        SetBinDataToOffset().setInt(swampBaseRegionTextField.text.toInt(), 22520)
+        SetBinDataToOffset().setInt(westBaseRegionTextField.text.toInt(), 22584)
+        SetBinDataToOffset().setInt(northBaseRegionTextField.text.toInt(), 22648)
+        SetBinDataToOffset().setInt(lavaBaseRegionTextField.text.toInt(), 22712)
+        SetBinDataToOffset().setInt(shaddarBaseRegionTextField.text.toInt(), 22776)
+        SetBinDataToOffset().setInt(upperUnderworldTextField.text.toInt(), 22840)
+        SetBinDataToOffset().setInt(lowerBaseRegionTextField.text.toInt(), 22904)
+
+        SetBinDataToOffset().setFloat(bronzeAwVwTextField.text.toFloat(), 1832)
+        SetBinDataToOffset().setFloat(bronzeHitPointsTextField.text.toFloat(), 1856)
+        SetBinDataToOffset().setFloat(bronzeResistanceTextField.text.toFloat(), 1904)
+        SetBinDataToOffset().setFloat(bronzeDamageTextField.text.toFloat(), 1880)
+
+        SetBinDataToOffset().setFloat(silverAwVwTextField.text.toFloat(), 1812)
+        SetBinDataToOffset().setFloat(silverHitPointsTextField.text.toFloat(), 1836)
+        SetBinDataToOffset().setFloat(silverResistanceTextField.text.toFloat(), 1884)
+        SetBinDataToOffset().setFloat(silverDamageTextField.text.toFloat(), 1860)
+
+        SetBinDataToOffset().setFloat(goldAwVwTextField.text.toFloat(), 1816)
+        SetBinDataToOffset().setFloat(goldHitPointsTextField.text.toFloat(), 1840)
+        SetBinDataToOffset().setFloat(goldResistanceTextField.text.toFloat(), 1888)
+        SetBinDataToOffset().setFloat(goldDamageTextField.text.toFloat(), 1864)
+
+        SetBinDataToOffset().setFloat(platinumAwVwTextField.text.toFloat(), 1820)
+        SetBinDataToOffset().setFloat(platinumHitPointsTextField.text.toFloat(), 1844)
+        SetBinDataToOffset().setFloat(platinumResistanceTextField.text.toFloat(), 1892)
+        SetBinDataToOffset().setFloat(platinumDamageTextField.text.toFloat(), 1868)
+
+        SetBinDataToOffset().setFloat(niobiumAwVwTextField.text.toFloat(), 1824)
+        SetBinDataToOffset().setFloat(niobiumHitPointsTextField.text.toFloat(), 1848)
+        SetBinDataToOffset().setFloat(niobiumResistanceTextField.text.toFloat(), 1896)
+        SetBinDataToOffset().setFloat(niobiumDamageTextField.text.toFloat(), 1872)
+
+        SetBinDataToOffset().setFloat(multiPlayerAwVwTextField.text.toFloat(), 1828)
+        SetBinDataToOffset().setFloat(multiPlayerHitPointsTextField.text.toFloat(), 1852)
+        SetBinDataToOffset().setFloat(multiPlayerResistanceTextField.text.toFloat(), 1900)
+        SetBinDataToOffset().setFloat(multiPlayerDamageTextField.text.toFloat(), 1876)
+
+        ApplicationLogger().logger.info("Balance.bin changes successfully saved to origin!")
+    }
+
+    private fun subscribeEvent() {
+        newFileMenuItem.action {
+            if (balanceBinFileOpened) {
+                if (balanceBinFileChanged) {
+                    val alert = Alert(Alert.AlertType.CONFIRMATION)
+
+                    alert.title = "Overwriting Balance File"
+                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
+
+                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
+                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
+                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
+
+                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
+
+                    alert.showAndWait().ifPresent { type ->
+                        if (type == ButtonType.OK) {
+                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+
+                            saveDialog.file = "balance.bin"
+                            saveDialog.isVisible = true
+
+                            if (saveDialog.directory != null || saveDialog.file != null) {
+                                val filePath = saveDialog.directory + saveDialog.file
+
+                                val initialStream = (javaClass.getResourceAsStream("etc/balance.bin"))
+
+                                ApplicationSummary().binPath = filePath
+
+                                File(ApplicationSummary().binPath).outputStream().use { initialStream.copyTo(it) }
+
+                                balanceBinFileChanged = false
+                                balanceBinFileOpened = false
+
+                                saveDataToBalanceBin()
+
+                                openCreateNewFileDialog()
+                            }
+                        }
+
+                        if (type == noButton) openCreateNewFileDialog()
+                    }
+                }
+                else openCreateNewFileDialog()
+            }
+            else openCreateNewFileDialog()
+        }
+    }
+
+    private fun openCreateNewFileDialog() {
+        val saveDialog = FileDialog(Frame(), "Select New File Directory", FileDialog.SAVE)
+
+        saveDialog.file = "balance.bin"
+        saveDialog.isVisible = true
+
+        if (saveDialog.directory != null || saveDialog.file != null) {
+            val filePath = saveDialog.directory + saveDialog.file
+
+            val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
+
+            ApplicationSummary().binPath = filePath
+
+            File(filePath).outputStream().use { initialStream.copyTo(it) }
+
+            filePathTextField.text = ApplicationSummary().binPath
+            balanceBinFileOpened = true
+
+            loadBalanceData()
         }
     }
 
