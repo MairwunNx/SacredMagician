@@ -52,6 +52,10 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
     init {
+        loadBalanceData()
+    }
+
+    private fun loadBalanceData() {
         southCenterRegionTextField.text = GetBinDataByOffset().get(22392, false).toString()
         northCenterRegionTextField.text = GetBinDataByOffset().get(22456, false).toString()
         swampBaseRegionTextField.text = GetBinDataByOffset().get(22520, false).toString()
