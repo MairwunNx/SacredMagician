@@ -2,6 +2,8 @@ package bvw
 
 import ApplicationSummary
 import bin.GetBinDataByOffset
+import bin.SetBinDataToOffset
+import javafx.scene.control.Hyperlink
 import javafx.scene.control.TextField
 import javafx.scene.layout.BorderPane
 import tornadofx.*
@@ -51,8 +53,15 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val upperUnderworldTextField: TextField by fxid("upperUnderworldTextField")
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
+    private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
+
     init {
         loadBalanceData()
+
+        sourceHyperLink.action {
+            SetBinDataToOffset().setInt(7400, 22392) // success
+            SetBinDataToOffset().setFloat(1.6, 1832) // success
+        }
     }
 
     private fun loadBalanceData() {

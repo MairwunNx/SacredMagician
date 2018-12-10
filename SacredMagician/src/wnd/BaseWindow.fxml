@@ -238,7 +238,7 @@
                                 <Font size="16.0"/>
                             </font>
                         </Label>
-                        <Hyperlink layoutX="953.0" layoutY="432.0" fx:id="sourceLink" text="Sources">
+                        <Hyperlink layoutX="953.0" layoutY="432.0" fx:id="sourceHyperLink" text="Sources">
                             <font>
                                 <Font size="16.0"/>
                             </font>
