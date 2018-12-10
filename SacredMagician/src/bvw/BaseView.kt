@@ -1,6 +1,7 @@
 package bvw
 
 import ApplicationSummary
+import bin.GetBinDataByOffset
 import javafx.scene.control.TextField
 import javafx.scene.layout.BorderPane
 import tornadofx.*
@@ -51,6 +52,14 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
     init {
-
+        southCenterRegionTextField.text = GetBinDataByOffset().get(22392).toString()
+        northCenterRegionTextField.text = GetBinDataByOffset().get(22456).toString()
+        swampBaseRegionTextField.text = GetBinDataByOffset().get(22520).toString()
+        westBaseRegionTextField.text = GetBinDataByOffset().get(22584).toString()
+        northBaseRegionTextField.text = GetBinDataByOffset().get(22648).toString()
+        lavaBaseRegionTextField.text = GetBinDataByOffset().get(22712).toString()
+        shaddarBaseRegionTextField.text = GetBinDataByOffset().get(22776).toString()
+        upperUnderworldTextField.text = GetBinDataByOffset().get(22840).toString()
+        lowerBaseRegionTextField.text = GetBinDataByOffset().get(22904).toString()
     }
 }
