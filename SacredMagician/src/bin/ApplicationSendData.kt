@@ -10,7 +10,7 @@ import java.util.concurrent.Executors
 
 class ApplicationSendData {
     fun send() {
-        if (ApplicationSummary().isOnline) {
+        if (ApplicationSummary.isOnline) {
             val f = File("\$SacredMagician\\conf\\app.stat.txt")
 
             if (!f.exists() && !f.isDirectory) {

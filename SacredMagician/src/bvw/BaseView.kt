@@ -141,9 +141,9 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
                                 val initialStream = (javaClass.getResourceAsStream("etc/balance.bin"))
 
-                                ApplicationSummary().binPath = filePath
+                                ApplicationSummary.binPath = filePath
 
-                                File(ApplicationSummary().binPath).outputStream().use { initialStream.copyTo(it) }
+                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                                 balanceBinFileChanged = false
                                 balanceBinFileOpened = false
@@ -174,11 +174,11 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
             val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
 
-            ApplicationSummary().binPath = filePath
-
             File(filePath).outputStream().use { initialStream.copyTo(it) }
 
-            filePathTextField.text = ApplicationSummary().binPath
+            ApplicationSummary.binPath = filePath
+
+            filePathTextField.text = ApplicationSummary.binPath
             balanceBinFileOpened = true
 
             loadBalanceData()

@@ -31,10 +31,10 @@ class GetInternetConnection {
     fun getCurrentSessionStatus() {
         if (getConnection()) {
             ApplicationLogger().logger.info("SacredMagician current application running in online mode!")
-            ApplicationSummary().isOnline = true
+            ApplicationSummary.isOnline = true
         } else {
             ApplicationLogger().logger.warn("SacredMagician current application running in offline mode!")
-            ApplicationSummary().isOnline = false
+            ApplicationSummary.isOnline = false
         }
     }
 }

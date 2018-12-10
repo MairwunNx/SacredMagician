@@ -9,7 +9,7 @@ import java.io.StringWriter
 class GetBinDataByOffset {
     fun get(offset: Long, isFloat: Boolean): Number {
         return try {
-            val fileInputStream = FileInputStream(ApplicationSummary().binPath)
+            val fileInputStream = FileInputStream(ApplicationSummary.binPath)
 
             val result = ConvertBytesToInt().convert(fileInputStream, offset, isFloat)
 

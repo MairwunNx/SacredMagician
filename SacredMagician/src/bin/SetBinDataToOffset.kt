@@ -9,7 +9,7 @@ import java.io.StringWriter
 class SetBinDataToOffset {
     fun setInt(neededNumber: Number, offset: Int) {
         try {
-            val raf = RandomAccessFile(ApplicationSummary().binPath, "rw")
+            val raf = RandomAccessFile(ApplicationSummary.binPath, "rw")
 
             val ss = ConvertNumToByteArray().convertFromInt(neededNumber)
 
@@ -30,7 +30,7 @@ class SetBinDataToOffset {
 
     fun setFloat(neededNumber: Number, offset: Int) {
         try {
-            val raf = RandomAccessFile(ApplicationSummary().binPath, "rw")
+            val raf = RandomAccessFile(ApplicationSummary.binPath, "rw")
 
             val ss = ConvertNumToByteArray().convertFromFloat(neededNumber)
 
