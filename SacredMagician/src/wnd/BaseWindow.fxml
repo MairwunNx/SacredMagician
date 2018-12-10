@@ -76,13 +76,13 @@
                                                                    prefWidth="139.0" fx:id="bronzeAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="bronzeHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="bronzeResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="bronzeDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -95,16 +95,16 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="silverAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="silverHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="silverResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="silverDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -117,16 +117,16 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="platinumAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="platinumHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="platinumResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="platinumDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -139,16 +139,16 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="goldAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="goldHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="goldResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="goldDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -161,16 +161,16 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="niobiumAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="niobiumHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="niobiumResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="niobiumDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>
@@ -183,16 +183,16 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="multiPlayerAwVwTextField"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField layoutX="79.0" layoutY="45.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="multiPlayerHitPointsTextField"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField layoutX="79.0" layoutY="80.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="multiPlayerResistanceTextField"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField layoutX="79.0" layoutY="114.0" prefHeight="25.0"
-                                                                   prefWidth="139.0"/>
+                                                                   prefWidth="139.0" fx:id="multiPlayerDamageTextField"/>
                                                     </children>
                                                 </AnchorPane>
                                             </content>

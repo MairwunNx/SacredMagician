@@ -52,14 +52,44 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
     init {
-        southCenterRegionTextField.text = GetBinDataByOffset().get(22392).toString()
-        northCenterRegionTextField.text = GetBinDataByOffset().get(22456).toString()
-        swampBaseRegionTextField.text = GetBinDataByOffset().get(22520).toString()
-        westBaseRegionTextField.text = GetBinDataByOffset().get(22584).toString()
-        northBaseRegionTextField.text = GetBinDataByOffset().get(22648).toString()
-        lavaBaseRegionTextField.text = GetBinDataByOffset().get(22712).toString()
-        shaddarBaseRegionTextField.text = GetBinDataByOffset().get(22776).toString()
-        upperUnderworldTextField.text = GetBinDataByOffset().get(22840).toString()
-        lowerBaseRegionTextField.text = GetBinDataByOffset().get(22904).toString()
+        southCenterRegionTextField.text = GetBinDataByOffset().get(22392, false).toString()
+        northCenterRegionTextField.text = GetBinDataByOffset().get(22456, false).toString()
+        swampBaseRegionTextField.text = GetBinDataByOffset().get(22520, false).toString()
+        westBaseRegionTextField.text = GetBinDataByOffset().get(22584, false).toString()
+        northBaseRegionTextField.text = GetBinDataByOffset().get(22648, false).toString()
+        lavaBaseRegionTextField.text = GetBinDataByOffset().get(22712, false).toString()
+        shaddarBaseRegionTextField.text = GetBinDataByOffset().get(22776, false).toString()
+        upperUnderworldTextField.text = GetBinDataByOffset().get(22840, false).toString()
+        lowerBaseRegionTextField.text = GetBinDataByOffset().get(22904, false).toString()
+
+        bronzeAwVwTextField.text = GetBinDataByOffset().get(1832, true).toString()
+        bronzeHitPointsTextField.text = GetBinDataByOffset().get(1856, true).toString()
+        bronzeResistanceTextField.text = GetBinDataByOffset().get(1904, true).toString()
+        bronzeDamageTextField.text = GetBinDataByOffset().get(1880, true).toString()
+
+        silverAwVwTextField.text = GetBinDataByOffset().get(1812, true).toString()
+        silverHitPointsTextField.text = GetBinDataByOffset().get(1836, true).toString()
+        silverResistanceTextField.text = GetBinDataByOffset().get(1884, true).toString()
+        silverDamageTextField.text = GetBinDataByOffset().get(1860, true).toString()
+
+        goldAwVwTextField.text = GetBinDataByOffset().get(1816, true).toString()
+        goldHitPointsTextField.text = GetBinDataByOffset().get(1840, true).toString()
+        goldResistanceTextField.text = GetBinDataByOffset().get(1888, true).toString()
+        goldDamageTextField.text = GetBinDataByOffset().get(1864, true).toString()
+
+        platinumAwVwTextField.text = GetBinDataByOffset().get(1820, true).toString()
+        platinumHitPointsTextField.text = GetBinDataByOffset().get(1844, true).toString()
+        platinumResistanceTextField.text = GetBinDataByOffset().get(1892, true).toString()
+        platinumDamageTextField.text = GetBinDataByOffset().get(1868, true).toString()
+
+        niobiumAwVwTextField.text = GetBinDataByOffset().get(1824, true).toString()
+        niobiumHitPointsTextField.text = GetBinDataByOffset().get(1848, true).toString()
+        niobiumResistanceTextField.text = GetBinDataByOffset().get(1896, true).toString()
+        niobiumDamageTextField.text = GetBinDataByOffset().get(1872, true).toString()
+
+        multiPlayerAwVwTextField.text = GetBinDataByOffset().get(1828, true).toString()
+        multiPlayerHitPointsTextField.text = GetBinDataByOffset().get(1852, true).toString()
+        multiPlayerResistanceTextField.text = GetBinDataByOffset().get(1900, true).toString()
+        multiPlayerDamageTextField.text = GetBinDataByOffset().get(1876, true).toString()
     }
 }
