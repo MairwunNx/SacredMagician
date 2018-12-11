@@ -14,7 +14,7 @@
                             <items>
                                 <MenuItem fx:id="newFileMenuItem" mnemonicParsing="false" text="New"/>
                                 <MenuItem fx:id="openFileMenuItem" mnemonicParsing="false" text="Open"/>
-                                <Menu fx:id="openRecentMenu" mnemonicParsing="false" text="Open Recent"/>
+                                <Menu fx:id="openRecentFileMenu" mnemonicParsing="false" text="Open Recent"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Save"/>
                                 <MenuItem mnemonicParsing="false" text="Save As"/>

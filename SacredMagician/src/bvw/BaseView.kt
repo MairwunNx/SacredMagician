@@ -3,6 +3,7 @@ package bvw
 import ApplicationLogger
 import ApplicationSummary
 import bin.GetBinDataByOffset
+import bin.ReadOpenRecentFile
 import bin.SetBinDataToOffset
 import javafx.fxml.FXML
 import javafx.scene.control.*
@@ -60,15 +61,18 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
     private val newFileMenuItem: MenuItem by fxid("newFileMenuItem")
     private val openFileMenuItem: MenuItem by fxid("openFileMenuItem")
+    private val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
     init {
-        subscribeEvent()
+        ReadOpenRecentFile.read().forEach { i ->
+            openRecentFileMenu.item(i)
 
-        lowerBaseRegionTextField.action {
-            ApplicationLogger.logger.info("Hello!")
+            ApplicationLogger.logger.info("Successfully loaded path: $i")
         }
+
+        subscribeEvent()
     }
 
     @FXML @Suppress("unused")
@@ -184,6 +188,13 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
             balanceBinFileOpened = true
             balanceBinFileChanged = false
 
+            val file = File("\$SacredMagician\\conf\\app.rcnt.txt")
+            val fileText = file.readText()
+
+            if (!fileText.contains(ApplicationSummary.binPath, true)) {
+                file.appendText(ApplicationSummary.binPath + System.getProperty("line.separator"))
+            }
+
             loadBalanceData()
         }
     }
@@ -205,6 +216,13 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
             filePathTextField.text = ApplicationSummary.binPath
             balanceBinFileOpened = true
+
+            val file = File("\$SacredMagician\\conf\\app.rcnt.txt")
+            val fileText = file.readText()
+
+            if (!fileText.contains(ApplicationSummary.binPath, true)) {
+                file.appendText(ApplicationSummary.binPath + System.getProperty("line.separator"))
+            }
 
             loadBalanceData()
         }
