@@ -62,10 +62,17 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val newFileMenuItem: MenuItem by fxid("newFileMenuItem")
     private val openFileMenuItem: MenuItem by fxid("openFileMenuItem")
     private val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
+    private val saveFileMenu: MenuItem by fxid("saveFileMenu")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
     init {
+        loadOpenRecentData()
+
+        subscribeEvent()
+    }
+
+    private fun loadOpenRecentData() {
         ReadOpenRecentFile.read().forEach { i ->
             openRecentFileMenu.item(i).action {
                 ApplicationSummary.binPath = i
@@ -78,8 +85,6 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
             ApplicationLogger.logger.info("Successfully loaded path: $i")
         }
-
-        subscribeEvent()
     }
 
     @FXML @Suppress("unused")
@@ -179,6 +184,8 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
                 } else openFileDialog()
             } else openFileDialog()
         }
+
+        saveFileMenu.action(this::saveDataToBalanceBin)
     }
 
     private fun openFileDialog() {
