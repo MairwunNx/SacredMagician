@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApplicationLogger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationLogger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryPoint.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/ApplicationDirectories.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ApplicationDirectories.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/ConvertBytesToInt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ConvertBytesToInt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/ConvertNumToByteArray.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ConvertNumToByteArray.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/CreateDirectories.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/CreateDirectories.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetInternetConnection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetInternetConnection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/PrintSystemBaseInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/PrintSystemBaseInfo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApplicationBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationBase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bvw/BaseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bvw/BaseView.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,20 +25,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="fxml" value="7" />
           <entry key="iml" value="4" />
           <entry key="java" value="2" />
-          <entry key="kt" value="89" />
+          <entry key="kt" value="91" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="IDEA_MODULE" value="4" />
           <entry key="JAVA" value="2" />
-          <entry key="Kotlin" value="89" />
+          <entry key="Kotlin" value="91" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -57,13 +46,13 @@
         <counts>
           <entry key="fxml" value="312" />
           <entry key="java" value="2" />
-          <entry key="kt" value="3974" />
+          <entry key="kt" value="4058" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="2" />
-          <entry key="Kotlin" value="3974" />
+          <entry key="Kotlin" value="4058" />
           <entry key="XML" value="312" />
         </counts>
       </usages-collector>
@@ -72,12 +61,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#96#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="256" column="35" lean-forward="true" selection-start-line="256" selection-start-column="35" selection-end-line="256" selection-end-column="35" />
+            <state relative-caret-position="1972">
+              <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
               <folding>
                 <element signature="e#13#303#0" expanded="true" />
+                <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#openFileDialog#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#openCreateNewFileDialog#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#loadBalanceData#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#saveDataToBalanceBin#0;n#!!block;n#BaseView#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#142#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/ApplicationSummary.kt" />
         <option value="$PROJECT_DIR$/src/bvw/Base.kt" />
         <option value="$PROJECT_DIR$/src/wnd/BaseWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/ApplicationBase.kt" />
         <option value="$PROJECT_DIR$/src/EntryPoint.kt" />
         <option value="$PROJECT_DIR$/src/bin/ApplicationDirectories.kt" />
         <option value="$PROJECT_DIR$/src/ApplicationLogger.kt" />
@@ -140,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/bin/PrintSystemBaseInfo.kt" />
         <option value="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" />
         <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
+        <option value="$PROJECT_DIR$/src/ApplicationBase.kt" />
       </list>
     </option>
   </component>
@@ -276,18 +295,18 @@
       <workItem from="1544369071322" duration="17293000" />
       <workItem from="1544448735943" duration="23790000" />
       <workItem from="1544474686344" duration="1027000" />
-      <workItem from="1544508371132" duration="1100000" />
+      <workItem from="1544508371132" duration="2382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43210000" />
+    <option name="totallyTimeSpent" value="44492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -447,16 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationLogger.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -471,22 +480,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding>
+            <element signature="e#13#303#0" expanded="true" />
+            <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#openFileDialog#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#openCreateNewFileDialog#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#loadBalanceData#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#saveDataToBalanceBin#0;n#!!block;n#BaseView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tornadofx-1.7.17.jar!/tornadofx/AppKt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="319">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="e#0#142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
+    <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="256" column="35" lean-forward="true" selection-start-line="256" selection-start-column="35" selection-end-line="256" selection-end-column="35" />
+        <state relative-caret-position="514">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
-            <element signature="e#13#303#0" expanded="true" />
+            <element signature="e#0#96#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,5 @@
 import bvw.BaseView
+import javafx.application.Platform
 import javafx.scene.image.Image
 import javafx.stage.Stage
 import tornadofx.*
@@ -17,6 +18,13 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
             minHeight = 550.0
             maxHeight = 550.0
             height = 550.0
+
+            setOnCloseRequest {
+                ApplicationLogger.logger.info("Shutting down SacredMagician application ...")
+
+                Platform.exit()
+                System.exit(0)
+            }
         }
     }
 }
