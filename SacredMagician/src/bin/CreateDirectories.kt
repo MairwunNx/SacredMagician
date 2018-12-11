@@ -4,13 +4,15 @@ import ApplicationLogger
 import java.io.File
 
 class CreateDirectories {
-    fun createDirectories() {
-        ApplicationDirectories().directoriesArray.forEach { i ->
-            val directory = File(i)
+    companion object {
+        fun createDirectories() {
+            ApplicationDirectories.directoriesArray.forEach { i ->
+                val directory = File(i)
 
-            directory.mkdirs()
+                directory.mkdirs()
 
-            ApplicationLogger().logger.info("Directory $i was created successfully!")
+                ApplicationLogger.logger.info("Directory $i was created successfully!")
+            }
         }
     }
 }

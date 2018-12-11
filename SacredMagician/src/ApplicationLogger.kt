@@ -1,5 +1,7 @@
 import org.slf4j.LoggerFactory
 
 class ApplicationLogger {
-    val logger = LoggerFactory.getLogger("root")!!
+    companion object {
+        val logger = LoggerFactory.getLogger("root")!!
+    }
 }
