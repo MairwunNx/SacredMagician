@@ -145,6 +145,8 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
                     loadBalanceData()
                 }
+
+                ApplicationLogger.logger.info("File path: $i opened by user in Open Recent")
             }
 
             ApplicationLogger.logger.info("Successfully loaded path: $i")
@@ -249,7 +251,11 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
             } else openFileDialog()
         }
 
-        saveFileMenu.action(this::saveDataToBalanceBin)
+        saveFileMenu.action {
+            saveDataToBalanceBin()
+
+            balanceBinFileChanged = false
+        }
     }
 
     private fun openFileDialog() {
