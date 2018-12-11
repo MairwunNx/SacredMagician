@@ -63,6 +63,7 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
     private val openFileMenuItem: MenuItem by fxid("openFileMenuItem")
     private val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
     private val saveFileMenu: MenuItem by fxid("saveFileMenu")
+    private val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
@@ -255,6 +256,28 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
             saveDataToBalanceBin()
 
             balanceBinFileChanged = false
+        }
+
+        saveAsFileMenu.action {
+            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+
+            saveDialog.file = "balance.bin"
+            saveDialog.isVisible = true
+
+            if (saveDialog.directory != null || saveDialog.file != null) {
+                val filePath = saveDialog.directory + saveDialog.file
+
+                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
+
+                ApplicationSummary.binPath = filePath
+
+                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
+
+                saveDataToBalanceBin()
+
+                filePathTextField.text = ApplicationSummary.binPath
+                balanceBinFileChanged = false
+            }
         }
     }
 
