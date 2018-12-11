@@ -6,14 +6,15 @@ import bin.ApplicationShutdown
 import bin.GetBinDataByOffset
 import bin.ReadOpenRecentFile
 import bin.SetBinDataToOffset
-import javafx.application.Platform
 import javafx.fxml.FXML
 import javafx.scene.control.*
+import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
 import tornadofx.*
 import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
+
 
 class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
@@ -158,10 +159,20 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     }
 
     @FXML @Suppress("unused")
-    private fun handleChangesBalanceBin() {
-        if (filePathTextField.text != "") {
-            balanceBinFileChanged = true
+    private fun handleChangesBalanceBin(e: KeyEvent) {
+        val s = e.source as TextField
+
+        s.textProperty().addListener { _, oldValue, newValue ->
+            if (!newValue.matches("\\d*".toRegex())) {
+                s.text = newValue.replace("[^\\d.]".toRegex(), "")
+            }
+
+            if (newValue.length > 5) {
+                s.text = oldValue
+            }
         }
+
+        if (ApplicationSummary.binPath != "") balanceBinFileChanged = true
     }
 
     private fun subscribeEvent() {

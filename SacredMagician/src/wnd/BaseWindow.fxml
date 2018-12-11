@@ -61,19 +61,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="bronzeAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="bronzeHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="bronzeResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="bronzeDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -87,19 +87,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="silverAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="silverHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="silverResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="silverDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -113,19 +113,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="platinumAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="platinumHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="platinumResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="platinumDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -139,19 +139,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="goldAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="goldHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="goldResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="goldDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -165,19 +165,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="niobiumAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="niobiumHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="niobiumResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="niobiumDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -191,19 +191,19 @@
                                                     <children>
                                                         <Label layoutX="14.0" layoutY="14.0" text="AW &amp; VW"/>
                                                         <TextField fx:id="multiPlayerAwVwTextField" layoutX="79.0"
-                                                                   layoutY="10.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="10.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="49.0" text="HitPoints"/>
                                                         <TextField fx:id="multiPlayerHitPointsTextField" layoutX="79.0"
-                                                                   layoutY="45.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="45.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="84.0" text="Resistance"/>
                                                         <TextField fx:id="multiPlayerResistanceTextField" layoutX="79.0"
-                                                                   layoutY="80.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="80.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                         <Label layoutX="14.0" layoutY="118.0" text="Damage"/>
                                                         <TextField fx:id="multiPlayerDamageTextField" layoutX="79.0"
-                                                                   layoutY="114.0" onKeyTyped="#handleChangesBalanceBin"
+                                                                   layoutY="114.0" onKeyPressed="#handleChangesBalanceBin"
                                                                    prefHeight="25.0" prefWidth="139.0"/>
                                                     </children>
                                                 </AnchorPane>
@@ -220,39 +220,39 @@
                                     <children>
                                         <Label layoutX="14.0" layoutY="14.0" text="South Center Region"/>
                                         <TextField fx:id="southCenterRegionTextField" layoutX="133.0" layoutY="10.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="46.0" text="North Center Region"/>
                                         <TextField fx:id="northCenterRegionTextField" layoutX="133.0" layoutY="42.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="79.0" text="Swamp Base Region"/>
                                         <TextField fx:id="swampBaseRegionTextField" layoutX="133.0" layoutY="75.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="111.0" text="West Base Region"/>
                                         <TextField fx:id="westBaseRegionTextField" layoutX="133.0" layoutY="107.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="144.0" text="North Base Region"/>
                                         <TextField fx:id="northBaseRegionTextField" layoutX="133.0" layoutY="140.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="177.0" text="Lava Base Region"/>
                                         <TextField fx:id="lavaBaseRegionTextField" layoutX="133.0" layoutY="173.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="210.0" text="Shaddar-Nur Region"/>
                                         <TextField fx:id="shaddarBaseRegionTextField" layoutX="133.0" layoutY="206.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="243.0" text="Upper Underworld"/>
                                         <TextField fx:id="upperUnderworldTextField" layoutX="133.0" layoutY="239.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                         <Label layoutX="14.0" layoutY="276.0" text="Lower Underworld"/>
                                         <TextField fx:id="lowerBaseRegionTextField" layoutX="133.0" layoutY="272.0"
-                                                   onKeyTyped="#handleChangesBalanceBin" prefHeight="25.0"
+                                                   onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                                    prefWidth="156.0"/>
                                     </children>
                                 </AnchorPane>
