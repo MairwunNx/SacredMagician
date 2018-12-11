@@ -67,7 +67,14 @@ class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVers
 
     init {
         ReadOpenRecentFile.read().forEach { i ->
-            openRecentFileMenu.item(i)
+            openRecentFileMenu.item(i).action {
+                ApplicationSummary.binPath = i
+                filePathTextField.text = ApplicationSummary.binPath
+                balanceBinFileOpened = true
+                balanceBinFileChanged = false
+
+                loadBalanceData()
+            }
 
             ApplicationLogger.logger.info("Successfully loaded path: $i")
         }
