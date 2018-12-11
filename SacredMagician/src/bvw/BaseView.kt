@@ -15,7 +15,6 @@ import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
 
-
 class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
 
@@ -68,6 +67,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     private val saveFileMenu: MenuItem by fxid("saveFileMenu")
     private val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
     private val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
+    private val applicationAboutMenuItem: MenuItem by fxid("applicationAboutMenuItem")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
@@ -337,6 +337,15 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
                     }
                 } else ApplicationShutdown.shutdown()
             } else ApplicationShutdown.shutdown()
+        }
+
+        applicationAboutMenuItem.action {
+            val alert = Alert(Alert.AlertType.INFORMATION)
+
+            alert.headerText = ""
+            alert.title = "About SacredMagician"
+            alert.contentText = "SacredMagician Release Version: ${ApplicationSummary.version}\nSacredMagician Alpha Version: ${ApplicationSummary.aVersion}\nSacredMagician Version Type: ${ApplicationSummary.type}\nSacredMagician Build: ${ApplicationSummary.build}\n\nThanks for using SacredMagician Balance editor!\n\nAuthor: MairwunNx, Licensed Under Apache 2.0"
+            alert.show()
         }
     }
 

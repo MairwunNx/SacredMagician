@@ -38,7 +38,7 @@
                                 <MenuItem mnemonicParsing="false" text="Open latest.log"/>
                                 <MenuItem mnemonicParsing="false" text="Open settings.json"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="About"/>
+                                <MenuItem mnemonicParsing="false" text="About" fx:id="applicationAboutMenuItem"/>
                             </items>
                         </Menu>
                     </menus>
