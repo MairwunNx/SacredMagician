@@ -2,6 +2,8 @@ package bin
 
 import ApplicationLogger
 import ApplicationSummary
+import java.io.PrintWriter
+import java.io.StringWriter
 import java.net.InetSocketAddress
 import java.net.Socket
 
@@ -14,15 +16,17 @@ class GetInternetConnection {
 
             try {
                 sock.connect(address, 3000)
-                if (sock.isConnected) {
-                    status = true
-                }
+                if (sock.isConnected) status = true
             } catch (e: Exception) {
                 status = false
             } finally {
                 try {
                     sock.close()
-                } catch (e: Exception) {
+                } catch (ex: Exception) {
+                    val sw = StringWriter()
+                    ex.printStackTrace(PrintWriter(sw))
+                    val exceptionAsString = "$sw"
+                    ApplicationLogger.logger.error(exceptionAsString)
                 }
             }
 

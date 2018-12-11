@@ -11,9 +11,7 @@ class ReadOpenRecentFile {
             val sc = Scanner(File("\$SacredMagician\\conf\\app.rcnt.txt"))
             val lines = ArrayList<String>()
 
-            while (sc.hasNextLine()) {
-                lines.add(sc.nextLine())
-            }
+            while (sc.hasNextLine()) lines.add(sc.nextLine())
 
             return lines.toTypedArray()
         }

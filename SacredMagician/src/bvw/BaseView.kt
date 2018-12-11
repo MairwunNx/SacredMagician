@@ -13,7 +13,7 @@ import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
 
-class BaseView : View("${ApplicationSummary().name} ${ApplicationSummary().aVersion}") {
+class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
 
     private var balanceBinFileOpened: Boolean = false

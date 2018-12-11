@@ -10,9 +10,7 @@ class ConvertBytesToInt {
             inStream.skip(offset)
             inStream.read(b2)
 
-            if (isFloat) {
-                return java.nio.ByteBuffer.wrap(b2).order(java.nio.ByteOrder.LITTLE_ENDIAN).float
-            }
+            if (isFloat) return java.nio.ByteBuffer.wrap(b2).order(java.nio.ByteOrder.LITTLE_ENDIAN).float
 
             return java.nio.ByteBuffer.wrap(b2).order(java.nio.ByteOrder.LITTLE_ENDIAN).int
         }

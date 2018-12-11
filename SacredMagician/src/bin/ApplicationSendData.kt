@@ -18,7 +18,7 @@ class ApplicationSendData {
                     val executor = Executors.newSingleThreadExecutor()
 
                     executor.submit {
-                        val data = "DATA: [${LocalDateTime.now()}] | OS: [${System.getProperty("os.name")} \\ ${System.getProperty("user.name")}] | VER: [${ApplicationSummary().version} \\ ${ApplicationSummary().aVersion}] | TYPE: [${ApplicationSummary().type}]"
+                        val data = "DATA: [${LocalDateTime.now()}] | OS: [${System.getProperty("os.name")} \\ ${System.getProperty("user.name")}] | VER: [${ApplicationSummary.version} \\ ${ApplicationSummary.aVersion}] | TYPE: [${ApplicationSummary.type}]"
                         val dataEncoded = Base64.getEncoder().withoutPadding().encodeToString(data.toByteArray())
 
                         val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&data=$dataEncoded")
@@ -35,9 +35,7 @@ class ApplicationSendData {
                             ApplicationLogger.logger.error(e.printStackTrace().toString())
                         }
                     }
-                } else {
-                    f.createNewFile()
-                }
+                } else f.createNewFile()
             }
         }
     }

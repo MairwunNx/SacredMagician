@@ -8,13 +8,13 @@ class PrintSystemBaseInfo {
         fun print() {
             ApplicationLogger.logger.info("============================================================")
 
-            if (ApplicationSummary().type == "Release") {
-                ApplicationLogger.logger.info("Starting ${ApplicationSummary().name} utility version ${ApplicationSummary().version}")
+            if (ApplicationSummary.type == "Release") {
+                ApplicationLogger.logger.info("Starting ${ApplicationSummary.name} utility version ${ApplicationSummary.version}")
             } else {
-                ApplicationLogger.logger.info("Starting ${ApplicationSummary().name} utility version ${ApplicationSummary().aVersion}")
+                ApplicationLogger.logger.info("Starting ${ApplicationSummary.name} utility version ${ApplicationSummary.aVersion}")
             }
 
-            ApplicationLogger.logger.info("You have launched SacredMagician an official ${ApplicationSummary().type} build")
+            ApplicationLogger.logger.info("You have launched SacredMagician an official ${ApplicationSummary.type} build")
 
             ApplicationLogger.logger.info("SacredMagician current launched system: ${System.getProperty("os.name")}")
             ApplicationLogger.logger.info("SacredMagician current launched Java version: ${System.getProperty("java.version")}")
