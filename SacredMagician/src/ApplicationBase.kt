@@ -1,3 +1,4 @@
+import bin.ApplicationShutdown
 import bvw.BaseView
 import javafx.application.Platform
 import javafx.scene.image.Image
@@ -20,10 +21,7 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
             height = 550.0
 
             setOnCloseRequest {
-                ApplicationLogger.logger.info("Shutting down SacredMagician application ...")
-
-                Platform.exit()
-                System.exit(0)
+                ApplicationShutdown.shutdown()
             }
         }
     }

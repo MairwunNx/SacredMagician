@@ -2,9 +2,11 @@ package bvw
 
 import ApplicationLogger
 import ApplicationSummary
+import bin.ApplicationShutdown
 import bin.GetBinDataByOffset
 import bin.ReadOpenRecentFile
 import bin.SetBinDataToOffset
+import javafx.application.Platform
 import javafx.fxml.FXML
 import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
@@ -64,6 +66,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     private val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
     private val saveFileMenu: MenuItem by fxid("saveFileMenu")
     private val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
+    private val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
@@ -278,6 +281,51 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
                 filePathTextField.text = ApplicationSummary.binPath
                 balanceBinFileChanged = false
             }
+        }
+
+        applicationExitMenuItem.action {
+            if (balanceBinFileOpened) {
+                if (balanceBinFileChanged) {
+                    val alert = Alert(Alert.AlertType.CONFIRMATION)
+
+                    alert.title = "Application Closing"
+                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
+
+                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
+                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
+                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
+
+                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
+
+                    alert.showAndWait().ifPresent { type ->
+                        if (type == okButton) {
+                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+
+                            saveDialog.file = "balance.bin"
+                            saveDialog.isVisible = true
+
+                            if (saveDialog.directory != null || saveDialog.file != null) {
+                                val filePath = saveDialog.directory + saveDialog.file
+
+                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
+
+                                ApplicationSummary.binPath = filePath
+
+                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
+
+                                balanceBinFileChanged = false
+                                balanceBinFileOpened = false
+
+                                saveDataToBalanceBin()
+
+                                ApplicationShutdown.shutdown()
+                            }
+                        }
+
+                        if (type == noButton) ApplicationShutdown.shutdown()
+                    }
+                } else ApplicationShutdown.shutdown()
+            } else ApplicationShutdown.shutdown()
         }
     }
 
