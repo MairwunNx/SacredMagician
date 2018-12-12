@@ -11,9 +11,11 @@ import javafx.scene.control.*
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
 import tornadofx.*
+import java.awt.Desktop
 import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
+import java.net.URI
 
 class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
@@ -348,6 +350,12 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
             alert.title = "About SacredMagician"
             alert.contentText = "SacredMagician Release Version: ${ApplicationSummary.version}\nSacredMagician Alpha Version: ${ApplicationSummary.aVersion}\nSacredMagician Version Type: ${ApplicationSummary.type}\nSacredMagician Build: ${ApplicationSummary.build}\n\nThanks for using SacredMagician Balance editor!\n\nAuthor: MairwunNx, Licensed Under Apache 2.0"
             alert.show()
+        }
+
+        sourceHyperLink.action {
+            if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                Desktop.getDesktop().browse(URI("https://github.com/MairwunNx/SacredMagician"))
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 [ApplicationSettings]
-AcceptLicenseArgeements = false
+AcceptLicenseAgreements = false
 AutoCheckingAlphaUpdates = false
 AutoCheckingReleaseUpdates = true
 AllowApplicationTelemetry = true
