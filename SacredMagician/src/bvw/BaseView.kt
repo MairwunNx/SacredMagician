@@ -364,6 +364,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         readLicenseMenuItem.action {
             OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/LICENSE")
         }
+
+        readChangeLogMenuItem.action {
+            OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/CHANGELOG.md")
+        }
     }
 
     private fun openFileDialog() {
