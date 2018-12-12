@@ -1,0 +1,6 @@
+[ApplicationSettings]
+AcceptLicenseArgeements = false
+AutoCheckingAlphaUpdates = false
+AutoCheckingReleaseUpdates = true
+AllowApplicationTelemetry = true
+MaxAllowedTypingChars = 4
