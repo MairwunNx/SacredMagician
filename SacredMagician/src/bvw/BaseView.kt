@@ -368,6 +368,14 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         readChangeLogMenuItem.action {
             OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/CHANGELOG.md")
         }
+
+        supportMailMenuItem.action {
+            OpenBrowserLink.open("mailto://MairwunNx@gmail.com")
+        }
+
+        donateMenuItem.action {
+            OpenBrowserLink.open("https://money.yandex.ru/to/410015993365458")
+        }
     }
 
     private fun openFileDialog() {
