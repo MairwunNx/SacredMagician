@@ -8,6 +8,7 @@ import javafx.scene.control.*
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
 import tornadofx.*
+import java.awt.Desktop
 import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
@@ -375,6 +376,14 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
         donateMenuItem.action {
             OpenBrowserLink.open("https://money.yandex.ru/to/410015993365458")
+        }
+
+        openLogMenuItem.action {
+            Desktop.getDesktop().open(File("\$SacredMagician\\logs\\latest.log"))
+        }
+
+        openAppSetgMenuItem.action {
+            Desktop.getDesktop().open(File("\$SacredMagician\\conf\\app.setg.toml"))
         }
     }
 
