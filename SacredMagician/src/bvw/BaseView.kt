@@ -2,20 +2,15 @@ package bvw
 
 import ApplicationLogger
 import ApplicationSummary
-import bin.ApplicationShutdown
-import bin.GetBinDataByOffset
-import bin.ReadOpenRecentFile
-import bin.SetBinDataToOffset
+import bin.*
 import javafx.fxml.FXML
 import javafx.scene.control.*
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
 import tornadofx.*
-import java.awt.Desktop
 import java.awt.FileDialog
 import java.awt.Frame
 import java.io.File
-import java.net.URI
 
 class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
@@ -68,7 +63,17 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     private val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
     private val saveFileMenu: MenuItem by fxid("saveFileMenu")
     private val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
+    private val settingsMenuItem: MenuItem by fxid("settingsMenuItem")
     private val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
+
+    private val readHowToUseMenuItem: MenuItem by fxid("readHowToUseMenuItem")
+    private val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
+    private val readChangeLogMenuItem: MenuItem by fxid("readChangeLogMenuItem")
+    private val checkForUpdatesMenuItem: MenuItem by fxid("checkForUpdatesMenuItem")
+    private val supportMailMenuItem: MenuItem by fxid("supportMailMenuItem")
+    private val donateMenuItem: MenuItem by fxid("donateMenuItem")
+    private val openLogMenuItem: MenuItem by fxid("openLogMenuItem")
+    private val openAppSetgMenuItem: MenuItem by fxid("openAppSetgMenuItem")
     private val applicationAboutMenuItem: MenuItem by fxid("applicationAboutMenuItem")
 
     private val filePathTextField: TextField by fxid("filePathTextField")
@@ -353,9 +358,11 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         }
 
         sourceHyperLink.action {
-            if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
-                Desktop.getDesktop().browse(URI("https://github.com/MairwunNx/SacredMagician"))
-            }
+            OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician")
+        }
+
+        readLicenseMenuItem.action {
+            OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/LICENSE")
         }
     }
 

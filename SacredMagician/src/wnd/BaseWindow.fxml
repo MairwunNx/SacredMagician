@@ -19,24 +19,24 @@
                                 <MenuItem mnemonicParsing="false" text="Save" fx:id="saveFileMenu"/>
                                 <MenuItem mnemonicParsing="false" text="Save As" fx:id="saveAsFileMenu"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="Settings"/>
+                                <MenuItem mnemonicParsing="false" text="Settings" fx:id="settingsMenuItem"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem fx:id="applicationExitMenuItem" mnemonicParsing="false" text="Exit"/>
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="How to Use"/>
-                                <MenuItem mnemonicParsing="false" text="Licenses"/>
-                                <MenuItem mnemonicParsing="false" text="Change Log"/>
+                                <MenuItem mnemonicParsing="false" text="How to Use" fx:id="readHowToUseMenuItem"/>
+                                <MenuItem mnemonicParsing="false" text="Read License" fx:id="readLicenseMenuItem"/>
+                                <MenuItem mnemonicParsing="false" text="Change Log" fx:id="readChangeLogMenuItem"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="Check for Updates"/>
-                                <MenuItem mnemonicParsing="false" text="Support Mail"/>
+                                <MenuItem mnemonicParsing="false" text="Check for Updates" fx:id="checkForUpdatesMenuItem"/>
+                                <MenuItem mnemonicParsing="false" text="Support Mail" fx:id="supportMailMenuItem"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="Donate"/>
+                                <MenuItem mnemonicParsing="false" text="Donate" fx:id="donateMenuItem"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="Open latest.log"/>
-                                <MenuItem mnemonicParsing="false" text="Open settings.json"/>
+                                <MenuItem mnemonicParsing="false" text="Open latest.log" fx:id="openLogMenuItem"/>
+                                <MenuItem mnemonicParsing="false" text="Open app.setg.toml" fx:id="openAppSetgMenuItem"/>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="About" fx:id="applicationAboutMenuItem"/>
                             </items>
