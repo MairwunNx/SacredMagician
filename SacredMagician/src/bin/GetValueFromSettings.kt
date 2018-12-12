@@ -8,7 +8,7 @@ import java.util.*
 
 class GetValueFromSettings {
     companion object {
-        fun getBoolean(path: String, name: String): Boolean {
+        fun getValue(path: String, name: String): String {
             try {
                 val configurationFuncName = "$name = "
 
@@ -16,41 +16,18 @@ class GetValueFromSettings {
 
                 val funcName = configuration.firstOrNull { s: String ->
                     s.startsWith(configurationFuncName)
-                } ?: return false
+                } ?: return "null"
 
-                return funcName.substring(configurationFuncName.length) == "true"
+                return funcName.substring(configurationFuncName.length)
             } catch (ex: Exception) {
-                ApplicationLogger.logger.error("An error occurred while getting bool value from file: \"$path\", from \"$name\"")
+                ApplicationLogger.logger.error("An error occurred while getting some value from file: \"$path\", from \"$name\"")
 
                 val sw = StringWriter()
                 ex.printStackTrace(PrintWriter(sw))
                 val exceptionAsString = "$sw"
                 ApplicationLogger.logger.error(exceptionAsString)
 
-                return false
-            }
-        }
-
-        fun getInteger(path: String, name: String): Int {
-            try {
-                val configurationFuncName = "$name = "
-
-                val configuration = readConfiguration(path)
-
-                val funcName = configuration.firstOrNull { s: String ->
-                    s.startsWith(configurationFuncName)
-                } ?: return 0
-
-                return funcName.substring(configurationFuncName.length).toInt()
-            } catch (ex: Exception) {
-                ApplicationLogger.logger.error("An error occurred while getting integer value from file: \"$path\", from \"$name\"")
-
-                val sw = StringWriter()
-                ex.printStackTrace(PrintWriter(sw))
-                val exceptionAsString = "$sw"
-                ApplicationLogger.logger.error(exceptionAsString)
-
-                return 0
+                return "null"
             }
         }
 
