@@ -6,6 +6,7 @@ fun main(args: Array<String>) {
     GetInternetConnection.getCurrentSessionStatus()
     CreateDirectories.createDirectories()
     CreateOpenRecentFile.create()
+    CreateApplicationSettings.create()
     ApplicationSendData.send()
     launch<ApplicationBase>(args)
 }
