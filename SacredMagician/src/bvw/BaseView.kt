@@ -71,6 +71,8 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
     private val filePathTextField: TextField by fxid("filePathTextField")
 
+    private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
+
     init {
         loadOpenRecentData()
 
