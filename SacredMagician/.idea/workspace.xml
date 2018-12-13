@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bin/AppPrintStackTrace.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryPoint.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetInternetConnection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetInternetConnection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetValueFromSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetValueFromSettings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/SetValueToSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/SetValueToSettings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bvw/BaseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bvw/BaseView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,14 +53,14 @@
         <counts>
           <entry key="fxml" value="787" />
           <entry key="java" value="3" />
-          <entry key="kt" value="10792" />
+          <entry key="kt" value="10795" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="10792" />
+          <entry key="Kotlin" value="10795" />
           <entry key="TOML file" value="1" />
           <entry key="XML" value="787" />
         </counts>
@@ -78,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="348">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -93,12 +84,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714">
+            <state relative-caret-position="-37">
               <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
               <folding>
+                <element signature="e#4806#4868#0" />
                 <element signature="n#!!block;n#loadOpenRecentData#0;n#!!block;n#BaseView#0" />
                 <element signature="e#4951#8416#2" />
                 <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
                 <element signature="e#8995#10951#2" />
                 <element signature="e#10985#12909#2" />
                 <element signature="e#12939#13028#2" />
@@ -121,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="435">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="e#13#57#0" expanded="true" />
               </folding>
@@ -202,13 +195,13 @@
         <option value="$PROJECT_DIR$/src/bin/RemoveTempFiles.kt" />
         <option value="$PROJECT_DIR$/src/bin/RemoveApplicationbTempFiles.kt" />
         <option value="$PROJECT_DIR$/src/bin/AppPrintStackTrace.kt" />
-        <option value="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetInternetConnection.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetValueFromSettings.kt" />
         <option value="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" />
         <option value="$PROJECT_DIR$/src/bin/SetValueToSettings.kt" />
         <option value="$PROJECT_DIR$/src/EntryPoint.kt" />
+        <option value="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" />
       </list>
     </option>
   </component>
@@ -315,7 +308,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544717699367" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544718039717" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/minimal-json-0.9.5.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -374,16 +367,15 @@
       <workItem from="1544530340493" duration="21542000" />
       <workItem from="1544626035151" duration="14692000" />
       <workItem from="1544645217450" duration="804000" />
-      <workItem from="1544706264111" duration="8462000" />
+      <workItem from="1544706264111" duration="9071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93926000" />
+    <option name="totallyTimeSpent" value="94535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -754,14 +746,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/CreateOpenRecentFile.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#13#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
+        <state relative-caret-position="-37">
           <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
           <folding>
+            <element signature="e#4806#4868#0" />
             <element signature="n#!!block;n#loadOpenRecentData#0;n#!!block;n#BaseView#0" />
             <element signature="e#4951#8416#2" />
             <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
             <element signature="e#8995#10951#2" />
             <element signature="e#10985#12909#2" />
             <element signature="e#12939#13028#2" />
@@ -785,30 +799,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="435">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="e#13#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/CreateOpenRecentFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
