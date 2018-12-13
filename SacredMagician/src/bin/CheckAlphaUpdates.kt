@@ -6,6 +6,8 @@ import javafx.application.Platform
 import javafx.scene.control.Alert
 import javafx.scene.control.ButtonBar
 import javafx.scene.control.ButtonType
+import java.awt.Desktop
+import java.io.File
 import java.io.FileOutputStream
 import java.net.URL
 import java.nio.channels.Channels
@@ -90,7 +92,7 @@ class CheckAlphaUpdates {
 
             alert.showAndWait().ifPresent { type ->
                 if (type == okButton) {
-                    Runtime.getRuntime().exec("java -jar updater.jar SacredMagician.jar _newVersionSacredMagicianTemp.jar")
+                    Desktop.getDesktop().open(File("updater.jar"))
 
                     ApplicationShutdown.shutdown()
                 }
