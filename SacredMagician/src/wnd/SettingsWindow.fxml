@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0"
+            prefWidth="483.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox prefHeight="182.0" prefWidth="508.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="684.0" prefWidth="600.0">
+                    <children>
+                        <Label layoutX="24.0" layoutY="19.0" text="Settings" textFill="#616161">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <CheckBox layoutX="24.0" layoutY="59.0" mnemonicParsing="false"
+                                  text="Accept license agreements and project license" fx:id="acceptLicenseCheckBox"/>
+                        <CheckBox layoutX="24.0" layoutY="84.0" mnemonicParsing="false"
+                                  text="Allow auto checking availability for release updates"
+                                  fx:id="allowCheckingReleaseUpdatedCheckBox"/>
+                        <CheckBox layoutX="24.0" layoutY="110.0" mnemonicParsing="false"
+                                  text="Allow auto checking availability for alpha updates"
+                                  fx:id="allowCheckingAlphaUpdatesCheckBox"/>
+                        <CheckBox layoutX="24.0" layoutY="136.0" mnemonicParsing="false"
+                                  text="Allow collecting anonymous data of application usage"
+                                  fx:id="allowApplicationTelemetryCheckBox"/>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

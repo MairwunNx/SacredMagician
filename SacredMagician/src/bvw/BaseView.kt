@@ -385,6 +385,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         openAppSetgMenuItem.action {
             Desktop.getDesktop().open(File("\$SacredMagician\\conf\\app.setg.toml"))
         }
+
+        settingsMenuItem.action {
+            openInternalWindow(SettingsView::class)
+        }
     }
 
     private fun openFileDialog() {
