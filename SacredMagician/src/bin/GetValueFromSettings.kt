@@ -2,8 +2,6 @@ package bin
 
 import ApplicationLogger
 import java.io.File
-import java.io.PrintWriter
-import java.io.StringWriter
 import java.util.*
 
 class GetValueFromSettings {
@@ -21,11 +19,7 @@ class GetValueFromSettings {
                 return funcName.substring(configurationFuncName.length)
             } catch (ex: Exception) {
                 ApplicationLogger.logger.error("An error occurred while getting some value from file: \"$path\", from \"$name\"")
-
-                val sw = StringWriter()
-                ex.printStackTrace(PrintWriter(sw))
-                val exceptionAsString = "$sw"
-                ApplicationLogger.logger.error(exceptionAsString)
+                AppPrintStackTrace.print(ex)
 
                 return "null"
             }

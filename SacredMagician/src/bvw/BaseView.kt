@@ -83,7 +83,6 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
     init {
         loadOpenRecentData()
-
         subscribeEvent()
     }
 

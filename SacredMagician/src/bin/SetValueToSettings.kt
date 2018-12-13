@@ -3,8 +3,6 @@ package bin
 import ApplicationLogger
 import java.io.File
 import java.io.FileWriter
-import java.io.PrintWriter
-import java.io.StringWriter
 
 class SetValueToSettings {
     companion object {
@@ -33,11 +31,7 @@ class SetValueToSettings {
                 }
             } catch (ex: Exception) {
                 ApplicationLogger.logger.error("An error occurred while setting some value: $value for file: \"$path\", for \"$name\"")
-
-                val sw = StringWriter()
-                ex.printStackTrace(PrintWriter(sw))
-                val exceptionAsString = "$sw"
-                ApplicationLogger.logger.error(exceptionAsString)
+                AppPrintStackTrace.print(ex)
             }
         }
 
