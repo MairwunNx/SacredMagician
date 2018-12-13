@@ -388,6 +388,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         settingsMenuItem.action {
             openInternalWindow(SettingsView::class)
         }
+
+        checkForUpdatesMenuItem.action {
+            CheckAlphaUpdates.getPermission()
+        }
     }
 
     private fun openFileDialog() {
