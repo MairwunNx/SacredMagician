@@ -5,7 +5,7 @@ import java.io.File
 
 class RemoveAppTempFiles {
     companion object {
-        private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar")
+        private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar", "updargs.txt")
 
         fun remove() {
             temporaryFiles.forEach {

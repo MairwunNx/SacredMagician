@@ -2,6 +2,7 @@ package bin
 
 import ApplicationLogger
 import ApplicationSummary
+import javafx.application.Platform
 import javafx.scene.control.Alert
 import javafx.scene.control.ButtonBar
 import javafx.scene.control.ButtonType
@@ -9,6 +10,8 @@ import java.io.FileOutputStream
 import java.net.URL
 import java.nio.channels.Channels
 import java.util.concurrent.Executors
+
+
 
 class CheckAlphaUpdates {
     companion object {
@@ -70,10 +73,14 @@ class CheckAlphaUpdates {
 
             ApplicationLogger.logger.info("Downloading SacredMagician updater utility done!")
 
+            Platform.runLater { showUpdateDialog() }
+        }
+
+        private fun showUpdateDialog() {
             val alert = Alert(Alert.AlertType.CONFIRMATION)
 
-            alert.title = "SACREDMAGICIAN UPDATER HOST"
-            //alert.headerText = ""
+            alert.title = "SacredMagician Updater"
+            alert.headerText = ""
             alert.contentText = "New update available now! Want you update to new version?"
 
             val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
