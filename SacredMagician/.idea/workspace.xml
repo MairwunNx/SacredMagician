@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,14 +54,14 @@
         <counts>
           <entry key="fxml" value="787" />
           <entry key="java" value="3" />
-          <entry key="kt" value="12238" />
+          <entry key="kt" value="12279" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="12238" />
+          <entry key="Kotlin" value="12279" />
           <entry key="TOML file" value="1" />
           <entry key="XML" value="787" />
         </counts>
@@ -93,13 +94,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+            <state relative-caret-position="197">
+              <caret line="52" selection-start-line="52" selection-end-line="97" selection-end-column="9" />
               <folding>
                 <element signature="e#13#333#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1218">
+              <caret line="42" column="111" selection-start-line="42" selection-start-column="111" selection-end-line="42" selection-end-column="111" />
+              <folding>
+                <element signature="e#13#339#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,15 +123,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -227,11 +231,11 @@
         <option value="$PROJECT_DIR$/src/bin/GetValueFromSettings.kt" />
         <option value="$PROJECT_DIR$/src/bin/SetBinDataToOffset.kt" />
         <option value="$PROJECT_DIR$/src/bin/SetValueToSettings.kt" />
-        <option value="$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetVersionFromLink.kt" />
         <option value="$PROJECT_DIR$/src/EntryPoint.kt" />
         <option value="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" />
         <option value="$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt" />
+        <option value="$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt" />
       </list>
     </option>
   </component>
@@ -308,7 +312,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544733253289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544733646064" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/minimal-json-0.9.5.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -367,18 +371,18 @@
       <workItem from="1544530340493" duration="21542000" />
       <workItem from="1544626035151" duration="14692000" />
       <workItem from="1544645217450" duration="804000" />
-      <workItem from="1544706264111" duration="21412000" />
+      <workItem from="1544706264111" duration="21836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106876000" />
+    <option name="totallyTimeSpent" value="107300000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -731,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationSummary.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -809,10 +806,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+        <state relative-caret-position="197">
+          <caret line="52" selection-start-line="52" selection-end-line="97" selection-end-column="9" />
           <folding>
             <element signature="e#13#333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="42" column="111" selection-start-line="42" selection-start-column="111" selection-end-line="42" selection-end-column="111" />
+          <folding>
+            <element signature="e#13#339#0" expanded="true" />
           </folding>
         </state>
       </provider>

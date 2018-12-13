@@ -13,8 +13,6 @@ import java.net.URL
 import java.nio.channels.Channels
 import java.util.concurrent.Executors
 
-
-
 class CheckAlphaUpdates {
     companion object {
         fun getPermission() {
