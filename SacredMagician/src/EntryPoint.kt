@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
     CreateApplicationSettings.create()
     CreateOpenRecentFile.create()
     RemoveAppTempFiles.remove()
+    CheckAlphaUpdates.getPermission()
     ApplicationSendData.send()
     launch<ApplicationBase>(args)
 }
