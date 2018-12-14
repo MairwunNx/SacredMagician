@@ -57,12 +57,6 @@
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="How to Use" fx:id="readHowToUseMenuItem">
-                                    <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F1" control="DOWN" meta="UP" shift="UP"
-                                                            shortcut="UP"/>
-                                    </accelerator>
-                                </MenuItem>
                                 <MenuItem mnemonicParsing="false" text="Read License" fx:id="readLicenseMenuItem">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="F2" control="DOWN" meta="UP" shift="UP"

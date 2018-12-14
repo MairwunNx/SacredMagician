@@ -67,7 +67,6 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     private val settingsMenuItem: MenuItem by fxid("settingsMenuItem")
     private val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
 
-    private val readHowToUseMenuItem: MenuItem by fxid("readHowToUseMenuItem")
     private val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
     private val readChangeLogMenuItem: MenuItem by fxid("readChangeLogMenuItem")
     private val checkForUpdatesMenuItem: MenuItem by fxid("checkForUpdatesMenuItem")
