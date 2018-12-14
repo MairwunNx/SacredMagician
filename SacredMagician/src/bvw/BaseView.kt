@@ -386,7 +386,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         }
 
         settingsMenuItem.action {
-            openInternalWindow(SettingsView::class)
+            openInternalWindow<SettingsView>(movable = false)
         }
 
         checkForUpdatesMenuItem.action {
