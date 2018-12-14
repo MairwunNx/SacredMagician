@@ -7,7 +7,7 @@ class CreateApplicationSettings {
         fun create() {
             if (GetAvailabilitySettings.get()) return
 
-            val initialStream = javaClass.getResourceAsStream("/cfg/app.setg.toml")
+            val initialStream = CreateApplicationSettings::class.java.getResourceAsStream("/cfg/app.setg.toml")
 
             File("\$SacredMagician\\conf\\app.setg.toml").outputStream().use { initialStream.copyTo(it) }
         }
