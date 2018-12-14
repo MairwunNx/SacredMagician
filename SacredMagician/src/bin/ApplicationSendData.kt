@@ -30,8 +30,8 @@ class ApplicationSendData {
                     SetValueToSettings.setValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended", "true")
 
                     ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent!")
-                } catch (e: Exception) {
-                    ApplicationLogger.logger.error(e.printStackTrace().toString())
+                } catch (ex: Exception) {
+                    AppPrintStackTrace.print(ex)
                 }
             }
         }
