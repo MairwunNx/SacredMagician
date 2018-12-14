@@ -70,13 +70,6 @@
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem mnemonicParsing="false" text="Check for Updates"
-                                          fx:id="checkForUpdatesMenuItem">
-                                    <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F4" control="DOWN" meta="UP" shift="UP"
-                                                            shortcut="UP"/>
-                                    </accelerator>
-                                </MenuItem>
                                 <MenuItem mnemonicParsing="false" text="Support Mail" fx:id="supportMailMenuItem">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"

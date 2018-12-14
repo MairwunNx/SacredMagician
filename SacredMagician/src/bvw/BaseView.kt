@@ -69,7 +69,6 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
     private val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
     private val readChangeLogMenuItem: MenuItem by fxid("readChangeLogMenuItem")
-    private val checkForUpdatesMenuItem: MenuItem by fxid("checkForUpdatesMenuItem")
     private val supportMailMenuItem: MenuItem by fxid("supportMailMenuItem")
     private val donateMenuItem: MenuItem by fxid("donateMenuItem")
     private val openLogMenuItem: MenuItem by fxid("openLogMenuItem")
@@ -386,10 +385,6 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
         settingsMenuItem.action {
             openInternalWindow<SettingsView>(movable = false)
-        }
-
-        checkForUpdatesMenuItem.action {
-            CheckAlphaUpdates.getPermission()
         }
     }
 

@@ -6,9 +6,9 @@ fun main(args: Array<String>) {
     GetInternetConnection.getCurrentSessionStatus()
     CreateDirectories.createDirectories()
     CreateApplicationSettings.create()
-    CreateOpenRecentFile.create()
     RemoveAppTempFiles.remove()
-    ApplicationSendData.send()
     CheckAlphaUpdates.getPermission()
+    CreateOpenRecentFile.create()
+    ApplicationSendData.send()
     launch<ApplicationBase>(args)
 }
