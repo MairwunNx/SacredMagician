@@ -1,6 +1,6 @@
+
 import bin.ApplicationShutdown
 import bvw.BaseView
-import javafx.application.Platform
 import javafx.scene.image.Image
 import javafx.stage.Stage
 import tornadofx.*

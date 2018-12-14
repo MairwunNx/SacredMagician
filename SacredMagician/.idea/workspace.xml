@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ApplicationSummary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationSummary.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wnd/BaseWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/wnd/BaseWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/LoadBalanceBinData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/SaveBalanceBinData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApplicationBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bvw/BaseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bvw/BaseView.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,38 +33,40 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="fxml" value="19" />
+          <entry key="class" value="5" />
+          <entry key="fxml" value="20" />
           <entry key="iml" value="5" />
           <entry key="java" value="15" />
-          <entry key="kt" value="263" />
-          <entry key="toml" value="5" />
+          <entry key="kt" value="269" />
+          <entry key="png" value="1" />
+          <entry key="toml" value="9" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
+          <entry key="CLASS" value="5" />
           <entry key="IDEA_MODULE" value="5" />
+          <entry key="Image" value="1" />
           <entry key="JAVA" value="15" />
-          <entry key="Kotlin" value="263" />
+          <entry key="Kotlin" value="269" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TOML file" value="3" />
-          <entry key="XML" value="22" />
+          <entry key="TOML file" value="7" />
+          <entry key="XML" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="794" />
           <entry key="java" value="3" />
-          <entry key="kt" value="13021" />
+          <entry key="kt" value="13241" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="13021" />
+          <entry key="Kotlin" value="13241" />
           <entry key="TOML file" value="1" />
           <entry key="XML" value="794" />
         </counts>
@@ -84,14 +88,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/wnd/BaseWindow.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="92" column="64" lean-forward="true" selection-start-line="92" selection-start-column="64" selection-end-line="92" selection-end-column="64" />
+            <state relative-caret-position="27">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
               <folding>
-                <element signature="n#Pane#0;n#children#0;n#VBox#0;n#center#0;n#BorderPane#0;n#!!top" />
+                <element signature="n#!!block;n#loadOpenRecentData#0;n#!!block;n#BaseView#0" />
+                <element signature="e#5658#6979#1" />
+                <element signature="e#7031#7382#1" />
+                <element signature="e#7436#7739#1" />
+                <element signature="e#7779#8058#1" />
+                <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
+                <element signature="e#8830#10786#2" />
+                <element signature="e#10820#12744#2" />
+                <element signature="e#12774#12863#2" />
+                <element signature="e#12895#13637#2" />
+                <element signature="e#13678#15649#2" />
+                <element signature="e#15691#16235#2" />
+                <element signature="e#16268#16359#2" />
+                <element signature="e#16396#16507#2" />
+                <element signature="e#16546#16662#2" />
+                <element signature="e#16699#16775#2" />
+                <element signature="e#16807#16897#2" />
+                <element signature="e#16930#17023#2" />
+                <element signature="e#17060#17156#2" />
+                <element signature="e#17190#17263#2" />
+                <element signature="n#!!block;n#openFileDialog#0;n#!!block;n#BaseView#0" />
+                <element signature="n#!!block;n#openCreateNewFileDialog#0;n#!!block;n#BaseView#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bin/LoadBalanceBinData.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#13#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bin/SaveBalanceBinData.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -114,6 +160,7 @@
       <find>SetBinDataToOffset().setFloat</find>
       <find>GetBinDataByOffset().get</find>
       <find>onKeyTyped</find>
+      <find>public</find>
     </findStrings>
     <replaceStrings>
       <replace>SetBinDataToOffset.setInt</replace>
@@ -150,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/bin/CreateDirectories.kt" />
         <option value="$PROJECT_DIR$/src/bin/PrintSystemBaseInfo.kt" />
         <option value="$PROJECT_DIR$/src/bin/ApplicationShutdown.kt" />
-        <option value="$PROJECT_DIR$/src/ApplicationBase.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetApplicationSettings.kt" />
         <option value="$PROJECT_DIR$/src/bin/OpenBrowserLink.kt" />
         <option value="$PROJECT_DIR$/src/cfg/app.setg.toml" />
@@ -165,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/bin/SetValueToSettings.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetVersionFromLink.kt" />
         <option value="$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt" />
-        <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
         <option value="$PROJECT_DIR$/src/bin/ShowUpdateDialog.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetAppLatestVersion.kt" />
         <option value="$PROJECT_DIR$/src/bin/DownloadUpdateTool.kt" />
@@ -181,6 +226,10 @@
         <option value="$PROJECT_DIR$/src/bin/GetBinDataByOffset.kt" />
         <option value="$PROJECT_DIR$/src/ApplicationSummary.kt" />
         <option value="$PROJECT_DIR$/src/wnd/BaseWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/ApplicationBase.kt" />
+        <option value="$PROJECT_DIR$/src/bin/SaveBalanceBinData.kt" />
+        <option value="$PROJECT_DIR$/src/bin/LoadBalanceBinData.kt" />
+        <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
       </list>
     </option>
   </component>
@@ -249,6 +298,12 @@
               <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
               <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bvw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cfg" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,6 +311,12 @@
               <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ico" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
@@ -275,7 +336,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544809522308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544811461787" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/tornadofx-1.7.18-SNAPSHOT.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -283,6 +344,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.14084508" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="tasks" />
   </component>
   <component name="RecentsManager">
@@ -335,24 +397,25 @@
       <workItem from="1544626035151" duration="14692000" />
       <workItem from="1544645217450" duration="804000" />
       <workItem from="1544706264111" duration="22549000" />
-      <workItem from="1544797616563" duration="7574000" />
+      <workItem from="1544797616563" duration="9619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115587000" />
+    <option name="totallyTimeSpent" value="117632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32939914" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -387,39 +450,10 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bin/GetApplicationSettings.kt" />
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="1167" column="27" selection-start-line="1167" selection-start-column="27" selection-end-line="1167" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/PrintWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="110" column="33" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="61" column="22" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/io/FileReadWrite.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="698">
           <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/app.setg.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -446,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bvw/SettingsView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-647">
@@ -471,42 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="387" column="9" selection-start-line="387" selection-start-column="9" selection-end-line="387" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!block;n#loadOpenRecentData#0;n#!!block;n#BaseView#0" />
-            <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
-            <element signature="e#8994#10950#2" />
-            <element signature="e#10984#12908#2" />
-            <element signature="e#12938#13027#2" />
-            <element signature="e#13059#13801#2" />
-            <element signature="e#13842#15813#2" />
-            <element signature="e#15855#16399#2" />
-            <element signature="e#16432#16523#2" />
-            <element signature="e#16560#16671#2" />
-            <element signature="e#16710#16826#2" />
-            <element signature="e#16863#16939#2" />
-            <element signature="e#16971#17061#2" />
-            <element signature="e#17094#17187#2" />
-            <element signature="e#17224#17320#2" />
-            <element signature="e#17354#17417#2" />
-            <element signature="n#!!block;n#openFileDialog#0;n#!!block;n#BaseView#0" />
-            <element signature="n#!!block;n#openCreateNewFileDialog#0;n#!!block;n#BaseView#0" />
-            <element signature="n#!!block;n#loadBalanceData#0;n#!!block;n#BaseView#0" />
-            <element signature="n#!!block;n#saveDataToBalanceBin#0;n#!!block;n#BaseView#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/app.stat.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -707,16 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/ReadOpenRecentFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-          <folding>
-            <element signature="e#13#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/RemoveAppTempFiles.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -775,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationLogger.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -796,6 +770,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/ReadOpenRecentFile.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#13#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ico/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/app.stat.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/app.setg.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bvw/SettingsView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/ApplicationShutdown.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -806,13 +814,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tornadofx-1.7.18-SNAPSHOT.jar!/tornadofx/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#1#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/LoadBalanceBinData.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#13#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/SaveBalanceBinData.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wnd/BaseWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="92" column="64" lean-forward="true" selection-start-line="92" selection-start-column="64" selection-end-line="92" selection-end-column="64" />
+        <state relative-caret-position="275">
+          <caret line="55" column="32" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
           <folding>
             <element signature="n#Pane#0;n#children#0;n#VBox#0;n#center#0;n#BorderPane#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="n#!!block;n#loadOpenRecentData#0;n#!!block;n#BaseView#0" />
+            <element signature="e#5658#6979#1" />
+            <element signature="e#7031#7382#1" />
+            <element signature="e#7436#7739#1" />
+            <element signature="e#7779#8058#1" />
+            <element signature="n#!!block;n#handleChangesBalanceBin#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#subscribeEvent#0;n#!!block;n#BaseView#0" />
+            <element signature="e#8830#10786#2" />
+            <element signature="e#10820#12744#2" />
+            <element signature="e#12774#12863#2" />
+            <element signature="e#12895#13637#2" />
+            <element signature="e#13678#15649#2" />
+            <element signature="e#15691#16235#2" />
+            <element signature="e#16268#16359#2" />
+            <element signature="e#16396#16507#2" />
+            <element signature="e#16546#16662#2" />
+            <element signature="e#16699#16775#2" />
+            <element signature="e#16807#16897#2" />
+            <element signature="e#16930#17023#2" />
+            <element signature="e#17060#17156#2" />
+            <element signature="e#17190#17263#2" />
+            <element signature="n#!!block;n#openFileDialog#0;n#!!block;n#BaseView#0" />
+            <element signature="n#!!block;n#openCreateNewFileDialog#0;n#!!block;n#BaseView#0" />
           </folding>
         </state>
       </provider>
