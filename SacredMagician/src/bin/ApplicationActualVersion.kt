@@ -12,11 +12,9 @@ class ApplicationActualVersion {
             return if (!appLatestVersion.contains(version)) {
                 ApplicationLogger.logger.warn("SacredMagician application $version is outdated!")
                 ApplicationLogger.logger.info("Downloading SacredMagician application $appLatestVersion update ...")
-
                 true
             } else {
                 ApplicationLogger.logger.info("SacredMagician application no need to $type update!")
-
                 false
             }
         }

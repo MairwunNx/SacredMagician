@@ -6,6 +6,7 @@ fun main(args: Array<String>) {
     GetInternetConnection.getCurrentSessionStatus()
     CreateDirectories.createDirectories()
     CreateApplicationSettings.create()
+    CreateTelemetrySettings.create()
     RemoveAppTempFiles.remove()
     CheckAlphaUpdates.getPermission()
     CreateOpenRecentFile.create()

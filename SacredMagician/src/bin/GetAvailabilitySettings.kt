@@ -4,8 +4,8 @@ import java.io.File
 
 class GetAvailabilitySettings {
     companion object {
-        fun get(): Boolean {
-            val file = File("\$SacredMagician\\conf\\app.setg.toml")
+        fun get(settingFile: String): Boolean {
+            val file = File(settingFile)
 
             return (file.exists() && !file.isDirectory)
         }

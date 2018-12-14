@@ -2,7 +2,6 @@ package bin
 
 import ApplicationLogger
 import ApplicationSummary
-import java.io.File
 import java.net.URL
 import java.time.LocalDateTime
 import java.util.*
@@ -11,31 +10,29 @@ import java.util.concurrent.Executors
 class ApplicationSendData {
     companion object {
         fun send() {
-            if (ApplicationSummary.isOnline) {
-                val f = File("\$SacredMagician\\conf\\app.stat.txt")
+            if (!ApplicationSummary.isOnline) return
 
-                if (!f.exists() && !f.isDirectory) {
-                    val executor = Executors.newSingleThreadExecutor()
+            if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended").toBoolean()) return
 
-                    executor.submit {
-                        val data = "DATA: [${LocalDateTime.now()}] | OS: [${System.getProperty("os.name")} \\ ${System.getProperty("user.name")}] | VER: [${ApplicationSummary.version} \\ ${ApplicationSummary.aVersion}] | TYPE: [${ApplicationSummary.type}]"
-                        val dataEncoded = Base64.getEncoder().withoutPadding().encodeToString(data.toByteArray())
+            val executor = Executors.newSingleThreadExecutor()
 
-                        val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&data=$dataEncoded")
+            executor.submit {
+                val data = "DATA: [${LocalDateTime.now()}] | OS: [${System.getProperty("os.name")} \\ ${System.getProperty("user.name")}] | VER: [${ApplicationSummary.version} \\ ${ApplicationSummary.aVersion}] | TYPE: [${ApplicationSummary.type}]"
+                val dataEncoded = Base64.getEncoder().withoutPadding().encodeToString(data.toByteArray())
 
-                        try {
-                            val conn = url.openConnection()
-                            val inStream = conn.getInputStream()
-                            inStream.close()
+                val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&data=$dataEncoded")
 
-                            f.createNewFile()
+                try {
+                    val conn = url.openConnection()
+                    val inStream = conn.getInputStream()
+                    inStream.close()
 
-                            ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent!")
-                        } catch (e: Exception) {
-                            ApplicationLogger.logger.error(e.printStackTrace().toString())
-                        }
-                    }
-                } else f.createNewFile()
+                    SetValueToSettings.setValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended", "true")
+
+                    ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent!")
+                } catch (e: Exception) {
+                    ApplicationLogger.logger.error(e.printStackTrace().toString())
+                }
             }
         }
     }

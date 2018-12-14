@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/bin/CreateTelemetrySettings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntryPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryPoint.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/CreateApplicationSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/CreateApplicationSettings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +39,8 @@
           <entry key="fxml" value="18" />
           <entry key="iml" value="4" />
           <entry key="java" value="14" />
-          <entry key="kt" value="224" />
-          <entry key="toml" value="3" />
+          <entry key="kt" value="232" />
+          <entry key="toml" value="5" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -43,9 +49,9 @@
           <entry key="CLASS" value="4" />
           <entry key="IDEA_MODULE" value="4" />
           <entry key="JAVA" value="14" />
-          <entry key="Kotlin" value="224" />
+          <entry key="Kotlin" value="232" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TOML file" value="1" />
+          <entry key="TOML file" value="3" />
           <entry key="XML" value="20" />
         </counts>
       </usages-collector>
@@ -53,14 +59,14 @@
         <counts>
           <entry key="fxml" value="787" />
           <entry key="java" value="3" />
-          <entry key="kt" value="12687" />
+          <entry key="kt" value="12993" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="12687" />
+          <entry key="Kotlin" value="12993" />
           <entry key="TOML file" value="1" />
           <entry key="XML" value="787" />
         </counts>
@@ -72,17 +78,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="290">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bin/CreateApplicationSettings.kt">
+        <entry file="file://$PROJECT_DIR$/src/bin/ApplicationSendData.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="696">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cfg/app.stat.toml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="1" column="19" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -139,13 +154,11 @@
         <option value="$PROJECT_DIR$/src/bin/ReadOpenRecentFile.kt" />
         <option value="$PROJECT_DIR$/src/bin/ConvertBytesToInt.kt" />
         <option value="$PROJECT_DIR$/src/bin/CreateDirectories.kt" />
-        <option value="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" />
         <option value="$PROJECT_DIR$/src/bin/PrintSystemBaseInfo.kt" />
         <option value="$PROJECT_DIR$/src/bin/ApplicationShutdown.kt" />
         <option value="$PROJECT_DIR$/src/ApplicationBase.kt" />
         <option value="$PROJECT_DIR$/src/ApplicationSummary.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetApplicationSettings.kt" />
-        <option value="$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt" />
         <option value="$PROJECT_DIR$/src/bin/OpenBrowserLink.kt" />
         <option value="$PROJECT_DIR$/src/cfg/app.setg.toml" />
         <option value="$PROJECT_DIR$/src/bvw/SettingsView.kt" />
@@ -164,13 +177,16 @@
         <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
         <option value="$PROJECT_DIR$/src/bin/ShowUpdateDialog.kt" />
         <option value="$PROJECT_DIR$/src/bin/GetAppLatestVersion.kt" />
-        <option value="$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt" />
         <option value="$PROJECT_DIR$/src/bin/DownloadUpdateTool.kt" />
         <option value="$PROJECT_DIR$/src/bin/DownloadNewUpdate.kt" />
         <option value="$PROJECT_DIR$/src/bin/CheckAlphaUpdates.kt" />
         <option value="$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt" />
+        <option value="$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt" />
+        <option value="$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt" />
         <option value="$PROJECT_DIR$/src/EntryPoint.kt" />
         <option value="$PROJECT_DIR$/src/bin/CreateApplicationSettings.kt" />
+        <option value="$PROJECT_DIR$/src/bin/CreateTelemetrySettings.kt" />
+        <option value="$PROJECT_DIR$/src/bin/ApplicationSendData.kt" />
       </list>
     </option>
   </component>
@@ -239,6 +255,18 @@
               <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
               <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cfg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SacredMagician" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SacredMagician" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="wnd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -253,7 +281,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544807783601" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544808529794" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/tornadofx-1.7.18-SNAPSHOT.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -313,12 +341,12 @@
       <workItem from="1544626035151" duration="14692000" />
       <workItem from="1544645217450" duration="804000" />
       <workItem from="1544706264111" duration="22549000" />
-      <workItem from="1544797616563" duration="5832000" />
+      <workItem from="1544797616563" duration="6572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113845000" />
+    <option name="totallyTimeSpent" value="114585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -365,17 +393,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/javafx-src.zip!/javafx/scene/control/Alert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="221" column="11" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="11" />
-          <folding>
-            <element signature="e#8634#8635#0" expanded="true" />
-            <element signature="e#8669#8670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/io/ReadWrite.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -433,13 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfg/app.stat.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/package-info.java" />
     <entry file="jar://$PROJECT_DIR$/lib/tornadofx-1.7.17.jar!/tornadofx/UIComponent.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -494,13 +504,6 @@
           <folding>
             <element signature="e#13#57#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -647,20 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationDirectories.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationSendData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wnd/BaseWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -706,13 +695,6 @@
           <folding>
             <element signature="e#13#167#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -772,17 +754,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
+    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationActualVersion.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="290">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationDirectories.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/GetAvailabilitySettings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/CreateApplicationSettings.kt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="e#13#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/CreateTelemetrySettings.kt">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <folding>
+            <element signature="e#13#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cfg/app.stat.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="19" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/ApplicationSendData.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
         </state>
       </provider>
     </entry>
