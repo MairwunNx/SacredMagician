@@ -1,9 +1,11 @@
 package bvw
 
+import ApplicationLogger
 import ApplicationSummary
 import bin.LoadOpenRecentData
 import bin.MenuItemSubscribeEvents
 import bin.OpenBrowserLink
+import bin.StartTimeCounter
 import javafx.fxml.FXML
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Menu
@@ -82,6 +84,8 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     init {
         LoadOpenRecentData.load()
         subscribeEvent()
+
+        ApplicationLogger.logger.info("Loading SacredMagician done (${System.currentTimeMillis() - StartTimeCounter.startTime} seconds)!")
     }
 
     @FXML @Suppress("unused")
@@ -89,13 +93,9 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         val s = e.source as TextField
 
         s.textProperty().addListener { _, oldValue, newValue ->
-            if (!newValue.matches("\\d*".toRegex())) {
-                s.text = newValue.replace("[^\\d.]".toRegex(), "")
-            }
+            if (!newValue.matches("\\d*".toRegex())) s.text = newValue.replace("[^\\d.]".toRegex(), "")
 
-            if (newValue.length > 5) {
-                s.text = oldValue
-            }
+            if (newValue.length > 5) s.text = oldValue
         }
 
         if (ApplicationSummary.binPath != "") balanceBinFileChanged = true

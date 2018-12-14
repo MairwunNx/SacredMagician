@@ -8,6 +8,8 @@ class OpenRecentOpenPath {
             BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
             BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
             LoadBalanceBinData.load()
+
+            ApplicationLogger.logger.info("File path: $path opened by user in Open Recent")
         }
     }
 }

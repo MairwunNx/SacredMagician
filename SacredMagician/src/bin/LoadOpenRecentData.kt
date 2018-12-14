@@ -48,17 +48,12 @@ class LoadOpenRecentData {
                                         BaseViewInstance.baseViewInstance.balanceBinFileOpened = false
 
                                         SaveBalanceBinData.save()
-
                                         OpenRecentOpenPath.open(i)
                                     }
-                                }
-
-                                if (type == noButton) OpenRecentOpenPath.open(i)
+                                } else if (type == noButton) OpenRecentOpenPath.open(i)
                             }
                         } else OpenRecentOpenPath.open(i)
                     } else OpenRecentOpenPath.open(i)
-
-                    ApplicationLogger.logger.info("File path: $i opened by user in Open Recent")
                 }
 
                 ApplicationLogger.logger.info("Successfully loaded path: $i")
