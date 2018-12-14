@@ -184,93 +184,11 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
     private fun subscribeEvent() {
         newFileMenuItem.action {
-            if (balanceBinFileOpened) {
-                if (balanceBinFileChanged) {
-                    val alert = Alert(Alert.AlertType.CONFIRMATION)
-
-                    alert.title = "Overwriting Balance File"
-                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
-
-                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
-                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
-                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
-
-                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
-
-                    alert.showAndWait().ifPresent { type ->
-                        if (type == okButton) {
-                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
-
-                            saveDialog.file = "balance.bin"
-                            saveDialog.isVisible = true
-
-                            if (saveDialog.directory != null || saveDialog.file != null) {
-                                val filePath = saveDialog.directory + saveDialog.file
-
-                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
-
-                                ApplicationSummary.binPath = filePath
-
-                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
-
-                                balanceBinFileChanged = false
-                                balanceBinFileOpened = false
-
-                                SaveBalanceBinData.save()
-
-                                CreateNewFileDialog.show()
-                            }
-                        }
-
-                        if (type == noButton) CreateNewFileDialog.show()
-                    }
-                } else CreateNewFileDialog.show()
-            } else CreateNewFileDialog.show()
+            OverwriteBalanceDialog.show("newFile")
         }
 
         openFileMenuItem.action {
-            if (balanceBinFileOpened) {
-                if (balanceBinFileChanged) {
-                    val alert = Alert(Alert.AlertType.CONFIRMATION)
-
-                    alert.title = "Closing Current Balance File"
-                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
-
-                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
-                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
-                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
-
-                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
-
-                    alert.showAndWait().ifPresent { type ->
-                        if (type == okButton) {
-                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
-
-                            saveDialog.file = "balance.bin"
-                            saveDialog.isVisible = true
-
-                            if (saveDialog.directory != null || saveDialog.file != null) {
-                                val filePath = saveDialog.directory + saveDialog.file
-
-                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
-
-                                ApplicationSummary.binPath = filePath
-
-                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
-
-                                balanceBinFileChanged = false
-                                balanceBinFileOpened = false
-
-                                SaveBalanceBinData.save()
-
-                                OpenExistsFileDialog.show()
-                            }
-                        }
-
-                        if (type == noButton) OpenExistsFileDialog.show()
-                    }
-                } else OpenExistsFileDialog.show()
-            } else OpenExistsFileDialog.show()
+            OverwriteBalanceDialog.show("openFile")
         }
 
         saveFileMenu.action {
@@ -302,48 +220,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         }
 
         applicationExitMenuItem.action {
-            if (balanceBinFileOpened) {
-                if (balanceBinFileChanged) {
-                    val alert = Alert(Alert.AlertType.CONFIRMATION)
-
-                    alert.title = "Application Closing"
-                    alert.contentText = "You has changed balance.bin file, you want to save current session file?"
-
-                    val okButton = ButtonType("Yes", ButtonBar.ButtonData.YES)
-                    val noButton = ButtonType("No", ButtonBar.ButtonData.NO)
-                    val cancelButton = ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE)
-
-                    alert.buttonTypes.setAll(okButton, noButton, cancelButton)
-
-                    alert.showAndWait().ifPresent { type ->
-                        if (type == okButton) {
-                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
-
-                            saveDialog.file = "balance.bin"
-                            saveDialog.isVisible = true
-
-                            if (saveDialog.directory != null || saveDialog.file != null) {
-                                val filePath = saveDialog.directory + saveDialog.file
-
-                                val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
-
-                                ApplicationSummary.binPath = filePath
-
-                                File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
-
-                                balanceBinFileChanged = false
-                                balanceBinFileOpened = false
-
-                                SaveBalanceBinData.save()
-
-                                ApplicationShutdown.shutdown()
-                            }
-                        }
-
-                        if (type == noButton) ApplicationShutdown.shutdown()
-                    }
-                } else ApplicationShutdown.shutdown()
-            } else ApplicationShutdown.shutdown()
+            OverwriteBalanceDialog.show("appExit")
         }
 
         applicationAboutMenuItem.action {
