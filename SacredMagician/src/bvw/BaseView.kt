@@ -218,14 +218,14 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
                                 SaveBalanceBinData.save()
 
-                                openCreateNewFileDialog()
+                                CreateNewFileDialog.show()
                             }
                         }
 
-                        if (type == noButton) openCreateNewFileDialog()
+                        if (type == noButton) CreateNewFileDialog.show()
                     }
-                } else openCreateNewFileDialog()
-            } else openCreateNewFileDialog()
+                } else CreateNewFileDialog.show()
+            } else CreateNewFileDialog.show()
         }
 
         openFileMenuItem.action {
@@ -263,14 +263,14 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
                                 SaveBalanceBinData.save()
 
-                                openFileDialog()
+                                OpenExistsFileDialog.show()
                             }
                         }
 
-                        if (type == noButton) openFileDialog()
+                        if (type == noButton) OpenExistsFileDialog.show()
                     }
-                } else openFileDialog()
-            } else openFileDialog()
+                } else OpenExistsFileDialog.show()
+            } else OpenExistsFileDialog.show()
         }
 
         saveFileMenu.action {
@@ -385,60 +385,6 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
         settingsMenuItem.action {
             openInternalWindow<SettingsView>(movable = false)
-        }
-    }
-
-    private fun openFileDialog() {
-        val openDialog = FileDialog(Frame(), "Select Open File Directory", FileDialog.LOAD)
-
-        openDialog.file = "*.bin"
-        openDialog.isVisible = true
-
-        if (openDialog.directory != null || openDialog.file != null) {
-            val filePath = openDialog.directory + openDialog.file
-
-            ApplicationSummary.binPath = filePath
-            filePathTextField.text = ApplicationSummary.binPath
-            balanceBinFileOpened = true
-            balanceBinFileChanged = false
-
-            val file = File("\$SacredMagician\\conf\\app.rcnt.txt")
-            val fileText = file.readText()
-
-            if (!fileText.contains(ApplicationSummary.binPath, true)) {
-                file.appendText(ApplicationSummary.binPath + System.getProperty("line.separator"))
-            }
-
-            LoadBalanceBinData.load()
-        }
-    }
-
-    private fun openCreateNewFileDialog() {
-        val saveDialog = FileDialog(Frame(), "Select New File Directory", FileDialog.SAVE)
-
-        saveDialog.file = "balance.bin"
-        saveDialog.isVisible = true
-
-        if (saveDialog.directory != null || saveDialog.file != null) {
-            val filePath = saveDialog.directory + saveDialog.file
-
-            val initialStream = javaClass.getResourceAsStream("/etc/balance.bin")
-
-            File(filePath).outputStream().use { initialStream.copyTo(it) }
-
-            ApplicationSummary.binPath = filePath
-
-            filePathTextField.text = ApplicationSummary.binPath
-            balanceBinFileOpened = true
-
-            val file = File("\$SacredMagician\\conf\\app.rcnt.txt")
-            val fileText = file.readText()
-
-            if (!fileText.contains(ApplicationSummary.binPath, true)) {
-                file.appendText(ApplicationSummary.binPath + System.getProperty("line.separator"))
-            }
-
-            LoadBalanceBinData.load()
         }
     }
 }
