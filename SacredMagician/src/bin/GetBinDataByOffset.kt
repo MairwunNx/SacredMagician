@@ -13,12 +13,10 @@ class GetBinDataByOffset {
                 val result = ConvertBytesToInt.convert(fileInputStream, offset, isFloat)
 
                 ApplicationLogger.logger.info("Loaded data by bytes: $result, offset: $offset")
-
                 result
             } catch (ex: Exception) {
                 ApplicationLogger.logger.error("An error occurred while loading data bytes on $offset")
                 AppPrintStackTrace.print(ex)
-
                 0
             }
         }

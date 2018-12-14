@@ -59,47 +59,47 @@
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Read License" fx:id="readLicenseMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F2" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F1" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <MenuItem mnemonicParsing="false" text="Change Log" fx:id="readChangeLogMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F3" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F2" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Support Mail" fx:id="supportMailMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F3" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Donate" fx:id="donateMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F6" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F4" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="Open latest.log" fx:id="openLogMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F7" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <MenuItem mnemonicParsing="false" text="Open app.setg.toml" fx:id="openAppSetgMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F8" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F6" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem mnemonicParsing="false" text="About" fx:id="applicationAboutMenuItem">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F9" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F7" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
