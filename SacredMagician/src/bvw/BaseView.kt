@@ -94,7 +94,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
         s.textProperty().addListener { _, oldValue, newValue ->
             if (!newValue.matches("\\d*".toRegex())) s.text = newValue.replace("[^\\d.]".toRegex(), "")
 
-            if (newValue.length > 5) s.text = oldValue
+            if (newValue.length > ApplicationSummary.maxLength) s.text = oldValue
         }
 
         if (ApplicationSummary.binPath != "") balanceBinFileChanged = true
