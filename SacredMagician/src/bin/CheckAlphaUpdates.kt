@@ -23,7 +23,7 @@ class CheckAlphaUpdates {
         }
 
         private fun getLatestVersion() {
-            if (ApplicationActualVersion.get(ApplicationSummary.aVersion, "alpha", "https://drive.google.com/uc?export=download&id=1sogUimjseix2Kq4Es9J5M9RlLfSaNKDe")) {
+            if (ApplicationActualVersion.get(ApplicationSummary.aVersion, "alpha", "https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/X1pywr-uYsSncw")) {
                 downloadUpdate()
             } else {
                 CheckReleaseUpdates.getPermission()
@@ -31,7 +31,7 @@ class CheckAlphaUpdates {
         }
 
         private fun downloadUpdate() {
-            DownloadNewUpdate.download("https://drive.google.com/uc?export=download&id=1tj-C7svsMs6qlzWrvfEzKtHfOrpwfXm3")
+            DownloadNewUpdate.download("https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/2L41fmLzzC1NLw")
         }
     }
 }

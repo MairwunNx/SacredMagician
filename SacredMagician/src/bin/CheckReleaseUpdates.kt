@@ -14,11 +14,11 @@ class CheckReleaseUpdates {
         }
 
         private fun getLatestVersion() {
-            if (ApplicationActualVersion.get(ApplicationSummary.version, "release", "https://drive.google.com/uc?export=download&id=1vOfI-eWVFnMaF8nKNv8rwoTTwMQ6YGkt")) downloadUpdate()
+            if (ApplicationActualVersion.get(ApplicationSummary.version, "release", "https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/jF7bbJ8YDgrvzA")) downloadUpdate()
         }
 
         private fun downloadUpdate() {
-            DownloadNewUpdate.download("https://drive.google.com/uc?export=download&id=13t88XU7uT0DtrtSqVpaB8eRtu2cSebtx")
+            DownloadNewUpdate.download("https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/HlrXhnaMb6edZQ")
         }
     }
 }
