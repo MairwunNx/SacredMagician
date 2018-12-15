@@ -2,7 +2,7 @@ import bin.*
 import tornadofx.*
 
 fun main(args: Array<String>) {
-    StartTimeCounter.startTime = System.currentTimeMillis()
+    ApplicationSummary.startTime = System.currentTimeMillis()
 
     PrintSystemBaseInfo.print()
     GetInternetConnection.getCurrentSessionStatus()

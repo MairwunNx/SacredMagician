@@ -23,7 +23,6 @@ class ShowUpdateDialog {
             alert.showAndWait().ifPresent { type ->
                 if (type == okButton) {
                     Desktop.getDesktop().open(File("updater.jar"))
-
                     ApplicationShutdown.shutdown()
                 }
             }

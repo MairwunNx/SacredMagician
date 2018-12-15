@@ -15,7 +15,6 @@ class PrintSystemBaseInfo {
             }
 
             ApplicationLogger.logger.info("You have launched SacredMagician an official ${ApplicationSummary.type} build")
-
             ApplicationLogger.logger.info("SacredMagician current launched system: ${System.getProperty("os.name")}")
             ApplicationLogger.logger.info("SacredMagician current launched Java version: ${System.getProperty("java.version")}")
             ApplicationLogger.logger.info("SacredMagician current session allocated memory: ${Runtime.getRuntime().maxMemory().div(1048576)}MB")

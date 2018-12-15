@@ -9,13 +9,11 @@ class RemoveAppTempFiles {
 
         fun remove() {
             temporaryFiles.forEach {
-                if (getAvailabilityTempContent(it)) {
-                    try {
-                        File(it).delete()
-                    } catch (ex: Exception) {
-                        ApplicationLogger.logger.error("An error occurred while removing temporary file $it")
-                        AppPrintStackTrace.print(ex)
-                    }
+                if (getAvailabilityTempContent(it)) try {
+                    File(it).delete()
+                } catch (ex: Exception) {
+                    ApplicationLogger.logger.error("An error occurred while removing temporary file $it")
+                    AppPrintStackTrace.print(ex)
                 }
             }
         }

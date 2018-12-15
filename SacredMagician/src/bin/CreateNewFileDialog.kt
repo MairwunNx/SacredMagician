@@ -13,22 +13,22 @@ class CreateNewFileDialog {
             saveDialog.file = "balance.bin"
             saveDialog.isVisible = true
 
-            if (saveDialog.directory != null || saveDialog.file != null) {
-                val filePath = saveDialog.directory + saveDialog.file
+            if (saveDialog.directory == null || saveDialog.file == null) return
 
-                val initialStream = CreateNewFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
+            val filePath = saveDialog.directory + saveDialog.file
 
-                File(filePath).outputStream().use { initialStream.copyTo(it) }
+            val initialStream = CreateNewFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
 
-                ApplicationSummary.binPath = filePath
+            File(filePath).outputStream().use { initialStream.copyTo(it) }
 
-                BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
-                BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
+            ApplicationSummary.binPath = filePath
 
-                AddFilePathToRecent.add()
+            BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
+            BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
 
-                LoadBalanceBinData.load()
-            }
+            AddFilePathToRecent.add()
+
+            LoadBalanceBinData.load()
         }
     }
 }

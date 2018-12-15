@@ -20,7 +20,6 @@ class SetValueToSettings {
                         j++
                         if (i.contains(configurationFuncName)) {
                             text[j] = "$configurationFuncName$value"
-
                             File(path).writeText(text.joinToString("\n"))
                         }
                     }

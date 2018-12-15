@@ -80,11 +80,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
 
     init {
         BaseViewInstance.baseViewInstance = this
-
         LoadOpenRecentData.load()
         subscribeEvent()
 
-        ApplicationLogger.logger.info("Loading SacredMagician done (${(System.currentTimeMillis() - StartTimeCounter.startTime).div(1000.0)} seconds \\ Free: ${Runtime.getRuntime().freeMemory().div(1048576)}MB of ${Runtime.getRuntime().maxMemory().div(1048576)}MB)!")
+        ApplicationLogger.logger.info("Loading SacredMagician done (${(System.currentTimeMillis() - ApplicationSummary.startTime).div(1000.0)} seconds \\ Free: ${Runtime.getRuntime().freeMemory().div(1048576)}MB of ${Runtime.getRuntime().maxMemory().div(1048576)}MB)!")
     }
 
     @FXML @Suppress("unused")

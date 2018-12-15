@@ -15,7 +15,6 @@ class DownloadNewUpdate {
             fos.close()
 
             ApplicationLogger.logger.info("Downloading SacredMagician application update done!")
-
             DownloadUpdateTool.download()
         }
     }

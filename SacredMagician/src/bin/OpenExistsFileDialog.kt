@@ -21,7 +21,6 @@ class OpenExistsFileDialog {
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
 
                 AddFilePathToRecent.add()
-
                 LoadBalanceBinData.load()
             }
         }

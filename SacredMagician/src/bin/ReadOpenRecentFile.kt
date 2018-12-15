@@ -1,5 +1,6 @@
 package bin
 
+import ApplicationLogger
 import java.io.File
 import java.util.*
 
@@ -12,7 +13,6 @@ class ReadOpenRecentFile {
             val lines = ArrayList<String>()
 
             while (sc.hasNextLine()) lines.add(sc.nextLine())
-
             return lines.toTypedArray()
         }
     }

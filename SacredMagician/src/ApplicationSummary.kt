@@ -9,5 +9,6 @@ class ApplicationSummary {
         var firstMove: Boolean = true
         var isOnline: Boolean = false
         var binPath: String = ""
+        var startTime: Long = 0
     }
 }

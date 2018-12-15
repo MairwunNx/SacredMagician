@@ -19,11 +19,9 @@ class SaveAsFileDialog {
                 val initialStream = SaveAsFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
 
                 ApplicationSummary.binPath = filePath
-
                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                 SaveBalanceBinData.save()
-
                 BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
             }

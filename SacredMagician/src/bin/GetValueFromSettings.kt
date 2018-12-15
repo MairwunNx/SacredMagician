@@ -9,7 +9,6 @@ class GetValueFromSettings {
         fun getValue(path: String, name: String): String {
             try {
                 val configurationFuncName = "$name = "
-
                 val configuration = readConfiguration(path)
 
                 val funcName = configuration.firstOrNull { s: String ->
@@ -32,7 +31,6 @@ class GetValueFromSettings {
             while (scanner.hasNextLine()) lines.add(scanner.nextLine())
 
             scanner.close()
-
             return lines.toTypedArray()
         }
     }

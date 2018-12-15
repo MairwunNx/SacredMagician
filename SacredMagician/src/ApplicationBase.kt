@@ -1,5 +1,6 @@
 
 import bin.ApplicationShutdown
+import bin.OverwriteBalanceDialog
 import bvw.BaseView
 import javafx.scene.image.Image
 import javafx.stage.Stage
@@ -21,6 +22,7 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
             height = 550.0
 
             setOnCloseRequest {
+                OverwriteBalanceDialog.show("appExit")
                 ApplicationShutdown.shutdown()
             }
         }
