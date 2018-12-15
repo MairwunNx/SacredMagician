@@ -6,6 +6,7 @@ class ApplicationSummary {
         const val type: String = "Alpha"
         const val build: Int = 56
         var maxLength: Int = 4
+        var firstMove: Boolean = true
         var isOnline: Boolean = false
         var binPath: String = ""
     }

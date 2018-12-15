@@ -109,6 +109,15 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
             openInternalWindow<SettingsView>(movable = false)
         }
 
+        if (!GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements").toBoolean()) {
+            root.setOnMouseMoved {
+                if (ApplicationSummary.firstMove) {
+                    ApplicationSummary.firstMove = false
+                    openInternalWindow<LicenseView>(movable = false, closeButton = false)
+                }
+            }
+        }
+
         MenuItemSubscribeEvents.subscribe()
     }
 }
