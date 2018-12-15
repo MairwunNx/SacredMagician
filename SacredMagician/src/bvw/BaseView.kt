@@ -2,10 +2,7 @@ package bvw
 
 import ApplicationLogger
 import ApplicationSummary
-import bin.LoadOpenRecentData
-import bin.MenuItemSubscribeEvents
-import bin.OpenBrowserLink
-import bin.StartTimeCounter
+import bin.*
 import javafx.fxml.FXML
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Menu
@@ -82,10 +79,12 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
      private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
 
     init {
+        BaseViewInstance.baseViewInstance = this
+
         LoadOpenRecentData.load()
         subscribeEvent()
 
-        ApplicationLogger.logger.info("Loading SacredMagician done (${System.currentTimeMillis() - StartTimeCounter.startTime} seconds)!")
+        ApplicationLogger.logger.info("Loading SacredMagician done (${(System.currentTimeMillis() - StartTimeCounter.startTime).div(1000.0)} seconds)!")
     }
 
     @FXML @Suppress("unused")
