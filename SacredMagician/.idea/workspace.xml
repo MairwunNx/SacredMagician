@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd37603-b57e-49e1-bd70-beba20892799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bin/StartTimeCounter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApplicationSummary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationSummary.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryPoint.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryPoint.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/LoadOpenRecentData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/LoadOpenRecentData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/OpenRecentOpenPath.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/OpenRecentOpenPath.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/BaseViewInstance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/BaseViewInstance.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bvw/BaseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bvw/BaseView.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,7 +34,7 @@
           <entry key="fxml" value="20" />
           <entry key="iml" value="5" />
           <entry key="java" value="16" />
-          <entry key="kt" value="311" />
+          <entry key="kt" value="312" />
           <entry key="png" value="1" />
           <entry key="toml" value="9" />
           <entry key="xml" value="3" />
@@ -51,7 +46,7 @@
           <entry key="IDEA_MODULE" value="5" />
           <entry key="Image" value="1" />
           <entry key="JAVA" value="16" />
-          <entry key="Kotlin" value="311" />
+          <entry key="Kotlin" value="312" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TOML file" value="7" />
           <entry key="XML" value="23" />
@@ -61,14 +56,14 @@
         <counts>
           <entry key="fxml" value="794" />
           <entry key="java" value="3" />
-          <entry key="kt" value="14292" />
+          <entry key="kt" value="14550" />
           <entry key="toml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="14292" />
+          <entry key="Kotlin" value="14550" />
           <entry key="TOML file" value="1" />
           <entry key="XML" value="794" />
         </counts>
@@ -81,75 +76,18 @@
         <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/ApplicationShutdown.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-              <folding>
-                <element signature="e#13#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
-              <folding>
-                <element signature="e#13#445#0" expanded="true" />
-              </folding>
+              <caret line="4" column="59" lean-forward="true" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bin/LoadOpenRecentData.kt">
+        <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="16" column="85" selection-start-line="16" selection-start-column="85" selection-end-line="16" selection-end-column="85" />
+            <state relative-caret-position="395">
+              <caret line="86" column="139" selection-start-line="86" selection-start-column="139" selection-end-line="86" selection-end-column="139" />
               <folding>
-                <element signature="e#13#262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/BaseViewInstance.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-              <folding>
-                <element signature="e#13#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/StartTimeCounter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/OverwriteBalanceDialog.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="36" column="86" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="86" />
-              <folding>
-                <element signature="e#13#218#0" expanded="true" />
+                <element signature="e#13#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,6 +114,7 @@
       <find>public</find>
       <find>baseView</find>
       <find>ApplicationSummary.baseViewInstance</find>
+      <find>BaseViewInstance.baseViewInstance</find>
     </findStrings>
     <replaceStrings>
       <replace>SetBinDataToOffset.setInt</replace>
@@ -184,6 +123,7 @@
       <replace>onKeyPressed</replace>
       <replace>ApplicationSummary.baseViewInstance</replace>
       <replace>BaseViewInstance.baseViewInstance</replace>
+      <replace>BaseViewInstance.instance</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -237,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/bin/AddFilePathToRecent.kt" />
         <option value="$PROJECT_DIR$/src/bin/OpenNewFileDialog.kt" />
         <option value="$PROJECT_DIR$/src/bin/CreateNewFileDialog.kt" />
-        <option value="$PROJECT_DIR$/src/bin/BaseViewInstance.kt" />
         <option value="$PROJECT_DIR$/src/bin/LoadBalanceBinData.kt" />
         <option value="$PROJECT_DIR$/src/bin/OpenExistsFileDialog.kt" />
         <option value="$PROJECT_DIR$/src/bin/SaveBalanceBinData.kt" />
@@ -249,8 +188,9 @@
         <option value="$PROJECT_DIR$/src/bin/StartTimeCounter.kt" />
         <option value="$PROJECT_DIR$/src/ApplicationSummary.kt" />
         <option value="$PROJECT_DIR$/src/EntryPoint.kt" />
-        <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
         <option value="$PROJECT_DIR$/src/bin/LoadOpenRecentData.kt" />
+        <option value="$PROJECT_DIR$/src/bin/BaseViewInstance.kt" />
+        <option value="$PROJECT_DIR$/src/bvw/BaseView.kt" />
       </list>
     </option>
   </component>
@@ -292,6 +232,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,15 +292,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544820948511" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544881679762" />
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/tornadofx-1.7.18-SNAPSHOT.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -424,13 +364,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125838000" />
+    <option name="totallyTimeSpent" value="127590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27345416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -450,7 +390,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.29399142" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -472,14 +412,15 @@
     <history />
     <find-history />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/bin/CheckReleaseUpdates.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="e#13#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,9 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,9 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-          <folding>
-            <element signature="e#13#158#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -535,9 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#13#76#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,9 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#13#95#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -555,9 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="e#13#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,9 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="109" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,9 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#13#167#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,9 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#13#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -672,9 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="80" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="80" />
-          <folding>
-            <element signature="e#13#94#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-          <folding>
-            <element signature="e#13#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#13#92#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#13#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,9 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="69" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,9 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#13#123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,19 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#13#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/CreateNewFileDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="67" />
-          <folding>
-            <element signature="e#13#107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,23 +696,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/MenuItemSubscribeEvents.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding>
-            <element signature="e#13#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationBase.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#1#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,23 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/BaseViewInstance.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#13#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,22 +744,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
+    <entry file="file://$PROJECT_DIR$/src/bin/BaseViewInstance.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
+        <state relative-caret-position="145">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/MenuItemSubscribeEvents.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#13#445#0" expanded="true" />
+            <element signature="e#13#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/CreateNewFileDialog.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#13#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/LoadOpenRecentData.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="16" column="85" selection-start-line="16" selection-start-column="85" selection-end-line="16" selection-end-column="85" />
+        <state relative-caret-position="-490">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="e#13#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryPoint.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="4" column="59" lean-forward="true" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bvw/BaseView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="86" column="139" selection-start-line="86" selection-start-column="139" selection-end-line="86" selection-end-column="139" />
+          <folding>
+            <element signature="e#13#445#0" expanded="true" />
           </folding>
         </state>
       </provider>
