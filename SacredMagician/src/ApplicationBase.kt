@@ -22,7 +22,7 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
             height = 550.0
 
             setOnCloseRequest {
-                OverwriteBalanceDialog.show("appExit")
+                OverwriteBalanceDialog.show("appExit") // If you changed file, and click to cancel, application close!!!
                 ApplicationShutdown.shutdown()
             }
         }
