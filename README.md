@@ -32,7 +32,7 @@ A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
 # Special thanks
 
  * Special thanks to Sha**no*us for testing for errors and bugs and design work test!
- * Special thanks to andrew.azimov for testing and finding some bugs!
+ * Special thanks to @andreyazimoov for testing and finding some bugs!
  * Special thanks to JetBrains for the free student license! Use this wonderful product!
 
 # In future
