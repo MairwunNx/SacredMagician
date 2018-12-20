@@ -188,18 +188,18 @@
  ******************************************************************************/
 
 .text-input {
-    border_color: #d2d2d2;
-    border_hover_color: #e2e2e2;
-    border_disabled_color: #777777;
+    border_color: #666;
+    border_hover_color: #999;
+    border_disabled_color: #555;
 
-    text_input_background_color: #d2d2d2;
-    background_focused_color: white;
-    background_hover_color: #e2e2e2;
-    background_disabled_color: #1d1d1d;
+    text_input_background_color: #000;
+    background_focused_color: #fff;
+    background_hover_color: #000;
+    background_disabled_color: #000;
 
-    text_color: #111;
-    text_disabled_color: #616161;
-    prompt_text_color: #818181;
+    text_color: #000;
+    text_disabled_color: #666;
+    prompt_text_color: #777;
 
     highlight_color: accent_color;
     highlighted_text_color: white;
@@ -499,8 +499,11 @@
  *                                                                             *
  ******************************************************************************/
 
-.tree-view {
-    tree_view_background_color: #111;
+.tree-view .tree-cell {
+    tree_view_background_color: #212021;
+
+    -fx-background-color: #212021;
+    -fx-text-fill: #ffffff;
 
     hover_color: #333;
     pressed_color: derive(hover_color, 15%);

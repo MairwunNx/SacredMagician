@@ -661,6 +661,7 @@
     -fx-highlight-text-fill: highlighted_text_color;
 
     -fx-font-size: 1.166667em; /* 14 */
+    -fx-text-fill: #fff;
 }
 
 .text-input:hover{
