@@ -11,7 +11,6 @@ import javafx.scene.layout.Pane
 import javafx.scene.shape.Rectangle
 import tornadofx.*
 
-
 class BaseView : View(ApplicationSummary.name) {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
 
