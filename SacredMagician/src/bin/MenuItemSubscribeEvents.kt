@@ -3,8 +3,6 @@ package bin
 import ApplicationSummary
 import javafx.scene.control.Alert
 import tornadofx.*
-import java.awt.Desktop
-import java.io.File
 
 class MenuItemSubscribeEvents {
     companion object {
@@ -18,12 +16,18 @@ class MenuItemSubscribeEvents {
             }
 
             BaseViewInstance.baseViewInstance.saveFileMenu.action {
-                SaveBalanceBinData.save()
-                BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
+                if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
+                    if (BaseViewInstance.baseViewInstance.balanceBinFileChanged) {
+                        SaveBalanceBinData.save()
+                        BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
+                    }
+                }
             }
 
             BaseViewInstance.baseViewInstance.saveAsFileMenu.action {
-                SaveAsFileDialog.open()
+                if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
+                    SaveAsFileDialog.open()
+                }
             }
 
             BaseViewInstance.baseViewInstance.applicationExitMenuItem.action {
@@ -53,14 +57,6 @@ class MenuItemSubscribeEvents {
                 alert.title = "About SacredMagician"
                 alert.contentText = "SacredMagician Release Version: ${ApplicationSummary.version}\nSacredMagician Alpha Version: ${ApplicationSummary.aVersion}\nSacredMagician Version Type: ${ApplicationSummary.type}\nSacredMagician Build: ${ApplicationSummary.build}\n\nThanks for using SacredMagician Balance editor!\n\nAuthor: MairwunNx, Licensed Under Apache 2.0"
                 alert.show()
-            }
-
-            BaseViewInstance.baseViewInstance.openLogMenuItem.action {
-                Desktop.getDesktop().open(File("\$SacredMagician\\logs\\latest.log"))
-            }
-
-            BaseViewInstance.baseViewInstance.openAppSetgMenuItem.action {
-                Desktop.getDesktop().open(File("\$SacredMagician\\conf\\app.setg.toml"))
             }
         }
     }

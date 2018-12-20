@@ -16,9 +16,12 @@ class OpenExistsFileDialog {
                 val filePath = openDialog.directory + openDialog.file
 
                 ApplicationSummary.binPath = filePath
-                BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
+                BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
                 BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
+                BaseViewInstance.baseViewInstance.treeView.isDisable = false
+                BaseViewInstance.baseViewInstance.openOrCreateLabel.isVisible = false
+                BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
 
                 AddFilePathToRecent.add()
                 LoadBalanceBinData.load()

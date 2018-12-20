@@ -22,7 +22,7 @@ class SaveAsFileDialog {
                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                 SaveBalanceBinData.save()
-                BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
+                BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
             }
         }

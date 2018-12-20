@@ -3,7 +3,7 @@ import tornadofx.*
 
 fun main(args: Array<String>) {
     ApplicationSummary.startTime = System.currentTimeMillis()
-
+    ImproveFontDisplay.improve()
     PrintSystemBaseInfo.print()
     GetInternetConnection.getCurrentSessionStatus()
     CreateDirectories.createDirectories()

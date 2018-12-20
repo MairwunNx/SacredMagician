@@ -23,8 +23,11 @@ class CreateNewFileDialog {
 
             ApplicationSummary.binPath = filePath
 
-            BaseViewInstance.baseViewInstance.filePathTextField.text = ApplicationSummary.binPath
+            BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
             BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
+            BaseViewInstance.baseViewInstance.treeView.isDisable = false
+            BaseViewInstance.baseViewInstance.openOrCreateLabel.isVisible = false
+            BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
 
             AddFilePathToRecent.add()
 

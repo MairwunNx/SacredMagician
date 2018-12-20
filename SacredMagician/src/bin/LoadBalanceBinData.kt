@@ -23,10 +23,10 @@ class LoadBalanceBinData {
             BaseViewInstance.baseViewInstance.silverResistanceTextField.text = GetBinDataByOffset.get(1884, true).toString()
             BaseViewInstance.baseViewInstance.silverDamageTextField.text = GetBinDataByOffset.get(1860, true).toString()
 
-            BaseViewInstance.baseViewInstance.goldAwVwTextField.text = GetBinDataByOffset.get(1816, true).toString()
-            BaseViewInstance.baseViewInstance.goldHitPointsTextField.text = GetBinDataByOffset.get(1840, true).toString()
-            BaseViewInstance.baseViewInstance.goldResistanceTextField.text = GetBinDataByOffset.get(1888, true).toString()
-            BaseViewInstance.baseViewInstance.goldDamageTextField.text = GetBinDataByOffset.get(1864, true).toString()
+            BaseViewInstance.baseViewInstance.goldenAwVwTextField.text = GetBinDataByOffset.get(1816, true).toString()
+            BaseViewInstance.baseViewInstance.goldenHitPointsTextField.text = GetBinDataByOffset.get(1840, true).toString()
+            BaseViewInstance.baseViewInstance.goldenResistanceTextField.text = GetBinDataByOffset.get(1888, true).toString()
+            BaseViewInstance.baseViewInstance.goldenDamageTextField.text = GetBinDataByOffset.get(1864, true).toString()
 
             BaseViewInstance.baseViewInstance.platinumAwVwTextField.text = GetBinDataByOffset.get(1820, true).toString()
             BaseViewInstance.baseViewInstance.platinumHitPointsTextField.text = GetBinDataByOffset.get(1844, true).toString()
@@ -38,10 +38,10 @@ class LoadBalanceBinData {
             BaseViewInstance.baseViewInstance.niobiumResistanceTextField.text = GetBinDataByOffset.get(1896, true).toString()
             BaseViewInstance.baseViewInstance.niobiumDamageTextField.text = GetBinDataByOffset.get(1872, true).toString()
 
-            BaseViewInstance.baseViewInstance.multiPlayerAwVwTextField.text = GetBinDataByOffset.get(1828, true).toString()
-            BaseViewInstance.baseViewInstance.multiPlayerHitPointsTextField.text = GetBinDataByOffset.get(1852, true).toString()
-            BaseViewInstance.baseViewInstance.multiPlayerResistanceTextField.text = GetBinDataByOffset.get(1900, true).toString()
-            BaseViewInstance.baseViewInstance.multiPlayerDamageTextField.text = GetBinDataByOffset.get(1876, true).toString()
+            BaseViewInstance.baseViewInstance.globalAwVwTextField.text = GetBinDataByOffset.get(1828, true).toString()
+            BaseViewInstance.baseViewInstance.globalHitPointsTextField.text = GetBinDataByOffset.get(1852, true).toString()
+            BaseViewInstance.baseViewInstance.globalResistanceTextField.text = GetBinDataByOffset.get(1900, true).toString()
+            BaseViewInstance.baseViewInstance.globalDamageTextField.text = GetBinDataByOffset.get(1876, true).toString()
         }
     }
 }

@@ -25,10 +25,10 @@ class SaveBalanceBinData {
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverResistanceTextField.text.toFloat(), 1884)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverDamageTextField.text.toFloat(), 1860)
 
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldAwVwTextField.text.toFloat(), 1816)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldHitPointsTextField.text.toFloat(), 1840)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldResistanceTextField.text.toFloat(), 1888)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldDamageTextField.text.toFloat(), 1864)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenAwVwTextField.text.toFloat(), 1816)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenHitPointsTextField.text.toFloat(), 1840)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenResistanceTextField.text.toFloat(), 1888)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenDamageTextField.text.toFloat(), 1864)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumAwVwTextField.text.toFloat(), 1820)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumHitPointsTextField.text.toFloat(), 1844)
@@ -40,10 +40,10 @@ class SaveBalanceBinData {
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumResistanceTextField.text.toFloat(), 1896)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumDamageTextField.text.toFloat(), 1872)
 
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.multiPlayerAwVwTextField.text.toFloat(), 1828)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.multiPlayerHitPointsTextField.text.toFloat(), 1852)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.multiPlayerResistanceTextField.text.toFloat(), 1900)
-            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.multiPlayerDamageTextField.text.toFloat(), 1876)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalAwVwTextField.text.toFloat(), 1828)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalHitPointsTextField.text.toFloat(), 1852)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalResistanceTextField.text.toFloat(), 1900)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalDamageTextField.text.toFloat(), 1876)
 
             ApplicationLogger.logger.info("Balance.bin changes successfully saved to origin!")
         }

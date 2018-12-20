@@ -4,19 +4,52 @@ import ApplicationLogger
 import ApplicationSummary
 import bin.*
 import javafx.fxml.FXML
-import javafx.scene.control.Hyperlink
-import javafx.scene.control.Menu
-import javafx.scene.control.MenuItem
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
+import javafx.scene.layout.Pane
+import javafx.scene.shape.Rectangle
 import tornadofx.*
 
-class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}") {
+
+class BaseView : View(ApplicationSummary.name) {
     override val root: BorderPane by fxml("/wnd/BaseWindow.fxml")
 
+    var xOffset: Double = 0.0
+    var yOffset: Double = 0.0
     var balanceBinFileOpened: Boolean = false
     var balanceBinFileChanged: Boolean = false
+
+    val treeView: TreeView<String> by fxid("baseTreeView")
+    var rootTreeNode = TreeItem("Root")
+
+    val balanceSettings = TreeItem<String>("Balance")
+    val serverBalanceSettings = TreeItem<String>("Server")
+    val regionsQtySettings = TreeItem<String>("Regions-Qty")
+    val applicationSettings = TreeItem<String>("Application")
+    val updateNowItem = TreeItem<String>("Update Now!")
+
+    val notSelectedPanel: Pane by fxid("notSelectedPane")
+    val bronzeSettingsPanel: Pane by fxid("bronzeSettingsPanel")
+    val silverSettingsPanel: Pane by fxid("silverSettingsPanel")
+    val goldenSettingsPanel: Pane by fxid("goldenSettingsPanel")
+    val platinumSettingsPanel: Pane by fxid("platinumSettingsPanel")
+    val niobiumSettingsPanel: Pane by fxid("niobiumSettingsPanel")
+    val serverSettingsPanel: Pane by fxid("serverSettingsPanel")
+    val regionQtySettingsPanel: Pane by fxid("regionQtySettingsPanel")
+    val applicationSettingsPanel: Pane by fxid("applicationSettingsPanel")
+
+    val licenseAgreementPane: Pane by fxid("licenseAgreementPane")
+    val readLicenseButton: Button by fxid("readLicenseButton")
+    val closeAppButton: Button by fxid("closeAppButton")
+    val acceptAgreementsButton: Button by fxid("acceptAgreementsButton")
+
+    val closeButtonRect: Rectangle by fxid("closeButtonRect")
+    val applicationHeaderRect: Rectangle by fxid("applicationHeaderRect")
+    val freeApplicationRamLabel: Label by fxid("freeApplicationRamLabel")
+    val gitHubButtonRect: Rectangle by fxid("gitHubButtonRect")
+    val openOrCreateLabel: Label by fxid("openOrCreateLabel")
+    val selectFileLabel: Label by fxid("selectFileLabel")
 
     val bronzeAwVwTextField: TextField by fxid("bronzeAwVwTextField")
     val bronzeHitPointsTextField: TextField by fxid("bronzeHitPointsTextField")
@@ -28,10 +61,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     val silverResistanceTextField: TextField by fxid("silverResistanceTextField")
     val silverDamageTextField: TextField by fxid("silverDamageTextField")
 
-    val goldAwVwTextField: TextField by fxid("goldAwVwTextField")
-    val goldHitPointsTextField: TextField by fxid("goldHitPointsTextField")
-    val goldResistanceTextField: TextField by fxid("goldResistanceTextField")
-    val goldDamageTextField: TextField by fxid("goldDamageTextField")
+    val goldenAwVwTextField: TextField by fxid("goldenAwVwTextField")
+    val goldenHitPointsTextField: TextField by fxid("goldenHitPointsTextField")
+    val goldenResistanceTextField: TextField by fxid("goldenResistanceTextField")
+    val goldenDamageTextField: TextField by fxid("goldenDamageTextField")
 
     val platinumAwVwTextField: TextField by fxid("platinumAwVwTextField")
     val platinumHitPointsTextField: TextField by fxid("platinumHitPointsTextField")
@@ -43,10 +76,10 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     val niobiumResistanceTextField: TextField by fxid("niobiumResistanceTextField")
     val niobiumDamageTextField: TextField by fxid("niobiumDamageTextField")
 
-    val multiPlayerAwVwTextField: TextField by fxid("multiPlayerAwVwTextField")
-    val multiPlayerHitPointsTextField: TextField by fxid("multiPlayerHitPointsTextField")
-    val multiPlayerResistanceTextField: TextField by fxid("multiPlayerResistanceTextField")
-    val multiPlayerDamageTextField: TextField by fxid("multiPlayerDamageTextField")
+    val globalAwVwTextField: TextField by fxid("globalAwVwTextField")
+    val globalHitPointsTextField: TextField by fxid("globalHitPointsTextField")
+    val globalResistanceTextField: TextField by fxid("globalResistanceTextField")
+    val globalDamageTextField: TextField by fxid("globalDamageTextField")
 
     val southCenterRegionTextField: TextField by fxid("southCenterRegionTextField")
     val northCenterRegionTextField: TextField by fxid("northCenterRegionTextField")
@@ -63,25 +96,29 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
     val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
     val saveFileMenu: MenuItem by fxid("saveFileMenu")
     val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
-    private val settingsMenuItem: MenuItem by fxid("settingsMenuItem")
     val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
 
     val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
     val readChangeLogMenuItem: MenuItem by fxid("readChangeLogMenuItem")
     val supportMailMenuItem: MenuItem by fxid("supportMailMenuItem")
     val donateMenuItem: MenuItem by fxid("donateMenuItem")
-    val openLogMenuItem: MenuItem by fxid("openLogMenuItem")
-    val openAppSetgMenuItem: MenuItem by fxid("openAppSetgMenuItem")
     val applicationAboutMenuItem: MenuItem by fxid("applicationAboutMenuItem")
 
-    val filePathTextField: TextField by fxid("filePathTextField")
+    val currentPathLabel: Label by fxid("currentPathLabel")
 
-    private val sourceHyperLink: Hyperlink by fxid("sourceHyperLink")
+    val acceptLicenseCheckBox: CheckBox by fxid("acceptLicenseCheckBox")
+    val allowCheckingReleaseUpdatedCheckBox: CheckBox by fxid("allowCheckingReleaseUpdatedCheckBox")
+    val allowCheckingAlphaUpdatesCheckBox: CheckBox by fxid("allowCheckingAlphaUpdatesCheckBox")
+    val allowApplicationTelemetryCheckBox: CheckBox by fxid("allowApplicationTelemetryCheckBox")
 
     init {
         BaseViewInstance.baseViewInstance = this
+        BaseWindowSubscribeEvent.subscribe()
         LoadOpenRecentData.load()
-        subscribeEvent()
+        RunMemoryCounting.start()
+        AddContentToTreeView.addContent()
+        LoadApplicationSettings.load()
+        SubscribeSettingsPane.subscribe()
 
         ApplicationLogger.logger.info("Loading SacredMagician done (${(System.currentTimeMillis() - ApplicationSummary.startTime).div(1000.0)} seconds \\ Free: ${Runtime.getRuntime().freeMemory().div(1048576)}MB of ${Runtime.getRuntime().maxMemory().div(1048576)}MB)!")
     }
@@ -96,28 +133,7 @@ class BaseView : View("${ApplicationSummary.name} ${ApplicationSummary.aVersion}
             if (newValue.length > ApplicationSummary.maxLength) s.text = oldValue
         }
 
-        if (ApplicationSummary.binPath != "") balanceBinFileChanged = true
-    }
-
-    private fun subscribeEvent() {
-        sourceHyperLink.action {
-            OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician")
-        }
-
-        settingsMenuItem.action {
-            openInternalWindow<SettingsView>(movable = false)
-        }
-
-        if (!GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements").toBoolean()) {
-            root.setOnMouseMoved {
-                if (ApplicationSummary.firstMove) {
-                    ApplicationSummary.firstMove = false
-                    openInternalWindow<LicenseView>(movable = false, closeButton = false)
-                }
-            }
-        }
-
-        MenuItemSubscribeEvents.subscribe()
+        if (!ApplicationSummary.binPath.isEmpty()) balanceBinFileChanged = true
     }
 }
 

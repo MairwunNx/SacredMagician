@@ -18,7 +18,7 @@ class DownloadUpdateTool {
             fos.close()
 
             ApplicationLogger.logger.info("Downloading SacredMagician updater utility done!")
-            Platform.runLater { ShowUpdateDialog.showDialog() }
+            Platform.runLater { ShowUpdateNowItem.show() }
         }
     }
 }

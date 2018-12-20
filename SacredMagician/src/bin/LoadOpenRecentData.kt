@@ -54,6 +54,10 @@ class LoadOpenRecentData {
                             }
                         } else OpenRecentOpenPath.open(i)
                     } else OpenRecentOpenPath.open(i)
+
+                    BaseViewInstance.baseViewInstance.treeView.isDisable = false
+                    BaseViewInstance.baseViewInstance.openOrCreateLabel.isVisible = false
+                    BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
                 }
 
                 ApplicationLogger.logger.info("Successfully loaded path: $i")
