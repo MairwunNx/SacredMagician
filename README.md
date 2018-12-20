@@ -1,7 +1,9 @@
 # SacredMagician
 A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
 
-![Alt text](Screenshots/SacredMagician_NewMainPage.png "SacredMagician main page.")
+<p align="center">
+  <img src="Screenshots/SacredMagician_NewMainPage.png">
+</p>
 
 # Features
 
