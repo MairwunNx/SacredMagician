@@ -9,7 +9,6 @@ class GetVersionFromLink {
         fun get(link: String): String {
             val url = URL(link)
             val reader = BufferedReader(InputStreamReader(url.openStream()))
-
             return reader.readLine().toString()
         }
     }

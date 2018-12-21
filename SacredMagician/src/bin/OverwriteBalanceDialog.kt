@@ -37,42 +37,24 @@ class OverwriteBalanceDialog {
                                 val initialStream = OverwriteBalanceDialog::class.java.getResourceAsStream("/etc/balance.bin")
 
                                 ApplicationSummary.binPath = filePath
-
                                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
                                 BaseViewInstance.baseViewInstance.balanceBinFileOpened = false
 
                                 SaveBalanceBinData.save()
-
-                                if (dialogType == "newFile") CreateNewFileDialog.show()
-
-                                if (dialogType == "openFile") OpenExistsFileDialog.show()
-
-                                if (dialogType == "appExit") ApplicationShutdown.shutdown()
+                                dialogTypesResults(dialogType)
                             }
-                        } else if (type == noButton) {
-                            if (dialogType == "newFile") CreateNewFileDialog.show()
-
-                            if (dialogType == "openFile") OpenExistsFileDialog.show()
-
-                            if (dialogType == "appExit") ApplicationShutdown.shutdown()
-                        }
+                        } else if (type == noButton) dialogTypesResults(dialogType)
                     }
-                } else {
-                    if (dialogType == "newFile") CreateNewFileDialog.show()
+                } else dialogTypesResults(dialogType)
+            } else dialogTypesResults(dialogType)
+        }
 
-                    if (dialogType == "openFile") OpenExistsFileDialog.show()
-
-                    if (dialogType == "appExit") ApplicationShutdown.shutdown()
-                }
-            } else {
-                if (dialogType == "newFile") CreateNewFileDialog.show()
-
-                if (dialogType == "openFile") OpenExistsFileDialog.show()
-
-                if (dialogType == "appExit") ApplicationShutdown.shutdown()
-            }
+        private fun dialogTypesResults(type: String) {
+            if (type == "newFile") CreateNewFileDialog.show()
+            if (type == "openFile") OpenExistsFileDialog.show()
+            if (type == "appExit") ApplicationShutdown.shutdown()
         }
     }
 }

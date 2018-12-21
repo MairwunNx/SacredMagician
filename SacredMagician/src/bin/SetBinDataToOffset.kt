@@ -8,13 +8,12 @@ class SetBinDataToOffset {
     companion object {
         fun setInt(neededNumber: Number, offset: Int) {
             try {
-                val raf = RandomAccessFile(ApplicationSummary.binPath, "rw")
+                val randomAccessFile = RandomAccessFile(ApplicationSummary.binPath, "rw")
+                val bytes = ConvertNumToByteArray.convertFromInt(neededNumber)
 
-                val ss = ConvertNumToByteArray.convertFromInt(neededNumber)
-
-                raf.seek(offset.toLong())
-                raf.write(ss)
-                raf.close()
+                randomAccessFile.seek(offset.toLong())
+                randomAccessFile.write(bytes)
+                randomAccessFile.close()
 
                 ApplicationLogger.logger.info("Successfully write data: $neededNumber to $offset!")
             } catch (ex: Exception) {
@@ -25,13 +24,12 @@ class SetBinDataToOffset {
 
         fun setFloat(neededNumber: Number, offset: Int) {
             try {
-                val raf = RandomAccessFile(ApplicationSummary.binPath, "rw")
+                val randomAccessFile = RandomAccessFile(ApplicationSummary.binPath, "rw")
+                val bytes = ConvertNumToByteArray.convertFromFloat(neededNumber)
 
-                val ss = ConvertNumToByteArray.convertFromFloat(neededNumber)
-
-                raf.seek(offset.toLong())
-                raf.write(ss)
-                raf.close()
+                randomAccessFile.seek(offset.toLong())
+                randomAccessFile.write(bytes)
+                randomAccessFile.close()
 
                 ApplicationLogger.logger.info("Successfully write data: $neededNumber to $offset!")
             } catch (ex: Exception) {

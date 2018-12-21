@@ -8,7 +8,6 @@ class SetValueToSettings {
     companion object {
         fun setValue(path: String, name: String, value: String) {
             val configurationFuncName = "$name = "
-
             val file = readConfiguration(path)
 
             try {

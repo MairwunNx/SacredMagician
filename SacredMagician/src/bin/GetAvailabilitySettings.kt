@@ -4,10 +4,6 @@ import java.io.File
 
 class GetAvailabilitySettings {
     companion object {
-        fun get(settingFile: String): Boolean {
-            val file = File(settingFile)
-
-            return (file.exists() && !file.isDirectory)
-        }
+        fun get(settingFile: String): Boolean = (File(settingFile).exists() && !File(settingFile).isDirectory)
     }
 }

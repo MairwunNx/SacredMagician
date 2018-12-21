@@ -9,20 +9,16 @@ class CreateNewFileDialog {
     companion object {
         fun show() {
             val saveDialog = FileDialog(Frame(), "Select New File Directory", FileDialog.SAVE)
-
             saveDialog.file = "balance.bin"
             saveDialog.isVisible = true
 
             if (saveDialog.directory == null || saveDialog.file == null) return
 
             val filePath = saveDialog.directory + saveDialog.file
-
             val initialStream = CreateNewFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
-
             File(filePath).outputStream().use { initialStream.copyTo(it) }
 
             ApplicationSummary.binPath = filePath
-
             BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
             BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
             BaseViewInstance.baseViewInstance.treeView.isDisable = false
@@ -30,7 +26,6 @@ class CreateNewFileDialog {
             BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
 
             AddFilePathToRecent.add()
-
             LoadBalanceBinData.load()
         }
     }

@@ -11,8 +11,7 @@ class DownloadUpdateTool {
         fun download() {
             ApplicationLogger.logger.info("Downloading SacredMagician updater utility ...")
 
-            val website = URL("https://drive.google.com/uc?export=download&id=1QAPcDsa_gg0T2RdH42kmWTPjaRYv9oqx")
-            val rbc = Channels.newChannel(website.openStream())
+            val rbc = Channels.newChannel(URL("https://drive.google.com/uc?export=download&id=1QAPcDsa_gg0T2RdH42kmWTPjaRYv9oqx").openStream())
             val fos = FileOutputStream("updater.jar")
             fos.channel.transferFrom(rbc, 0, java.lang.Long.MAX_VALUE)
             fos.close()

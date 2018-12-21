@@ -5,7 +5,7 @@ import java.io.File
 
 class RemoveAppTempFiles {
     companion object {
-        private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar", "updargs.txt")
+        private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar")
 
         fun remove() {
             temporaryFiles.forEach {
@@ -18,10 +18,7 @@ class RemoveAppTempFiles {
             }
         }
 
-        private fun getAvailabilityTempContent(tempFileName: String): Boolean {
-            val file = File(tempFileName)
-
-            return (file.exists() && !file.isDirectory)
-        }
+        private fun getAvailabilityTempContent(tempFileName: String): Boolean =
+                (File(tempFileName).exists() && !File(tempFileName).isDirectory)
     }
 }

@@ -19,6 +19,8 @@ class BaseView : View(ApplicationSummary.name) {
     var balanceBinFileOpened: Boolean = false
     var balanceBinFileChanged: Boolean = false
 
+    //region BaseView Window Controls
+
     val treeView: TreeView<String> by fxid("baseTreeView")
     var rootTreeNode = TreeItem("Root")
 
@@ -109,6 +111,8 @@ class BaseView : View(ApplicationSummary.name) {
     val allowCheckingReleaseUpdatedCheckBox: CheckBox by fxid("allowCheckingReleaseUpdatedCheckBox")
     val allowCheckingAlphaUpdatesCheckBox: CheckBox by fxid("allowCheckingAlphaUpdatesCheckBox")
     val allowApplicationTelemetryCheckBox: CheckBox by fxid("allowApplicationTelemetryCheckBox")
+
+    //endregion
 
     init {
         BaseViewInstance.baseViewInstance = this

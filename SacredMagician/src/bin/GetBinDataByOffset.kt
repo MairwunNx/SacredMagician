@@ -8,10 +8,7 @@ class GetBinDataByOffset {
     companion object {
         fun get(offset: Long, isFloat: Boolean): Number {
             return try {
-                val fileInputStream = FileInputStream(ApplicationSummary.binPath)
-
-                val result = ConvertBytesToInt.convert(fileInputStream, offset, isFloat)
-
+                val result = ConvertBytesToInt.convert(FileInputStream(ApplicationSummary.binPath), offset, isFloat)
                 ApplicationLogger.logger.info("Loaded data by bytes: $result, offset: $offset")
                 result
             } catch (ex: Exception) {
