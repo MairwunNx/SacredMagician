@@ -11,22 +11,24 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
         applyStageParams(stage)
     }
 
-    private fun applyStageParams(stage: Stage) {
-        stage.apply {
-            isResizable = false
-            minWidth = 827.0
-            maxWidth = 827.0
-            width = 827.0
-            minHeight = 578.0
-            maxHeight = 578.0
-            height = 578.0
+    companion object {
+        private fun applyStageParams(stage: Stage) {
+            stage.apply {
+                isResizable = false
+                minWidth = 827.0
+                maxWidth = 827.0
+                width = 827.0
+                minHeight = 578.0
+                maxHeight = 578.0
+                height = 578.0
+            }
+
+            loadStylesheets()
         }
 
-        loadStylesheets()
-    }
-
-    private fun loadStylesheets() {
-        importStylesheet("/css/JMetroBase.css")
-        importStylesheet("/css/JMetroDarkTheme.css")
+        private fun loadStylesheets() {
+            importStylesheet("/css/JMetroBase.css")
+            importStylesheet("/css/JMetroDarkTheme.css")
+        }
     }
 }

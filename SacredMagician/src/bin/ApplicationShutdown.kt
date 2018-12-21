@@ -6,8 +6,11 @@ import javafx.application.Platform
 class ApplicationShutdown {
     companion object {
         fun shutdown() {
+            ApplicationLogger.logger.info("Shutting down Updater Method thread ...")
+            CheckAlphaUpdates.executor.shutdown()
             ApplicationLogger.logger.info("Shutting down SacredMagician application ...")
             Platform.exit()
+            ApplicationLogger.logger.info("// GoodBye! Author: MairwunNx. When I Was a Young Boy.")
             System.exit(0)
         }
     }

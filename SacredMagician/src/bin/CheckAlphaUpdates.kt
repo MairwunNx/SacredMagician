@@ -6,10 +6,10 @@ import java.util.concurrent.Executors
 
 class CheckAlphaUpdates {
     companion object {
+        var executor = Executors.newSingleThreadExecutor()!!
+
         fun getPermission() {
             if (ApplicationSummary.isOnline) {
-                val executor = Executors.newSingleThreadExecutor()
-
                 executor.submit {
                     ApplicationLogger.logger.info("Checking permission for checking alpha SacredMagician updates ...")
 
