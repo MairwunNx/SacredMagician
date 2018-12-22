@@ -7,7 +7,9 @@ class RemoveAppTempFiles {
     companion object {
         private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar")
 
-        fun remove() {
+        fun remove(args: Array<String>) {
+            if (args.contains("-disableRemoveTemp")) return
+
             temporaryFiles.forEach {
                 if (getAvailabilityTempContent(it)) try {
                     File(it).delete()

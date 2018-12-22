@@ -5,7 +5,9 @@ import ApplicationSummary
 
 class PrintSystemBaseInfo {
     companion object {
-        fun print() {
+        fun print(args: Array<String>) {
+            if (args.contains("-disableBaseInfo")) return
+
             ApplicationLogger.logger.info("============================================================")
 
             if (ApplicationSummary.type == "Release") {
