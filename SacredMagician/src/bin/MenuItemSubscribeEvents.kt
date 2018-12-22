@@ -24,6 +24,9 @@ class MenuItemSubscribeEvents {
                 }
             }
 
+            BaseViewInstance.baseViewInstance.saveFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
+            BaseViewInstance.baseViewInstance.saveAsFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
+
             BaseViewInstance.baseViewInstance.saveAsFileMenu.action {
                 if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
                     SaveAsFileDialog.open()

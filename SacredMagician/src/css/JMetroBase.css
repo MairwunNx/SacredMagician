@@ -1644,8 +1644,7 @@
 }
 
 /* hover */
-.menu-item:hover,
-.menu-item:focused {
+.menu-item:hover, .menu-item:focused {
     -fx-background-color: hover_color;
 }
 
@@ -1654,3 +1653,11 @@
     -fx-background-color: pressed_color;
 }
 
+/* disabled */
+.menu-item:disabled:hover,
+.menu-item:disabled:focused,
+.menu-item:disabled:pressed {
+    -fx-background-color: background_color;
+}
+
+/* todo: fix slider, fix textarea */
