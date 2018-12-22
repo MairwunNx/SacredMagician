@@ -34,6 +34,11 @@ class BaseWindowSubscribeEvent {
                 BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = false
             }
 
+            BaseViewInstance.baseViewInstance.currentPathLabel.setOnMouseEntered {
+                BaseViewInstance.baseViewInstance.tooltip.text = BaseViewInstance.baseViewInstance.currentPathLabel.text
+                BaseViewInstance.baseViewInstance.currentPathLabel.tooltip = BaseViewInstance.baseViewInstance.tooltip
+            }
+
             BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = !GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements").toBoolean()
 
             MenuItemSubscribeEvents.subscribe()

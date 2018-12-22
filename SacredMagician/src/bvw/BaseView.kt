@@ -23,6 +23,7 @@ class BaseView : View(ApplicationSummary.name) {
 
     val treeView: TreeView<String> by fxid("baseTreeView")
     var rootTreeNode = TreeItem("Root")
+    var tooltip: Tooltip = Tooltip("Path unavailable, balance.bin file not created or not opened.")
 
     val balanceSettings = TreeItem<String>("Balance")
     val serverBalanceSettings = TreeItem<String>("Server")
