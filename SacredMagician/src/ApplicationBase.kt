@@ -6,8 +6,11 @@ import tornadofx.*
 
 class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
     override fun start(stage: Stage) {
+        ApplicationLogger.logger.info("Applying stage style to style UNDECORATED")
         stage.initStyle(StageStyle.UNDECORATED)
+        ApplicationLogger.logger.info("Starting application stage window!")
         super.start(stage)
+        ApplicationLogger.logger.info("Applying application stage params!")
         applyStageParams(stage)
     }
 
@@ -27,6 +30,7 @@ class ApplicationBase : App(Image("ico/icon.png"), BaseView::class) {
         }
 
         private fun loadStylesheets() {
+            ApplicationLogger.logger.info("Applying application stylesheet")
             importStylesheet("/css/JMetroBase.css")
             importStylesheet("/css/JMetroDarkTheme.css")
         }
