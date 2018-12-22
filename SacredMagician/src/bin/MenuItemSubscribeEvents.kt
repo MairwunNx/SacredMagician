@@ -16,21 +16,15 @@ class MenuItemSubscribeEvents {
             }
 
             BaseViewInstance.baseViewInstance.saveFileMenu.action {
-                if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
-                    if (BaseViewInstance.baseViewInstance.balanceBinFileChanged) {
-                        SaveBalanceBinData.save()
-                        BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
-                    }
-                }
+                SaveBalanceBinData.save()
+                BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
             }
 
             BaseViewInstance.baseViewInstance.saveFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
             BaseViewInstance.baseViewInstance.saveAsFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
 
             BaseViewInstance.baseViewInstance.saveAsFileMenu.action {
-                if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
-                    SaveAsFileDialog.open()
-                }
+                SaveAsFileDialog.open()
             }
 
             BaseViewInstance.baseViewInstance.applicationExitMenuItem.action {
