@@ -260,6 +260,28 @@
 
 /*******************************************************************************
  *                                                                             *
+ * TitledPane (Expanded and unexpanded)                                        *
+ *                                                                             *
+ ******************************************************************************/
+
+/* titled pane expanded & unexpanded header text */
+.titled-pane:expanded .title .text, .titled-pane .title .text {
+    -fx-fill: #fff;
+}
+
+/* titled pane expanded & unexpanded header arrow */
+.titled-pane:expanded .title .arrow-button .arrow, .titled-pane .title .arrow-button .arrow {
+    -fx-background-color: #fff;
+}
+
+/* titled pane expanded & unexpanded content */
+.titled-pane:expanded .content {
+    -fx-background-color: #2B2B2B;
+    -fx-border-color: #2B2B2B;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Spinner                                                                     *
  *                                                                             *
  ******************************************************************************/
