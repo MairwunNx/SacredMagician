@@ -82,6 +82,13 @@
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="reloadFileMenu" mnemonicParsing="false" text="Reload File">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="DOWN"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
                                 <MenuItem fx:id="applicationExitMenuItem" mnemonicParsing="false" text="Exit">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP"

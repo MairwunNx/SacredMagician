@@ -22,9 +22,15 @@ class MenuItemSubscribeEvents {
 
             BaseViewInstance.baseViewInstance.saveFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
             BaseViewInstance.baseViewInstance.saveAsFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
+            BaseViewInstance.baseViewInstance.reloadFileMenu.disableProperty().bind(BaseViewInstance.baseViewInstance.treeView.disableProperty())
 
             BaseViewInstance.baseViewInstance.saveAsFileMenu.action {
                 SaveAsFileDialog.open()
+            }
+
+            BaseViewInstance.baseViewInstance.reloadFileMenu.action {
+                LoadBalanceBinData.load()
+                BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
             }
 
             BaseViewInstance.baseViewInstance.applicationExitMenuItem.action {

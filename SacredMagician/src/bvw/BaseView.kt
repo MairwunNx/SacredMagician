@@ -98,6 +98,7 @@ class BaseView : View(ApplicationSummary.name) {
     val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
     val saveFileMenu: MenuItem by fxid("saveFileMenu")
     val saveAsFileMenu: MenuItem by fxid("saveAsFileMenu")
+    val reloadFileMenu: MenuItem by fxid("reloadFileMenu")
     val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
 
     val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
