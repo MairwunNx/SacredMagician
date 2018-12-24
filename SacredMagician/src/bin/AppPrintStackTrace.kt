@@ -9,8 +9,8 @@ class AppPrintStackTrace {
         fun print(ex: Exception) {
             val sw = StringWriter()
             ex.printStackTrace(PrintWriter(sw))
-            val exceptionAsString = sw.toString()
 
+            val exceptionAsString = sw.toString()
             ApplicationLogger.logger.error(exceptionAsString)
         }
     }

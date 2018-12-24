@@ -5,6 +5,8 @@ import ApplicationLogger
 class SaveBalanceBinData {
     companion object {
         fun save() {
+            ValidateRegionTextFields.validate()
+
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.southCenterRegionTextField.text.toInt(), 22392)
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.northCenterRegionTextField.text.toInt(), 22456)
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.swampBaseRegionTextField.text.toInt(), 22520)
