@@ -220,11 +220,39 @@
  *                                                                             *
  ******************************************************************************/
 
-.slider {
-    track_hover_color: #999999;
-    thumb_hover_color: #f2f2f2;
+/*******************************************************************************
+ *                                                                             *
+ * Slider                                                                      *
+ *                                                                             *
+ ******************************************************************************/
 
-    thumb_pressed_color: #767676;
+/* slider hover */
+
+/* hover for thumb */
+.slider:hover .thumb {
+    thumb_hover_color: #f2f2f2;
+}
+
+/* hover for track */
+.slider:hover .track {
+    -fx-background-color: #999;
+}
+
+/* slider pressed */
+
+/* pressed for thumb */
+.slider:pressed .thumb {
+    -fx-background-color: #767676;
+}
+
+/* pressed for track */
+.slider:pressed .track {
+    -fx-background-color: #666;
+}
+
+/* slider default background */
+.slider .track {
+    -fx-background-color: #666;
 }
 
 /*******************************************************************************

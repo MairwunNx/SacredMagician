@@ -844,21 +844,14 @@
 }
 
 .slider .track {
-    -fx-background-color: #c6c6c6;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
     -fx-padding: 0.083333em; /* 1 */
-
 }
 
 .slider .fill {
     -fx-background-color: accent_color;
     -fx-padding: 0.083333em; /* 1 */
-}
-
-/* hover */
-.slider:hover .track{
-    -fx-background-color: track_hover_color;
 }
 
 .slider:hover .thumb{
@@ -870,9 +863,9 @@
     -fx-background-color: thumb_pressed_color;
 }
 
-/* disabled */
+/* slider disabled */
 .slider:disabled {
-    -fx-opacity: 0.2;
+    -fx-opacity: 0.35;
 }
 
 /* Slider popup showing its value */
