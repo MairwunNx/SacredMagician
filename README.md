@@ -1,7 +1,12 @@
 # SacredMagician
 A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
 
-![Alt text](Screenshots/SacredMagician_NewMainPage.png "SacredMagician main page.")
+![SacredMagician main page](Screenshots/SacredMagician_NewMainPage.png "SacredMagician main page.")
+
+# Requirements
+
+ * JRE minimum version for .jar variant (1.8.0), for .exe (1.8.0_121).
+ * Administrator rules if application pasted in UAC secure folders.
 
 # Features
 
@@ -45,4 +50,3 @@ A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
  * All tasks for the future are made! If you have idea, open Issue or send it on email me.
 
 ## Thanks for using SacredMagician! Maded with ❤, please click on ★!
-
