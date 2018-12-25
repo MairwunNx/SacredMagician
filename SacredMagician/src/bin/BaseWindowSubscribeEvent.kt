@@ -7,6 +7,7 @@ class BaseWindowSubscribeEvent {
         fun subscribe() {
             BaseViewInstance.baseViewInstance.gitHubButtonRect.setOnMouseClicked {
                 OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician")
+                ApplicationSendData.sendUseStat("github-rect")
             }
 
             BaseViewInstance.baseViewInstance.closeButtonRect.setOnMouseClicked {
@@ -25,6 +26,7 @@ class BaseWindowSubscribeEvent {
 
             BaseViewInstance.baseViewInstance.readLicenseButton.action {
                 OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/LICENSE")
+                ApplicationSendData.sendUseStat("read-license")
             }
 
             BaseViewInstance.baseViewInstance.closeAppButton.action(ApplicationShutdown.Companion::shutdown)
@@ -32,6 +34,7 @@ class BaseWindowSubscribeEvent {
             BaseViewInstance.baseViewInstance.acceptAgreementsButton.action {
                 SetValueToSettings.setValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements", "true")
                 BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = false
+                ApplicationSendData.sendUseStat("accept-agreements")
             }
 
             BaseViewInstance.baseViewInstance.currentPathLabel.setOnMouseEntered {

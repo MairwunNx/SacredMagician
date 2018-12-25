@@ -24,8 +24,8 @@ class ApplicationSendData {
                     try {
                         val urlConnection = url.openConnection()
                         val inputStream = urlConnection.getInputStream()
-                        inputStream.close()
 
+                        inputStream.close()
                         executorStarts.shutdown()
 
                         ApplicationLogger.logger.info("SacredMagician start-up statistics has been sent! ${(System.currentTimeMillis() - time).div(1000.0)}")
@@ -58,6 +58,33 @@ class ApplicationSendData {
                     executorDownloads.shutdown()
                 } catch (ex: Exception) {
                     AppPrintStackTrace.print(ex)
+                }
+            }
+        }
+
+        fun sendUseStat(stat: String) {
+            if (!ApplicationSummary.isOnline) return
+
+            val executorSpecData = Executors.newSingleThreadExecutor()
+
+            executorSpecData.submit {
+                if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AllowApplicationTelemetry").toBoolean()) {
+                    val time = System.currentTimeMillis()
+                    if (System.getProperty("user.name") != "Nynxx") {
+                        val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&spec=true&stat=$stat")
+
+                        try {
+                            val urlConnection = url.openConnection()
+                            val inputStream = urlConnection.getInputStream()
+
+                            inputStream.close()
+                            executorSpecData.shutdown()
+
+                            ApplicationLogger.logger.info("SacredMagician $stat statistics has been sent! ${(System.currentTimeMillis() - time).div(1000.0)}")
+                        } catch (ex: Exception) {
+                            AppPrintStackTrace.print(ex)
+                        }
+                    }
                 }
             }
         }

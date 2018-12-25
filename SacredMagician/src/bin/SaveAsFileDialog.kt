@@ -24,6 +24,8 @@ class SaveAsFileDialog {
                 SaveBalanceBinData.save()
                 BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
+
+                ApplicationSendData.sendUseStat("save-as")
             }
         }
     }

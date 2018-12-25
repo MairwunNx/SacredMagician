@@ -12,6 +12,8 @@ class OpenRecentOpenPath {
             LoadBalanceBinData.load()
 
             ApplicationLogger.logger.info("File path: $path opened by user in Open Recent")
+
+            ApplicationSendData.sendUseStat("open-recent")
         }
     }
 }

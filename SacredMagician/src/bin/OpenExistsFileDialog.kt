@@ -25,6 +25,8 @@ class OpenExistsFileDialog {
 
                 AddFilePathToRecent.add()
                 LoadBalanceBinData.load()
+
+                ApplicationSendData.sendUseStat("open-file")
             }
         }
     }
