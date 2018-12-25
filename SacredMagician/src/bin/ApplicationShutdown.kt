@@ -10,7 +10,7 @@ class ApplicationShutdown {
             CheckAlphaUpdates.executor.shutdown()
             ApplicationLogger.logger.info("Shutting down SacredMagician application ...")
             Platform.exit()
-            ApplicationLogger.logger.info("// GoodBye! Author: MairwunNx. When I Was a Young Boy.")
+            ApplicationLogger.logger.info("// GoodBye! Author: MairwunNx. Finish the Job (c) Si Begg.")
             System.exit(0)
         }
     }
