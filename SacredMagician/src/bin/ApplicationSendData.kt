@@ -17,6 +17,7 @@ class ApplicationSendData {
             val executorStarts = Executors.newSingleThreadExecutor()
 
             executorStarts.submit {
+                val time = System.currentTimeMillis()
                 if (System.getProperty("user.name") != "Nynxx") {
                     val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&lnch=true")
 
@@ -25,9 +26,9 @@ class ApplicationSendData {
                         val inputStream = urlConnection.getInputStream()
                         inputStream.close()
 
-                        ApplicationLogger.logger.info("SacredMagician start-up statistics has been sent!")
-
                         executorStarts.shutdown()
+
+                        ApplicationLogger.logger.info("SacredMagician start-up statistics has been sent! ${(System.currentTimeMillis() - time).div(1000.0)}")
                     } catch (ex: Exception) {
                         AppPrintStackTrace.print(ex)
                     }
@@ -39,6 +40,7 @@ class ApplicationSendData {
             val executorDownloads = Executors.newSingleThreadExecutor()
 
             executorDownloads.submit {
+                val time = System.currentTimeMillis()
                 val data = "DATA: [${LocalDateTime.now()}] | OS: [${System.getProperty("os.name")} \\ ${System.getProperty("user.name")}] | VER: [${ApplicationSummary.version} \\ ${ApplicationSummary.aVersion}] | TYPE: [${ApplicationSummary.type}]"
                 val dataEncoded = Base64.getEncoder().withoutPadding().encodeToString(data.toByteArray())
 
@@ -51,7 +53,7 @@ class ApplicationSendData {
 
                     SetValueToSettings.setValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended", "true")
 
-                    ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent!")
+                    ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent! ${(System.currentTimeMillis() - time).div(1000.0)}")
 
                     executorDownloads.shutdown()
                 } catch (ex: Exception) {
