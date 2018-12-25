@@ -1,9 +1,7 @@
 # SacredMagician
 A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
 
-<p align="center">
-  <img src="Screenshots/SacredMagician_NewMainPage.png">
-</p>
+![Alt text](Screenshots/SacredMagician_NewMainPage.png "SacredMagician main page.")
 
 # Features
 
@@ -37,10 +35,14 @@ A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
  * Special thanks to @andreyazimoov for testing and finding some bugs!
  * Special thanks to JetBrains for the free student license! Use this wonderful product!
 
+# Recommend to use
+ 
+ * Great [JMetro](https://github.com/JFXtras/jfxtras-styles) css styles based on Fluent Design Language and Metro!
+ * Great kotlin ui JavaFX Framework library [TornadoFx](https://github.com/edvin/tornadofx)!
+
 # In future
 
- * Improve and up stable working SacredMagician with balance.bin file.
- * Clean up and improve project source code, fixing some bugs.
+ * All tasks for the future are made! If you have idea, open Issue or send it on email me.
 
 ## Thanks for using SacredMagician! Maded with ❤, please click on ★!
 
