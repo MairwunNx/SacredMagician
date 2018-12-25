@@ -9,6 +9,7 @@ import javafx.scene.input.KeyEvent
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.Pane
 import javafx.scene.shape.Rectangle
+import javafx.scene.shape.SVGPath
 import tornadofx.*
 
 class BaseView : View(ApplicationSummary.name) {
@@ -47,9 +48,11 @@ class BaseView : View(ApplicationSummary.name) {
     val acceptAgreementsButton: Button by fxid("acceptAgreementsButton")
 
     val closeButtonRect: Rectangle by fxid("closeButtonRect")
+    val closeButtonSvg: SVGPath by fxid("closeButtonSvg")
     val applicationHeaderRect: Rectangle by fxid("applicationHeaderRect")
     val freeApplicationRamLabel: Label by fxid("freeApplicationRamLabel")
     val gitHubButtonRect: Rectangle by fxid("gitHubButtonRect")
+    val gitHubButtonSvg: SVGPath by fxid("gitHubButtonSvg")
     val openOrCreateLabel: Label by fxid("openOrCreateLabel")
     val selectFileLabel: Label by fxid("selectFileLabel")
 

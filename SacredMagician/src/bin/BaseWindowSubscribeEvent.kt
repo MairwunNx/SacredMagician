@@ -10,7 +10,16 @@ class BaseWindowSubscribeEvent {
                 ApplicationSendData.sendUseStat("github-rect")
             }
 
+            BaseViewInstance.baseViewInstance.gitHubButtonSvg.setOnMouseClicked {
+                OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician")
+                ApplicationSendData.sendUseStat("github-rect")
+            }
+
             BaseViewInstance.baseViewInstance.closeButtonRect.setOnMouseClicked {
+                OverwriteBalanceDialog.show("appExit")
+            }
+
+            BaseViewInstance.baseViewInstance.closeButtonSvg.setOnMouseClicked {
                 OverwriteBalanceDialog.show("appExit")
             }
 
