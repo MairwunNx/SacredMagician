@@ -311,62 +311,70 @@
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
                     </children>
                 </Pane>
-                <Pane fx:id="platinumSettingsPanel" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0"
-                      visible="false">
+                <Pane fx:id="platinumSettingsPanel" visible="false" layoutX="201.0" layoutY="66.0" prefHeight="488.0"
+                      prefWidth="625.0">
                     <children>
-                        <Label layoutX="146.0" layoutY="181.0" text="AW &amp; VW" textFill="WHITE">
+                        <Label layoutX="146.0" layoutY="158.0" text="AW &amp; VW" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
                         <TextField fx:id="platinumAwVwTextField" focusTraversable="false" layoutX="146.0"
-                                   layoutY="200.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
+                                   layoutY="177.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
                         <TextField fx:id="platinumHitPointsTextField" focusTraversable="false" layoutX="318.0"
-                                   layoutY="200.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
+                                   layoutY="177.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
                         <TextField fx:id="platinumResistanceTextField" focusTraversable="false" layoutX="146.0"
-                                   layoutY="258.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
+                                   layoutY="235.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
                         <TextField fx:id="platinumDamageTextField" focusTraversable="false" layoutX="318.0"
-                                   layoutY="258.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
+                                   layoutY="235.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="25.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
-                        <Label layoutX="145.0" layoutY="112.0" text="Settings" textFill="WHITE">
+                        <Label layoutX="145.0" layoutY="89.0" text="Settings" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI Semilight" size="35.0"/>
                             </font>
                         </Label>
-                        <Label layoutX="318.0" layoutY="182.0" text="HitPoints" textFill="WHITE">
+                        <Label layoutX="318.0" layoutY="159.0" text="HitPoints" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
-                        <Label layoutX="146.0" layoutY="239.0" text="Resistance" textFill="WHITE">
+                        <Label layoutX="146.0" layoutY="216.0" text="Resistance" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
-                        <Label layoutX="318.0" layoutY="240.0" text="Damage" textFill="WHITE">
+                        <Label layoutX="318.0" layoutY="217.0" text="Damage" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
-                        <Label layoutX="146.0" layoutY="297.0" text="Experience" textFill="WHITE">
+                        <Label layoutX="146.0" layoutY="274.0" text="Experience" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
                         <TextField fx:id="platinumMinLevelTextField" focusTraversable="false" layoutX="318.0"
-                                   layoutY="316.0" onKeyPressed="#handleChangesIntBalanceBin" prefHeight="28.0"
+                                   layoutY="293.0" onKeyPressed="#handleChangesIntBalanceBin" prefHeight="28.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
-                        <Label layoutX="318.0" layoutY="297.0" text="Min Entry Level" textFill="WHITE">
+                        <Label layoutX="318.0" layoutY="274.0" text="Min Entry Level" textFill="WHITE">
                             <font>
                                 <Font name="Segoe UI" size="12.0"/>
                             </font>
                         </Label>
                         <TextField fx:id="platinumExperienceTextField" focusTraversable="false" layoutX="146.0"
-                                   layoutY="316.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="28.0"
+                                   layoutY="293.0" onKeyPressed="#handleChangesBalanceBin" prefHeight="28.0"
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
+                        <TextField fx:id="platinumMaxLevelTextField" focusTraversable="false" layoutX="146.0"
+                                   layoutY="351.0" onKeyPressed="#handleChangesIntBalanceBin" prefHeight="28.0"
+                                   prefWidth="312.0" promptText="default value" styleClass="text-field"/>
+                        <Label layoutX="146.0" layoutY="332.0" text="Max Entry Level" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="12.0"/>
+                            </font>
+                        </Label>
                     </children>
                 </Pane>
                 <Pane fx:id="niobiumSettingsPanel" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0"
@@ -617,7 +625,8 @@
                         </Label>
                     </children>
                 </Pane>
-                <Pane fx:id="notSelectedPane" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0">
+                <Pane fx:id="notSelectedPane" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0"
+                      visible="true">
                     <children>
                         <Label fx:id="selectFileLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0"
                                layoutY="218.0" text="Choose: what would you like to customize." textFill="WHITE"
