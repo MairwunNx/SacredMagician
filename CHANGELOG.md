@@ -1,4 +1,13 @@
  # Changes for SacredMagician Rv1
+  ###### Changes included in SacredMagician-1.0.1.0-261218-release-2-official (1.0.1.0.261218.R2)
+
+> - Added balance.bin MaxEntryLevel settings for platinum.
+> - Added balance.bin loading \ saving MinEntryLevel settings.
+> - Added balance.bin category skills (open-level-skills)
+> - Moved "Server > Global" to "Balance > Server"
+> - Added experience balance.bin settings fields 
+> - Improved project code. Removed redundant check fields.
+
   ###### Changes included in SacredMagician-1.0.0.0-251218-release-1-official (1.0.0.0.251218.R1)
 
 > - Fixed not closable window, if clicked on SVGPath
