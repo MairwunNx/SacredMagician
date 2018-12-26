@@ -5,8 +5,6 @@ import ApplicationLogger
 class SaveBalanceBinData {
     companion object {
         fun save() {
-            ValidateRegionTextFields.validate()
-
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.southCenterRegionTextField.text.toInt(), 22392)
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.northCenterRegionTextField.text.toInt(), 22456)
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.swampBaseRegionTextField.text.toInt(), 22520)
@@ -21,31 +19,37 @@ class SaveBalanceBinData {
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeHitPointsTextField.text.toFloat(), 1856)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeResistanceTextField.text.toFloat(), 1904)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeDamageTextField.text.toFloat(), 1880)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeExperienceTextField.text.toFloat(), 1928)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverAwVwTextField.text.toFloat(), 1812)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverHitPointsTextField.text.toFloat(), 1836)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverResistanceTextField.text.toFloat(), 1884)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverDamageTextField.text.toFloat(), 1860)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.silverExperienceTextField.text.toFloat(), 1908)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenAwVwTextField.text.toFloat(), 1816)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenHitPointsTextField.text.toFloat(), 1840)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenResistanceTextField.text.toFloat(), 1888)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenDamageTextField.text.toFloat(), 1864)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.goldenExperienceTextField.text.toFloat(), 1912)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumAwVwTextField.text.toFloat(), 1820)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumHitPointsTextField.text.toFloat(), 1844)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumResistanceTextField.text.toFloat(), 1892)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumDamageTextField.text.toFloat(), 1868)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.platinumExperienceTextField.text.toFloat(), 1916)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumAwVwTextField.text.toFloat(), 1824)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumHitPointsTextField.text.toFloat(), 1848)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumResistanceTextField.text.toFloat(), 1896)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumDamageTextField.text.toFloat(), 1872)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.niobiumExperienceTextField.text.toFloat(), 1920)
 
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalAwVwTextField.text.toFloat(), 1828)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalHitPointsTextField.text.toFloat(), 1852)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalResistanceTextField.text.toFloat(), 1900)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.globalDamageTextField.text.toFloat(), 1876)
+            SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.serverExperienceTextField.text.toFloat(), 1924)
 
             ApplicationLogger.logger.info("Balance.bin changes successfully saved to origin!")
         }

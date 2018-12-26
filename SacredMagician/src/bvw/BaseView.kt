@@ -27,7 +27,7 @@ class BaseView : View(ApplicationSummary.name) {
     var tooltip: Tooltip = Tooltip("Path unavailable, balance.bin file not created or not opened.")
 
     val balanceSettings = TreeItem<String>("Balance")
-    val serverBalanceSettings = TreeItem<String>("Server")
+    val skillsSettings = TreeItem<String>("Skills")
     val regionsQtySettings = TreeItem<String>("Regions-Qty")
     val applicationSettings = TreeItem<String>("Application")
     val updateNowItem = TreeItem<String>("Update Now!")
@@ -39,6 +39,7 @@ class BaseView : View(ApplicationSummary.name) {
     val platinumSettingsPanel: Pane by fxid("platinumSettingsPanel")
     val niobiumSettingsPanel: Pane by fxid("niobiumSettingsPanel")
     val serverSettingsPanel: Pane by fxid("serverSettingsPanel")
+    val skillsSettingsPanel: Pane by fxid("skillsSettingsPanel")
     val regionQtySettingsPanel: Pane by fxid("regionQtySettingsPanel")
     val applicationSettingsPanel: Pane by fxid("applicationSettingsPanel")
 
@@ -60,31 +61,37 @@ class BaseView : View(ApplicationSummary.name) {
     val bronzeHitPointsTextField: TextField by fxid("bronzeHitPointsTextField")
     val bronzeResistanceTextField: TextField by fxid("bronzeResistanceTextField")
     val bronzeDamageTextField: TextField by fxid("bronzeDamageTextField")
+    val bronzeExperienceTextField: TextField by fxid("bronzeExperienceTextField")
 
     val silverAwVwTextField: TextField by fxid("silverAwVwTextField")
     val silverHitPointsTextField: TextField by fxid("silverHitPointsTextField")
     val silverResistanceTextField: TextField by fxid("silverResistanceTextField")
     val silverDamageTextField: TextField by fxid("silverDamageTextField")
+    val silverExperienceTextField: TextField by fxid("silverExperienceTextField")
 
     val goldenAwVwTextField: TextField by fxid("goldenAwVwTextField")
     val goldenHitPointsTextField: TextField by fxid("goldenHitPointsTextField")
     val goldenResistanceTextField: TextField by fxid("goldenResistanceTextField")
     val goldenDamageTextField: TextField by fxid("goldenDamageTextField")
+    val goldenExperienceTextField: TextField by fxid("goldenExperienceTextField")
 
     val platinumAwVwTextField: TextField by fxid("platinumAwVwTextField")
     val platinumHitPointsTextField: TextField by fxid("platinumHitPointsTextField")
     val platinumResistanceTextField: TextField by fxid("platinumResistanceTextField")
     val platinumDamageTextField: TextField by fxid("platinumDamageTextField")
+    val platinumExperienceTextField: TextField by fxid("platinumExperienceTextField")
 
     val niobiumAwVwTextField: TextField by fxid("niobiumAwVwTextField")
     val niobiumHitPointsTextField: TextField by fxid("niobiumHitPointsTextField")
     val niobiumResistanceTextField: TextField by fxid("niobiumResistanceTextField")
     val niobiumDamageTextField: TextField by fxid("niobiumDamageTextField")
+    val niobiumExperienceTextField: TextField by fxid("niobiumExperienceTextField")
 
     val globalAwVwTextField: TextField by fxid("globalAwVwTextField")
     val globalHitPointsTextField: TextField by fxid("globalHitPointsTextField")
     val globalResistanceTextField: TextField by fxid("globalResistanceTextField")
     val globalDamageTextField: TextField by fxid("globalDamageTextField")
+    val serverExperienceTextField: TextField by fxid("serverExperienceTextField")
 
     val southCenterRegionTextField: TextField by fxid("southCenterRegionTextField")
     val northCenterRegionTextField: TextField by fxid("northCenterRegionTextField")
@@ -137,6 +144,19 @@ class BaseView : View(ApplicationSummary.name) {
 
         s.textProperty().addListener { _, oldValue, newValue ->
             if (!newValue.matches("\\d*".toRegex())) s.text = newValue.replace("[^\\d.]".toRegex(), "")
+
+            if (newValue.length > ApplicationSummary.maxLength) s.text = oldValue
+        }
+
+        if (!ApplicationSummary.binPath.isEmpty()) balanceBinFileChanged = true
+    }
+
+    @FXML @Suppress("unused")
+    private fun handleChangesIntBalanceBin(e: KeyEvent) {
+        val s = e.source as TextField
+
+        s.textProperty().addListener { _, oldValue, newValue ->
+            if (!newValue.matches("\\d*".toRegex())) s.text = newValue.replace("[^\\d]".toRegex(), "")
 
             if (newValue.length > ApplicationSummary.maxLength) s.text = oldValue
         }
