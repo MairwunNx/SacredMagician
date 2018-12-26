@@ -68,24 +68,28 @@ class BaseView : View(ApplicationSummary.name) {
     val silverResistanceTextField: TextField by fxid("silverResistanceTextField")
     val silverDamageTextField: TextField by fxid("silverDamageTextField")
     val silverExperienceTextField: TextField by fxid("silverExperienceTextField")
+    val silverMinLevelTextField: TextField by fxid("silverMinLevelTextField")
 
     val goldenAwVwTextField: TextField by fxid("goldenAwVwTextField")
     val goldenHitPointsTextField: TextField by fxid("goldenHitPointsTextField")
     val goldenResistanceTextField: TextField by fxid("goldenResistanceTextField")
     val goldenDamageTextField: TextField by fxid("goldenDamageTextField")
     val goldenExperienceTextField: TextField by fxid("goldenExperienceTextField")
+    val goldenMinLevelTextField: TextField by fxid("goldenMinLevelTextField")
 
     val platinumAwVwTextField: TextField by fxid("platinumAwVwTextField")
     val platinumHitPointsTextField: TextField by fxid("platinumHitPointsTextField")
     val platinumResistanceTextField: TextField by fxid("platinumResistanceTextField")
     val platinumDamageTextField: TextField by fxid("platinumDamageTextField")
     val platinumExperienceTextField: TextField by fxid("platinumExperienceTextField")
+    val platinumMinLevelTextField: TextField by fxid("platinumMinLevelTextField")
 
     val niobiumAwVwTextField: TextField by fxid("niobiumAwVwTextField")
     val niobiumHitPointsTextField: TextField by fxid("niobiumHitPointsTextField")
     val niobiumResistanceTextField: TextField by fxid("niobiumResistanceTextField")
     val niobiumDamageTextField: TextField by fxid("niobiumDamageTextField")
     val niobiumExperienceTextField: TextField by fxid("niobiumExperienceTextField")
+    val niobiumMinLevelTextField: TextField by fxid("niobiumMinLevelTextField")
 
     val globalAwVwTextField: TextField by fxid("globalAwVwTextField")
     val globalHitPointsTextField: TextField by fxid("globalHitPointsTextField")
