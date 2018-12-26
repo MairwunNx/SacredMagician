@@ -27,7 +27,7 @@ class BaseView : View(ApplicationSummary.name) {
     var tooltip: Tooltip = Tooltip("Path unavailable, balance.bin file not created or not opened.")
 
     val balanceSettings = TreeItem<String>("Balance")
-    val skillsSettings = TreeItem<String>("Skills")
+    val skillsSettings = TreeItem<String>("Player-Skills")
     val regionsQtySettings = TreeItem<String>("Regions-Qty")
     val applicationSettings = TreeItem<String>("Application")
     val updateNowItem = TreeItem<String>("Update Now!")
