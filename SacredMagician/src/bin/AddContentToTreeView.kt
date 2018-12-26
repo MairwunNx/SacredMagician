@@ -33,7 +33,7 @@ class AddContentToTreeView {
                 BaseViewInstance.baseViewInstance.platinumSettingsPanel.isVisible = isNeededPane("Platinum")
                 BaseViewInstance.baseViewInstance.niobiumSettingsPanel.isVisible = isNeededPane("Niobium")
                 BaseViewInstance.baseViewInstance.serverSettingsPanel.isVisible = isNeededPane("Server")
-                BaseViewInstance.baseViewInstance.skillsSettingsPanel.isVisible = isNeededPane("Skills")
+                BaseViewInstance.baseViewInstance.skillsSettingsPanel.isVisible = isNeededPane("Player-Skills")
                 BaseViewInstance.baseViewInstance.regionQtySettingsPanel.isVisible = isNeededPane("Regions-Qty")
                 BaseViewInstance.baseViewInstance.applicationSettingsPanel.isVisible = isNeededPane("Application")
 
