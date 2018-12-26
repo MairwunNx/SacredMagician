@@ -14,6 +14,9 @@ A powerful balance.bin editor for Sacred and Sacred Underworld, on Kotlin JVM.
  * Writed on simple, beautiful and cool language "Kotlin" under JVM.
  * Constant support and updates, bug fixes, help with editing balance files.
  * Ability to creating \ generating balance files, without problems!
+ * Ability to change entry bronze \ silver \ gold and etc levels!
+ * Ability to change experience modifier to bronze \ silver and etc levels!
+ * Ability to change open new skills level (3, 6 and etc)!
  * Restricted not-needed keys, allowed only numbers and "."!
  * Data length control, and safe saving data pasted in textfields!
  * International English we all love! Say "Hello" to all people! 
