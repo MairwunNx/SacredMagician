@@ -15,6 +15,13 @@ class SaveBalanceBinData {
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.upperUnderworldTextField.text.toInt(), 22840)
             SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.lowerBaseRegionTextField.text.toInt(), 22904)
 
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.firstSkillTextField.text.toInt(), 780)
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.secondSkillTextField.text.toInt(), 784)
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.thirdSkillTextField.text.toInt(), 788)
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.fourthSkillTextField.text.toInt(), 792)
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.fifthSkillTextField.text.toInt(), 796)
+            SetBinDataToOffset.setInt(BaseViewInstance.baseViewInstance.sixthSkillTextField.text.toInt(), 800)
+
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeAwVwTextField.text.toFloat(), 1832)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeHitPointsTextField.text.toFloat(), 1856)
             SetBinDataToOffset.setFloat(BaseViewInstance.baseViewInstance.bronzeResistanceTextField.text.toFloat(), 1904)

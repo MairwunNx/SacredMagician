@@ -13,6 +13,13 @@ class LoadBalanceBinData {
             BaseViewInstance.baseViewInstance.upperUnderworldTextField.text = GetBinDataByOffset.get(22840, false).toString()
             BaseViewInstance.baseViewInstance.lowerBaseRegionTextField.text = GetBinDataByOffset.get(22904, false).toString()
 
+            BaseViewInstance.baseViewInstance.firstSkillTextField.text = GetBinDataByOffset.get(780, false).toString()
+            BaseViewInstance.baseViewInstance.secondSkillTextField.text = GetBinDataByOffset.get(784, false).toString()
+            BaseViewInstance.baseViewInstance.thirdSkillTextField.text = GetBinDataByOffset.get(788, false).toString()
+            BaseViewInstance.baseViewInstance.fourthSkillTextField.text = GetBinDataByOffset.get(792, false).toString()
+            BaseViewInstance.baseViewInstance.fifthSkillTextField.text = GetBinDataByOffset.get(796, false).toString()
+            BaseViewInstance.baseViewInstance.sixthSkillTextField.text = GetBinDataByOffset.get(800, false).toString()
+
             BaseViewInstance.baseViewInstance.bronzeAwVwTextField.text = GetBinDataByOffset.get(1832, true).toString()
             BaseViewInstance.baseViewInstance.bronzeHitPointsTextField.text = GetBinDataByOffset.get(1856, true).toString()
             BaseViewInstance.baseViewInstance.bronzeResistanceTextField.text = GetBinDataByOffset.get(1904, true).toString()

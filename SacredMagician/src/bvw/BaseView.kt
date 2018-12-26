@@ -108,6 +108,13 @@ class BaseView : View(ApplicationSummary.name) {
     val upperUnderworldTextField: TextField by fxid("upperUnderworldTextField")
     val lowerBaseRegionTextField: TextField by fxid("lowerBaseRegionTextField")
 
+    val firstSkillTextField: TextField by fxid("firstSkillTextField")
+    val secondSkillTextField: TextField by fxid("secondSkillTextField")
+    val thirdSkillTextField: TextField by fxid("thirdSkillTextField")
+    val fourthSkillTextField: TextField by fxid("fourthSkillTextField")
+    val fifthSkillTextField: TextField by fxid("fifthSkillTextField")
+    val sixthSkillTextField: TextField by fxid("sixthSkillTextField")
+
     val newFileMenuItem: MenuItem by fxid("newFileMenuItem")
     val openFileMenuItem: MenuItem by fxid("openFileMenuItem")
     val openRecentFileMenu: Menu by fxid("openRecentFileMenu")
