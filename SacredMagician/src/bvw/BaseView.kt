@@ -83,6 +83,7 @@ class BaseView : View(ApplicationSummary.name) {
     val platinumDamageTextField: TextField by fxid("platinumDamageTextField")
     val platinumExperienceTextField: TextField by fxid("platinumExperienceTextField")
     val platinumMinLevelTextField: TextField by fxid("platinumMinLevelTextField")
+    val platinumMaxLevelTextField: TextField by fxid("platinumMaxLevelTextField")
 
     val niobiumAwVwTextField: TextField by fxid("niobiumAwVwTextField")
     val niobiumHitPointsTextField: TextField by fxid("niobiumHitPointsTextField")

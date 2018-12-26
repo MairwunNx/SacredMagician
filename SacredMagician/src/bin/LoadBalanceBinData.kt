@@ -39,7 +39,7 @@ class LoadBalanceBinData {
             BaseViewInstance.baseViewInstance.platinumDamageTextField.text = GetBinDataByOffset.get(1868, true).toString()
             BaseViewInstance.baseViewInstance.platinumExperienceTextField.text = GetBinDataByOffset.get(1916, true).toString()
             BaseViewInstance.baseViewInstance.platinumMinLevelTextField.text = GetBinDataByOffset.get(2496, false).toString()
-            //todo: add max entry level to platinum
+            BaseViewInstance.baseViewInstance.platinumMaxLevelTextField.text = GetBinDataByOffset.get(2504, false).toString()
 
             BaseViewInstance.baseViewInstance.niobiumAwVwTextField.text = GetBinDataByOffset.get(1824, true).toString()
             BaseViewInstance.baseViewInstance.niobiumHitPointsTextField.text = GetBinDataByOffset.get(1848, true).toString()
