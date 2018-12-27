@@ -46,24 +46,22 @@
  *                                                                             *
  ******************************************************************************/
 
-.button, .toggle-button {
-    background_color: #333333;
-    background_pressed_color: #666666;
+ .button, .toggle-button {
+    background_color: #333;
 
+    background_pressed_color: #666;
+    background_pressed_default_color: #666;
+    border_pressed_default_color: #666;
+
+    border_hover_default_color: #66AEE7;
+    border_hover_selected_color: #66AEE7;
+    
     border_hover_color: #858585;
 
     text_color: white;
     default_button_text_color: white;
 
     focus_ring_border_color: white;
-}
-
-.button {
-    border_hover_default_color: derive(accent_color, 70%);
-}
-
-.toggle-button {
-    border_hover_selected_color: derive(accent_color, 70%);
 }
 
 /*******************************************************************************

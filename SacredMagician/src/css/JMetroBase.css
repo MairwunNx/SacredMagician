@@ -46,10 +46,9 @@
  *                                                                             *
  ******************************************************************************/
 
-.button, .toggle-button {
+ .button, .toggle-button {
     -shrink-animate-on-press: true;
 }
-
 
 .button, .toggle-button {
     -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
@@ -66,7 +65,7 @@
     -fx-text-fill: text_color;
 }
 
-.button:hover, .toggle-button:hover{
+.button:hover, .toggle-button:hover {
     -fx-border-color: border_hover_color;
 }
 
@@ -105,12 +104,13 @@
     -fx-text-fill: default_button_text_color;
 }
 
-.button:default:hover{
+.button:default:hover {
     -fx-border-color: border_hover_default_color;
 }
 
 .button:default:pressed {
-    -fx-background-color: derive(accent_color, -40%);
+    -fx-background-color: border_pressed_default_color;
+    -fx-border-color: background_pressed_default_color;
 }
 
 /**************************** Toggle Button ***********************************/
@@ -129,7 +129,8 @@
 }
 
 .toggle-button:selected:pressed {
-    -fx-background-color: derive(accent_color, -40%);
+    -fx-background-color: border_pressed_default_color;
+    -fx-border-color: background_pressed_default_color;
 }
 
 /*******************************************************************************
