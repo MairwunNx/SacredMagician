@@ -107,30 +107,36 @@
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
-                                <MenuItem fx:id="readChangeLogMenuItem" mnemonicParsing="false" text="Change Log">
+                                <MenuItem fx:id="openSources" mnemonicParsing="false" text="Project Sources">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="F2" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
-                                <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem fx:id="supportMailMenuItem" mnemonicParsing="false" text="Support Mail">
+                                <MenuItem fx:id="readChangeLogMenuItem" mnemonicParsing="false" text="Change Log">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="F3" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem fx:id="donateMenuItem" mnemonicParsing="false" text="Donate">
+                                <MenuItem fx:id="supportMailMenuItem" mnemonicParsing="false" text="Support Mail">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="F4" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>
                                 <SeparatorMenuItem mnemonicParsing="false"/>
-                                <MenuItem fx:id="applicationAboutMenuItem" mnemonicParsing="false" text="About">
+                                <MenuItem fx:id="donateMenuItem" mnemonicParsing="false" text="Let's Donate">
                                     <accelerator>
-                                        <KeyCodeCombination alt="UP" code="F7" control="DOWN" meta="UP" shift="UP"
+                                        <KeyCodeCombination alt="UP" code="F5" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="applicationAboutMenuItem" mnemonicParsing="false" text="About Project">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F6" control="DOWN" meta="UP" shift="UP"
                                                             shortcut="UP"/>
                                     </accelerator>
                                 </MenuItem>

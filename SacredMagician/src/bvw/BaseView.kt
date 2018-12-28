@@ -129,6 +129,7 @@ class BaseView : View(ApplicationSummary.name) {
     val applicationExitMenuItem: MenuItem by fxid("applicationExitMenuItem")
 
     val readLicenseMenuItem: MenuItem by fxid("readLicenseMenuItem")
+    val openSources: MenuItem by fxid("openSources")
     val readChangeLogMenuItem: MenuItem by fxid("readChangeLogMenuItem")
     val supportMailMenuItem: MenuItem by fxid("supportMailMenuItem")
     val donateMenuItem: MenuItem by fxid("donateMenuItem")

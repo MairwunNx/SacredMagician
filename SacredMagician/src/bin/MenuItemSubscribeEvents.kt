@@ -42,6 +42,11 @@ class MenuItemSubscribeEvents {
                 ApplicationSendData.sendUseStat("read-license")
             }
 
+            BaseViewInstance.baseViewInstance.openSources.action {
+                OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician")
+                ApplicationSendData.sendUseStat("open-sources")
+            }
+
             BaseViewInstance.baseViewInstance.readChangeLogMenuItem.action {
                 OpenBrowserLink.open("https://github.com/MairwunNx/SacredMagician/blob/master/CHANGELOG.md")
                 ApplicationSendData.sendUseStat("change-log")
