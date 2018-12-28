@@ -1,21 +1,21 @@
 package bin
 
 import ApplicationSummary
-import java.awt.FileDialog
-import java.awt.Frame
+import javafx.stage.FileChooser
 
 class OpenExistsFileDialog {
     companion object {
         fun show() {
-            val openDialog = FileDialog(Frame(), "Select Open File Directory", FileDialog.LOAD)
+            val fileChooser = FileChooser()
+            val extFilter = FileChooser.ExtensionFilter("Sacred binary files (*.bin)", "*.bin")
 
-            openDialog.file = "*.bin"
-            openDialog.isVisible = true
+            fileChooser.extensionFilters.add(extFilter)
+            fileChooser.selectedExtensionFilter = extFilter
 
-            if (openDialog.directory != null || openDialog.file != null) {
-                val filePath = openDialog.directory + openDialog.file
+            try {
+                val file = fileChooser.showOpenDialog(BaseViewInstance.baseViewInstance.root.scene.window)
 
-                ApplicationSummary.binPath = filePath
+                ApplicationSummary.binPath = file.path
                 BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
                 BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
@@ -27,6 +27,8 @@ class OpenExistsFileDialog {
                 LoadBalanceBinData.load()
 
                 ApplicationSendData.sendUseStat("open-file")
+            } catch (ex: Exception) {
+                AppPrintStackTrace.print(ex)
             }
         }
     }
