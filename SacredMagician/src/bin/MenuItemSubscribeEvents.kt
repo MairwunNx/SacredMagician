@@ -59,7 +59,6 @@ class MenuItemSubscribeEvents {
 
             BaseViewInstance.baseViewInstance.applicationAboutMenuItem.action {
                 BaseViewInstance.baseViewInstance.aboutPane.isVisible = true
-
                 ApplicationSendData.sendUseStat("about")
             }
         }
