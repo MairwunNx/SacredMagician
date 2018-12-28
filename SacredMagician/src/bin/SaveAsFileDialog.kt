@@ -1,24 +1,24 @@
 package bin
 
 import ApplicationSummary
-import java.awt.FileDialog
-import java.awt.Frame
+import javafx.stage.FileChooser
 import java.io.File
 
 class SaveAsFileDialog {
     companion object {
         fun open() {
-            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+            val fileChooser = FileChooser()
+            val extFilter = FileChooser.ExtensionFilter("Sacred binary files (*.bin)", "*.bin")
 
-            saveDialog.file = "balance.bin"
-            saveDialog.isVisible = true
+            fileChooser.extensionFilters.add(extFilter)
+            fileChooser.selectedExtensionFilter = extFilter
 
-            if (saveDialog.directory != null || saveDialog.file != null) {
-                val filePath = saveDialog.directory + saveDialog.file
+            try {
+                val file = fileChooser.showSaveDialog(BaseViewInstance.baseViewInstance.root.scene.window)
 
                 val initialStream = SaveAsFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
 
-                ApplicationSummary.binPath = filePath
+                ApplicationSummary.binPath = file.path
                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                 SaveBalanceBinData.save()
@@ -26,6 +26,8 @@ class SaveAsFileDialog {
                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
 
                 ApplicationSendData.sendUseStat("save-as")
+            } catch (ex: Exception) {
+                AppPrintStackTrace.print(ex)
             }
         }
     }
