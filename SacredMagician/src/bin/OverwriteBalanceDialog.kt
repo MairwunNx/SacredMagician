@@ -4,8 +4,7 @@ import ApplicationSummary
 import javafx.scene.control.Alert
 import javafx.scene.control.ButtonBar
 import javafx.scene.control.ButtonType
-import java.awt.FileDialog
-import java.awt.Frame
+import javafx.stage.FileChooser
 import java.io.File
 
 class OverwriteBalanceDialog {
@@ -26,17 +25,17 @@ class OverwriteBalanceDialog {
 
                     alert.showAndWait().ifPresent { type ->
                         if (type == okButton) {
-                            val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+                            val fileChooser = FileChooser()
+                            val extFilter = FileChooser.ExtensionFilter("Sacred binary files (*.bin)", "*.bin")
 
-                            saveDialog.file = "balance.bin"
-                            saveDialog.isVisible = true
+                            fileChooser.extensionFilters.add(extFilter)
+                            fileChooser.selectedExtensionFilter = extFilter
 
-                            if (saveDialog.directory != null || saveDialog.file != null) {
-                                val filePath = saveDialog.directory + saveDialog.file
+                            try {
+                                val file = fileChooser.showSaveDialog(BaseViewInstance.baseViewInstance.root.scene.window)
+                                ApplicationSummary.binPath = file.path
 
-                                val initialStream = OverwriteBalanceDialog::class.java.getResourceAsStream("/etc/balance.bin")
-
-                                ApplicationSummary.binPath = filePath
+                                val initialStream = LoadOpenRecentData::class.java.getResourceAsStream("/etc/balance.bin")
                                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
@@ -44,6 +43,8 @@ class OverwriteBalanceDialog {
 
                                 SaveBalanceBinData.save()
                                 dialogTypesResults(dialogType)
+                            } catch (ex: Exception) {
+                                AppPrintStackTrace.print(ex)
                             }
                         } else if (type == noButton) dialogTypesResults(dialogType)
                     }
