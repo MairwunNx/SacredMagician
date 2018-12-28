@@ -1,34 +1,38 @@
 package bin
 
 import ApplicationSummary
-import java.awt.FileDialog
-import java.awt.Frame
+import javafx.stage.FileChooser
 import java.io.File
 
 class CreateNewFileDialog {
     companion object {
         fun show() {
-            val saveDialog = FileDialog(Frame(), "Select New File Directory", FileDialog.SAVE)
-            saveDialog.file = "balance.bin"
-            saveDialog.isVisible = true
+            val fileChooser = FileChooser()
+            val extFilter = FileChooser.ExtensionFilter("Sacred binary files (*.bin)", "*.bin")
 
-            if (saveDialog.directory == null || saveDialog.file == null) return
+            fileChooser.extensionFilters.add(extFilter)
+            fileChooser.selectedExtensionFilter = extFilter
 
-            val filePath = saveDialog.directory + saveDialog.file
-            val initialStream = CreateNewFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
-            File(filePath).outputStream().use { initialStream.copyTo(it) }
+            try {
+                val file = fileChooser.showSaveDialog(BaseViewInstance.baseViewInstance.root.scene.window)
 
-            ApplicationSummary.binPath = filePath
-            BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
-            BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
-            BaseViewInstance.baseViewInstance.treeView.isDisable = false
-            BaseViewInstance.baseViewInstance.openOrCreateLabel.isVisible = false
-            BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
+                val initialStream = CreateNewFileDialog::class.java.getResourceAsStream("/etc/balance.bin")
+                File(file.path).outputStream().use { initialStream.copyTo(it) }
 
-            AddFilePathToRecent.add()
-            LoadBalanceBinData.load()
+                ApplicationSummary.binPath = file.path
+                BaseViewInstance.baseViewInstance.currentPathLabel.text = ApplicationSummary.binPath
+                BaseViewInstance.baseViewInstance.balanceBinFileOpened = true
+                BaseViewInstance.baseViewInstance.treeView.isDisable = false
+                BaseViewInstance.baseViewInstance.openOrCreateLabel.isVisible = false
+                BaseViewInstance.baseViewInstance.selectFileLabel.isVisible = true
 
-            ApplicationSendData.sendUseStat("new-file")
+                AddFilePathToRecent.add()
+                LoadBalanceBinData.load()
+
+                ApplicationSendData.sendUseStat("new-file")
+            } catch (ex: Exception) {
+                AppPrintStackTrace.print(ex)
+            }
         }
     }
 }
