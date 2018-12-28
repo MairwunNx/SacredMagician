@@ -5,14 +5,22 @@ import ApplicationSummary
 import javafx.scene.control.Alert
 import javafx.scene.control.ButtonBar
 import javafx.scene.control.ButtonType
+import javafx.stage.FileChooser
 import tornadofx.*
-import java.awt.FileDialog
-import java.awt.Frame
 import java.io.File
+import java.io.PrintWriter
 
 class LoadOpenRecentData {
     companion object {
-        fun load() {
+        fun load(removeOldElements: Boolean = false) {
+            if (removeOldElements) {
+                try {
+                    BaseViewInstance.baseViewInstance.openRecentFileMenu.items.clear()
+                } catch (ex: Exception) {
+                    AppPrintStackTrace.print(ex)
+                }
+            }
+
             ReadOpenRecentFile.read().forEach { i ->
                 BaseViewInstance.baseViewInstance.openRecentFileMenu.item(i).action {
                     if (BaseViewInstance.baseViewInstance.balanceBinFileOpened) {
@@ -30,18 +38,17 @@ class LoadOpenRecentData {
 
                             alert.showAndWait().ifPresent { type ->
                                 if (type == okButton) {
-                                    val saveDialog = FileDialog(Frame(), "Select Save Directory", FileDialog.SAVE)
+                                    val fileChooser = FileChooser()
+                                    val extFilter = FileChooser.ExtensionFilter("Sacred binary files (*.bin)", "*.bin")
 
-                                    saveDialog.file = "balance.bin"
-                                    saveDialog.isVisible = true
+                                    fileChooser.extensionFilters.add(extFilter)
+                                    fileChooser.selectedExtensionFilter = extFilter
 
-                                    if (saveDialog.directory != null || saveDialog.file != null) {
-                                        val filePath = saveDialog.directory + saveDialog.file
+                                    try {
+                                        val file = fileChooser.showSaveDialog(BaseViewInstance.baseViewInstance.root.scene.window)
+                                        ApplicationSummary.binPath = file.path
 
                                         val initialStream = LoadOpenRecentData::class.java.getResourceAsStream("/etc/balance.bin")
-
-                                        ApplicationSummary.binPath = filePath
-
                                         File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                                         BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
@@ -49,6 +56,8 @@ class LoadOpenRecentData {
 
                                         SaveBalanceBinData.save()
                                         OpenRecentOpenPath.open(i)
+                                    } catch (ex: Exception) {
+                                        AppPrintStackTrace.print(ex)
                                     }
                                 } else if (type == noButton) OpenRecentOpenPath.open(i)
                             }
@@ -61,6 +70,16 @@ class LoadOpenRecentData {
                 }
 
                 ApplicationLogger.logger.info("Successfully loaded path: $i")
+            }
+
+            if (BaseViewInstance.baseViewInstance.openRecentFileMenu.items.count() != 0) {
+                BaseViewInstance.baseViewInstance.openRecentFileMenu.separator()
+                BaseViewInstance.baseViewInstance.openRecentFileMenu.item("Remove saved open-recent patches").action {
+                    ApplicationLogger.logger.info("Starting removing open recent patches ...")
+                    BaseViewInstance.baseViewInstance.openRecentFileMenu.items.clear()
+                    PrintWriter("\$SacredMagician\\conf\\app.rcnt.txt").close()
+                    ApplicationLogger.logger.info("Removing open recent patches done!")
+                }
             }
         }
     }

@@ -28,6 +28,7 @@ class CreateNewFileDialog {
 
                 AddFilePathToRecent.add()
                 LoadBalanceBinData.load()
+                LoadOpenRecentData.load(true)
 
                 ApplicationSendData.sendUseStat("new-file")
             } catch (ex: Exception) {
