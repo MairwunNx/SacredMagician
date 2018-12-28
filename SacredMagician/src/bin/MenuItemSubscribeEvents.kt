@@ -1,7 +1,5 @@
 package bin
 
-import ApplicationSummary
-import javafx.scene.control.Alert
 import tornadofx.*
 
 class MenuItemSubscribeEvents {
@@ -60,12 +58,7 @@ class MenuItemSubscribeEvents {
             }
 
             BaseViewInstance.baseViewInstance.applicationAboutMenuItem.action {
-                val alert = Alert(Alert.AlertType.INFORMATION)
-
-                alert.headerText = ""
-                alert.title = "About SacredMagician"
-                alert.contentText = "SacredMagician Release Version: ${ApplicationSummary.version}\nSacredMagician Alpha Version: ${ApplicationSummary.aVersion}\nSacredMagician Version Type: ${ApplicationSummary.type}\nSacredMagician Build: ${ApplicationSummary.build}\n\nThanks for using SacredMagician Balance editor!\n\nAuthor: MairwunNx, Licensed Under Apache 2.0"
-                alert.show()
+                BaseViewInstance.baseViewInstance.aboutPane.isVisible = true
 
                 ApplicationSendData.sendUseStat("about")
             }

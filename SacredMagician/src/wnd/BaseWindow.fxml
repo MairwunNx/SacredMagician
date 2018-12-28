@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.Cursor?>
+<?import javafx.scene.*?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.input.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -311,8 +313,8 @@
                                    prefWidth="139.0" promptText="default value" styleClass="text-field"/>
                     </children>
                 </Pane>
-                <Pane fx:id="platinumSettingsPanel" visible="false" layoutX="201.0" layoutY="66.0" prefHeight="488.0"
-                      prefWidth="625.0">
+                <Pane fx:id="platinumSettingsPanel" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0"
+                      visible="false">
                     <children>
                         <Label layoutX="146.0" layoutY="158.0" text="AW &amp; VW" textFill="WHITE">
                             <font>
@@ -625,8 +627,7 @@
                         </Label>
                     </children>
                 </Pane>
-                <Pane fx:id="notSelectedPane" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0"
-                      visible="true">
+                <Pane fx:id="notSelectedPane" layoutX="201.0" layoutY="66.0" prefHeight="488.0" prefWidth="625.0">
                     <children>
                         <Label fx:id="selectFileLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0"
                                layoutY="218.0" text="Choose: what would you like to customize." textFill="WHITE"
@@ -683,8 +684,8 @@
                 <Pane fx:id="licenseAgreementPane" layoutX="-1.0" layoutY="36.0" prefHeight="518.0" prefWidth="827.0"
                       visible="false">
                     <children>
-                        <Rectangle fx:id="dialogBackground" height="517.0" layoutX="1.0" opacity="0.66" stroke="#2b2b2b"
-                                   strokeType="INSIDE" strokeWidth="0.0" width="825.0"/>
+                        <Rectangle fx:id="dialogBackground" height="517.0" layoutX="1.5" opacity="0.66" stroke="#2b2b2b"
+                                   strokeType="INSIDE" strokeWidth="0.0" width="824.0"/>
                         <Pane fx:id="licenseDialogPane" layoutX="169.0" layoutY="135.0" prefHeight="249.0"
                               prefWidth="490.0" styleClass="background">
                             <children>
@@ -725,6 +726,82 @@
                                         <Font name="Segoe UI Semilight" size="12.0"/>
                                     </font>
                                 </Button>
+                            </children>
+                            <effect>
+                                <DropShadow/>
+                            </effect>
+                        </Pane>
+                    </children>
+                </Pane>
+                <Pane fx:id="aboutPane" layoutX="-1.0" layoutY="36.0" prefHeight="518.0" prefWidth="827.0"
+                      visible="false">
+                    <children>
+                        <Rectangle fx:id="aboutDialogBackground" height="517.0" layoutX="1.5" opacity="0.66"
+                                   stroke="#2b2b2b" strokeType="INSIDE" strokeWidth="0.0" width="824.0"/>
+                        <Pane fx:id="aboutDialogPane" layoutX="169.0" layoutY="140.0" prefHeight="235.0"
+                              prefWidth="490.0" styleClass="background">
+                            <children>
+                                <Label focusTraversable="false" layoutX="32.0" layoutY="21.0" text="About"
+                                       textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI Semilight" size="30.0"/>
+                                    </font>
+                                </Label>
+                                <Label focusTraversable="false" layoutX="31.0" layoutY="78.0"
+                                       text="SacredMagician Version: 1.0.1.1.291218.R3" textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0"/>
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="123.0" layoutY="29.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ico/SacredMagician.png"/>
+                                    </image>
+                                    <viewport>
+                                        <Rectangle2D/>
+                                    </viewport>
+                                </ImageView>
+                                <Label focusTraversable="false" layoutX="31.0" layoutY="103.0"
+                                       text="SacredMagician Version Type: Release \ Official" textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0"/>
+                                    </font>
+                                </Label>
+                                <Label focusTraversable="false" layoutX="31.0" layoutY="127.0"
+                                       text="SacredMagician Build Number: 112" textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI" size="16.0"/>
+                                    </font>
+                                </Label>
+                                <Label focusTraversable="false" layoutX="31.0" layoutY="169.0"
+                                       text="Thanks for using SacredMagician! &lt;&gt; with ❤ by MairwunNx"
+                                       textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Label focusTraversable="false" layoutX="31.0" layoutY="189.0"
+                                       text="Licensed under apache license version 2.0." textFill="WHITE">
+                                    <font>
+                                        <Font name="Segoe UI" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Rectangle fx:id="closeDialogButtonRect" fill="TRANSPARENT" height="25.0"
+                                           layoutX="431.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE"
+                                           strokeWidth="0.0" width="25.0">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </Rectangle>
+                                <SVGPath fx:id="closeDialogButtonSvg"
+                                         content="M 10.828125 8.671875 L 8.671875 10.828125 L 21.84375 24 L 8.671875 37.171875 L 10.828125 39.328125 L 24 26.15625 L 37.171875 39.328125 L 39.328125 37.171875 L 26.15625 24 L 39.328125 10.828125 L 37.171875 8.671875 L 24 21.84375 Z"
+                                         fill="#868686" fillRule="EVEN_ODD" layoutX="420.0" layoutY="17.0" scaleX="0.35"
+                                         scaleY="0.35" stroke="BLACK" strokeWidth="0.0">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </SVGPath>
                             </children>
                             <effect>
                                 <DropShadow/>

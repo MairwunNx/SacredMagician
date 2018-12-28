@@ -43,6 +43,11 @@ class BaseView : View(ApplicationSummary.name) {
     val regionQtySettingsPanel: Pane by fxid("regionQtySettingsPanel")
     val applicationSettingsPanel: Pane by fxid("applicationSettingsPanel")
 
+    val aboutPane: Pane by fxid("aboutPane")
+    val closeDialogButtonRect: Rectangle by fxid("closeDialogButtonRect")
+    val closeDialogButtonSvg: SVGPath by fxid("closeDialogButtonSvg")
+    val aboutDialogBackground: Rectangle by fxid("aboutDialogBackground")
+
     val licenseAgreementPane: Pane by fxid("licenseAgreementPane")
     val readLicenseButton: Button by fxid("readLicenseButton")
     val closeAppButton: Button by fxid("closeAppButton")

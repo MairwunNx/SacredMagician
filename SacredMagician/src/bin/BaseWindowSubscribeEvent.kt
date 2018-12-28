@@ -53,6 +53,18 @@ class BaseWindowSubscribeEvent {
 
             BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = !GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements").toBoolean()
 
+            BaseViewInstance.baseViewInstance.closeDialogButtonRect.setOnMouseClicked {
+                BaseViewInstance.baseViewInstance.aboutPane.isVisible = false
+            }
+
+            BaseViewInstance.baseViewInstance.closeDialogButtonSvg.setOnMouseClicked {
+                BaseViewInstance.baseViewInstance.aboutPane.isVisible = false
+            }
+
+            BaseViewInstance.baseViewInstance.aboutDialogBackground.setOnMouseClicked {
+                BaseViewInstance.baseViewInstance.aboutPane.isVisible = false
+            }
+
             MenuItemSubscribeEvents.subscribe()
         }
     }
