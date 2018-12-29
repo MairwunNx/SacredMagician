@@ -1,12 +1,26 @@
  # Changes for SacredMagician Rv1
+  ###### Changes included in SacredMagician-1.0.1.1-291218-release-3-official (1.0.1.1.291218.R3)
+
+> - Fixed not fully correctly JMetro button colors 
+> - Now used normal JavaFx dialogs - correct dialogs behavior
+> - Re-designed SacredMagician project about window
+> - Fixed app border overlap with dialogs backgrounds
+> - Fixed bug with not loaded open-recent pathes with spaces
+> - Added live-time adding open-recent file patche
+> - Added application "open sources" item to help menu
+> - Improved project code. Fixed startup crash on Linux systems
+> - Added "Open in Explorer" ContextMenu for currentPath label
+> - Added ability to collect garbage if clicked on RamLabel
+> - (src) uploaded needed data for source compiling
+
   ###### Changes included in SacredMagician-1.0.1.0-261218-release-2-official (1.0.1.0.261218.R2)
 
-> - Added balance.bin MaxEntryLevel settings for platinum.
-> - Added balance.bin loading \ saving MinEntryLevel settings.
+> - Added balance.bin MaxEntryLevel settings for platinum
+> - Added balance.bin loading \ saving MinEntryLevel settings
 > - Added balance.bin category skills (open-level-skills)
 > - Moved "Server > Global" to "Balance > Server"
 > - Added experience balance.bin settings fields 
-> - Improved project code. Removed redundant check fields.
+> - Improved project code. Removed redundant check fields
 
   ###### Changes included in SacredMagician-1.0.0.0-251218-release-1-official (1.0.0.0.251218.R1)
 
