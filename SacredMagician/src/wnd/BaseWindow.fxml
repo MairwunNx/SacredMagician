@@ -743,7 +743,7 @@
                         </font>
                     </Label>
                     <Label layoutX="31.0" layoutY="127.0"
-                           text="SacredMagician Build Number: 112" textFill="WHITE">
+                           text="SacredMagician Build Number: 135" textFill="WHITE">
                         <font>
                             <Font name="Segoe UI" size="16.0"/>
                         </font>
