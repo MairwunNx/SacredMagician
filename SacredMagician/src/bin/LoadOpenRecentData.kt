@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import ApplicationSummary
 import javafx.scene.control.Alert
 import javafx.scene.control.ButtonBar
@@ -77,7 +78,7 @@ class LoadOpenRecentData {
                 BaseViewInstance.baseViewInstance.openRecentFileMenu.item("Remove saved open-recent patches").action {
                     ApplicationLogger.logger.info("Starting removing open recent patches ...")
                     BaseViewInstance.baseViewInstance.openRecentFileMenu.items.clear()
-                    PrintWriter("\$SacredMagician\\conf\\app.rcnt.txt").close()
+                    PrintWriter(ApplicationPaths.openRecentFile).close()
                     ApplicationLogger.logger.info("Removing open recent patches done!")
                 }
             }

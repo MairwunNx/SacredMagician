@@ -890,7 +890,7 @@
 }
 
 .toggle-switch {
-    -thumb-move-animation-time: 100;
+    -thumb-move-animation-time: 100px;
     -toggle-display: left;
 }
 
@@ -1088,6 +1088,7 @@
 /* TODO: Below doesn't work when spinner is in SPLIT_ARROWS_HORIZONTAL and is not focused
    however it works if you are running with Scenic View attached. Should be a bug in JavaFX 8.
  */
+/*noinspection ALL*/
 .spinner:focused > .text-field,
 .spinner:contains-focus > .text-field,
 .spinner > .text-field,
@@ -1638,6 +1639,7 @@
     -fx-padding: 0em 0.75em 0em 0em;
 }
 
+/*noinspection ALL*/
 .radio-menu-item:checked > .left-container > .radio {
     -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
 
@@ -1645,6 +1647,7 @@
     -fx-scale-shape: true;
 }
 
+/*noinspection ALL*/
 .check-menu-item:checked > .left-container > .check {
     -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
 
@@ -1652,10 +1655,12 @@
     -fx-scale-shape: true;
 }
 
+/*noinspection ALL*/
 .check-menu-item:checked > .left-container {
     -fx-padding: 0em 1em 0em 0.5em;
 }
 
+/*noinspection ALL*/
 .radio-menu-item:checked > .left-container {
     -fx-padding: 0em 1em 0em 0.5em;
 }
@@ -1666,6 +1671,7 @@
     -fx-scale-shape: true;
 }
 
+/*noinspection ALL*/
 .radio-menu-item:checked > .left-container > .radio,
 .check-menu-item:checked > .left-container > .check,
 .menu > .right-container > .arrow {

@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import ApplicationSummary
 
 class CheckReleaseUpdates {
@@ -8,7 +9,7 @@ class CheckReleaseUpdates {
         fun getPermission() {
             ApplicationLogger.logger.info("Checking permission for checking release SacredMagician updates ...")
 
-            if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AutoCheckingReleaseUpdates").toBoolean()) getLatestVersion()
+            if (GetValueFromSettings.getValue(ApplicationPaths.appSettingsFile, "AutoCheckingReleaseUpdates").toBoolean()) getLatestVersion()
         }
 
         private fun getLatestVersion() {

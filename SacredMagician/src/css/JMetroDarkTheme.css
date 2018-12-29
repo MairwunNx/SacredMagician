@@ -443,6 +443,7 @@
     -fx-background-insets: 0 0 0 0, 1 0 1 0;
 }
 
+/*noinspection ALL*/
 .table-view .column-header:last-visible {
     -fx-border-color: transparent transparent table_view_border_color transparent;
 }
@@ -489,6 +490,7 @@
     -fx-padding: 0.833333em 2em 0.5em 2em;
 }
 
+/*noinspection ALL*/
 .table-cell:last-visible {
     -fx-border-color: transparent transparent transparent transparent;
 }

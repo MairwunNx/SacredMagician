@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import ApplicationSummary
 import java.net.URL
 import java.time.LocalDateTime
@@ -12,7 +13,7 @@ class ApplicationSendData {
         fun send() {
             if (!ApplicationSummary.isOnline) return
 
-            if (!GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AllowApplicationTelemetry").toBoolean()) return
+            if (!GetValueFromSettings.getValue(ApplicationPaths.appSettingsFile, "AllowApplicationTelemetry").toBoolean()) return
 
             val executorStarts = Executors.newSingleThreadExecutor()
 
@@ -35,7 +36,7 @@ class ApplicationSendData {
                 }
             }
 
-            if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended").toBoolean()) return
+            if (GetValueFromSettings.getValue(ApplicationPaths.appStatisticFile, "TelemetryDataSended").toBoolean()) return
 
             val executorDownloads = Executors.newSingleThreadExecutor()
 
@@ -51,7 +52,7 @@ class ApplicationSendData {
                     val inStream = conn.getInputStream()
                     inStream.close()
 
-                    SetValueToSettings.setValue("\$SacredMagician\\conf\\app.stat.toml", "TelemetryDataSended", "true")
+                    SetValueToSettings.setValue(ApplicationPaths.appStatisticFile, "TelemetryDataSended", "true")
 
                     ApplicationLogger.logger.info("SacredMagician anonymous statistics has been sent! ${(System.currentTimeMillis() - time).div(1000.0)}")
 
@@ -68,7 +69,7 @@ class ApplicationSendData {
             val executorSpecData = Executors.newSingleThreadExecutor()
 
             executorSpecData.submit {
-                if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AllowApplicationTelemetry").toBoolean()) {
+                if (GetValueFromSettings.getValue(ApplicationPaths.appSettingsFile, "AllowApplicationTelemetry").toBoolean()) {
                     val time = System.currentTimeMillis()
                     if (System.getProperty("user.name") != "Nynxx") {
                         val url = URL("http://mnxtelemetry.zzz.com.ua/send.php?type=sm&spec=true&stat=$stat")

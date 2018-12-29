@@ -1,5 +1,6 @@
 package bin
 
+import ApplicationPaths
 import tornadofx.*
 
 class BaseWindowSubscribeEvent {
@@ -41,7 +42,7 @@ class BaseWindowSubscribeEvent {
             BaseViewInstance.baseViewInstance.closeAppButton.action(ApplicationShutdown.Companion::shutdown)
 
             BaseViewInstance.baseViewInstance.acceptAgreementsButton.action {
-                SetValueToSettings.setValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements", "true")
+                SetValueToSettings.setValue(ApplicationPaths.appSettingsFile, "AcceptLicenseAgreements", "true")
                 BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = false
                 ApplicationSendData.sendUseStat("accept-agreements")
             }
@@ -51,7 +52,7 @@ class BaseWindowSubscribeEvent {
                 BaseViewInstance.baseViewInstance.currentPathLabel.tooltip = BaseViewInstance.baseViewInstance.tooltip
             }
 
-            BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = !GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AcceptLicenseAgreements").toBoolean()
+            BaseViewInstance.baseViewInstance.licenseAgreementPane.isVisible = !GetValueFromSettings.getValue(ApplicationPaths.appSettingsFile, "AcceptLicenseAgreements").toBoolean()
 
             BaseViewInstance.baseViewInstance.closeDialogButtonRect.setOnMouseClicked {
                 BaseViewInstance.baseViewInstance.aboutPane.isVisible = false

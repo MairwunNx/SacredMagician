@@ -1,5 +1,6 @@
 package bin
 
+import ApplicationPaths
 import javafx.scene.control.TreeItem
 import java.awt.Desktop
 import java.io.File
@@ -38,7 +39,7 @@ class AddContentToTreeView {
                 BaseViewInstance.baseViewInstance.applicationSettingsPanel.isVisible = isNeededPane("Application")
 
                 if (BaseViewInstance.baseViewInstance.treeView.selectionModel.selectedItem.value == "Update Now!") {
-                    Desktop.getDesktop().open(File("updater.jar"))
+                    Desktop.getDesktop().open(File(ApplicationPaths.updaterFile))
                     ApplicationShutdown.shutdown()
                 }
             }

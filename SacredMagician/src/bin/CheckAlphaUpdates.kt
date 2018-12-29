@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import ApplicationSummary
 import java.util.concurrent.Executors
 
@@ -13,7 +14,7 @@ class CheckAlphaUpdates {
                 executor.submit {
                     ApplicationLogger.logger.info("Checking permission for checking alpha SacredMagician updates ...")
 
-                    if (GetValueFromSettings.getValue("\$SacredMagician\\conf\\app.setg.toml", "AutoCheckingAlphaUpdates").toBoolean()) getLatestVersion() else CheckReleaseUpdates.getPermission()
+                    if (GetValueFromSettings.getValue(ApplicationPaths.appSettingsFile, "AutoCheckingAlphaUpdates").toBoolean()) getLatestVersion() else CheckReleaseUpdates.getPermission()
                 }
             }
         }

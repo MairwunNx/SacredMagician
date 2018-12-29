@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import javafx.application.Platform
 import java.io.FileOutputStream
 import java.net.URL
@@ -12,7 +13,7 @@ class DownloadUpdateTool {
             ApplicationLogger.logger.info("Downloading SacredMagician updater utility ...")
 
             val rbc = Channels.newChannel(URL("https://drive.google.com/uc?export=download&id=1QAPcDsa_gg0T2RdH42kmWTPjaRYv9oqx").openStream())
-            val fos = FileOutputStream("updater.jar")
+            val fos = FileOutputStream(ApplicationPaths.updaterFile)
             fos.channel.transferFrom(rbc, 0, java.lang.Long.MAX_VALUE)
             fos.close()
 

@@ -1,11 +1,12 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import java.io.File
 
 class RemoveAppTempFiles {
     companion object {
-        private val temporaryFiles = arrayOf("updater.jar", "_newVersionSacredMagicianTemp.jar")
+        private val temporaryFiles = arrayOf(ApplicationPaths.updaterFile, ApplicationPaths.newUpdateFile)
 
         fun remove(args: Array<String>) {
             if (args.contains("-disableRemoveTemp")) return

@@ -1,6 +1,7 @@
 package bin
 
 import ApplicationLogger
+import ApplicationPaths
 import java.io.File
 import java.util.*
 
@@ -11,7 +12,7 @@ class ReadOpenRecentFile {
 
             val lines = ArrayList<String>()
 
-            File("\$SacredMagician\\conf\\app.rcnt.txt").readLines().forEach {
+            File(ApplicationPaths.openRecentFile).readLines().forEach {
                 if (File(it).exists() && File(it).isFile) lines.add(it)
             }
 

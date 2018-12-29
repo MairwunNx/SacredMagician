@@ -1,12 +1,13 @@
 package bin
 
+import ApplicationPaths
 import ApplicationSummary
 import java.io.File
 
 class AddFilePathToRecent {
     companion object {
         fun add() {
-            val file = File("\$SacredMagician\\conf\\app.rcnt.txt")
+            val file = File(ApplicationPaths.openRecentFile)
             val fileText = file.readText()
 
             if (fileText.contains(ApplicationSummary.binPath, true)) return

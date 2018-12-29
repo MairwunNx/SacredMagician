@@ -2,6 +2,6 @@ package bin
 
 class ApplicationDirectories {
     companion object {
-        val directoriesArray = arrayOf("\$SacredMagician", "\$SacredMagician\\conf", "\$SacredMagician\\logs")
+        val directoriesArray = arrayOf(ApplicationPaths.baseAppDirectory, ApplicationPaths.configDirectory, ApplicationPaths.loggerDirectory)
     }
 }
