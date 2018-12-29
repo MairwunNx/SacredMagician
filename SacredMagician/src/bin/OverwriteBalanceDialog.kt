@@ -35,7 +35,7 @@ class OverwriteBalanceDialog {
                                 val file = fileChooser.showSaveDialog(BaseViewInstance.baseViewInstance.root.scene.window)
                                 ApplicationSummary.binPath = file.path
 
-                                val initialStream = LoadOpenRecentData::class.java.getResourceAsStream("/etc/balance.bin")
+                                val initialStream = OverwriteBalanceDialog::class.java.getResourceAsStream("/etc/balance.bin")
                                 File(ApplicationSummary.binPath).outputStream().use { initialStream.copyTo(it) }
 
                                 BaseViewInstance.baseViewInstance.balanceBinFileChanged = false
