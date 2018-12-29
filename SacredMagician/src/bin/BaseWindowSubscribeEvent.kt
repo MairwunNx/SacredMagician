@@ -66,6 +66,10 @@ class BaseWindowSubscribeEvent {
                 BaseViewInstance.baseViewInstance.aboutPane.isVisible = false
             }
 
+            BaseViewInstance.baseViewInstance.freeApplicationRamLabel.setOnMouseClicked {
+                System.gc()
+            }
+
             MenuItemSubscribeEvents.subscribe()
         }
     }
