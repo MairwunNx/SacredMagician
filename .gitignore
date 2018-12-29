@@ -7,8 +7,9 @@
 # BlueJ files
 *.ctxt
 
-# IntelijIDEA settings
-.idea/
+
+.idea/vcs.xml
+.idea/workspace.xml
 
 # Build results
 [Oo]ut/
@@ -25,4 +26,8 @@
 *.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+# IntelijIDEA settings
 hs_err_pid*
+SacredMagician/.idea/vcs.xml
+SacredMagician/.idea/workspace.xml
