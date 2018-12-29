@@ -66,6 +66,18 @@ class MenuItemSubscribeEvents {
                 BaseViewInstance.baseViewInstance.aboutPane.isVisible = true
                 ApplicationSendData.sendUseStat("about")
             }
+
+            BaseViewInstance.baseViewInstance.openInExplorer.action {
+                if (System.getProperty("os.name").contains("Windows", true)) {
+                    if (BaseViewInstance.baseViewInstance.currentPathLabel.text != "Path unavailable, balance.bin file not created or not opened.") {
+                        Runtime.getRuntime().exec("explorer.exe /select," + BaseViewInstance.baseViewInstance.currentPathLabel.text)
+                    } else {
+                        JavaMessageBox.show("Ninny! You can't open file in explorer, because you not open file! ಠ_ಠ", "ERROR")
+                    }
+                } else {
+                    JavaMessageBox.show("Select file in explorer or open file path in explorer not available on your system! Only on windows!", "WARNING")
+                }
+            }
         }
     }
 }

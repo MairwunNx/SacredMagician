@@ -136,6 +136,7 @@ class BaseView : View(ApplicationSummary.name) {
     val applicationAboutMenuItem: MenuItem by fxid("applicationAboutMenuItem")
 
     val currentPathLabel: Label by fxid("currentPathLabel")
+    val openInExplorer: MenuItem by fxid("openInExplorer")
 
     val acceptLicenseCheckBox: CheckBox by fxid("acceptLicenseCheckBox")
     val allowCheckingReleaseUpdatedCheckBox: CheckBox by fxid("allowCheckingReleaseUpdatedCheckBox")

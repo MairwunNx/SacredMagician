@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-
 <BorderPane fx:id="baseBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="578.0" prefWidth="827.0" style="-fx-border-color: #0078D7;"
             xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
@@ -800,6 +799,18 @@
                 <padding>
                     <Insets bottom="3.0" left="10.0" top="3.0"/>
                 </padding>
+                <contextMenu>
+                    <ContextMenu>
+                        <items>
+                            <MenuItem fx:id="openInExplorer" mnemonicParsing="false" text="Open in Explorer">
+                                <accelerator>
+                                    <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP"
+                                                        shortcut="UP"/>
+                                </accelerator>
+                            </MenuItem>
+                        </items>
+                    </ContextMenu>
+                </contextMenu>
             </Label>
             <Label fx:id="freeApplicationRamLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT"
                    layoutX="89.0" layoutY="10.0" prefHeight="21.0" prefWidth="69.0"
