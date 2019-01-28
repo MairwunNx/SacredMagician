@@ -1,7 +1,11 @@
  # Changes for SacredMagician Rv1
+  ###### Changes included in SacredMagician-1.0.1.2-280119-release-4-official (1.0.1.2.280119.R4)
+
+> - Added "Recommend to Use" menu with my projects
+
   ###### Changes included in SacredMagician-1.0.1.1-291218-release-3-official (1.0.1.1.291218.R3)
 
-> - Fixed not fully correctly JMetro button colors 
+> - Fixed not fully correctly JMetro button colors
 > - Now used normal JavaFx dialogs - correct dialogs behavior
 > - Re-designed SacredMagician project about window
 > - Fixed app border overlap with dialogs backgrounds
@@ -19,7 +23,7 @@
 > - Added balance.bin loading \ saving MinEntryLevel settings
 > - Added balance.bin category skills (open-level-skills)
 > - Moved "Server > Global" to "Balance > Server"
-> - Added experience balance.bin settings fields 
+> - Added experience balance.bin settings fields
 > - Improved project code. Removed redundant check fields
 
   ###### Changes included in SacredMagician-1.0.0.0-251218-release-1-official (1.0.0.0.251218.R1)
