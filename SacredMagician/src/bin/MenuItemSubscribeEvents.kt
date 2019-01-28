@@ -81,10 +81,12 @@ class MenuItemSubscribeEvents {
 
             BaseViewInstance.baseViewInstance.applicationSuMenuItem.action {
                 OpenBrowserLink.open("https://github.com/MairwunNx/SacredUtils")
+                ApplicationSendData.sendUseStat("open-su")
             }
 
             BaseViewInstance.baseViewInstance.applicationSlMenuItem.action {
                 OpenBrowserLink.open("https://github.com/MairwunNx/SacredLumina")
+                ApplicationSendData.sendUseStat("open-sl")
             }
 
             BaseViewInstance.baseViewInstance.applicationAddNewMenuItem.action {
