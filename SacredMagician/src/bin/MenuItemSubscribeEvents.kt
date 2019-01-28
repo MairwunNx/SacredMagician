@@ -78,6 +78,18 @@ class MenuItemSubscribeEvents {
                     JavaMessageBox.show("Select file in explorer or open file path in explorer not available on your system! Only on windows!", "WARNING")
                 }
             }
+
+            BaseViewInstance.baseViewInstance.applicationSuMenuItem.action {
+                OpenBrowserLink.open("https://github.com/MairwunNx/SacredUtils")
+            }
+
+            BaseViewInstance.baseViewInstance.applicationSlMenuItem.action {
+                OpenBrowserLink.open("https://github.com/MairwunNx/SacredLumina")
+            }
+
+            BaseViewInstance.baseViewInstance.applicationAddNewMenuItem.action {
+                OpenBrowserLink.open("mailto:MairwunNx@gmail.com?subject=Request%20to%20add%20my%20utility.&body=Hello%20MairwunNx%2C%20please%20add%20my%20utility%20or%20project%20to%20your%20application.%0A%0AApplication%20Name%20and%20what%20it%20do%20(just%20describe%20it)%0AApplication%20Screenshots%3A%20(link%20here)%0AApplication%20Demo%20or%20Release%3A%20(link%20here)%0AApplication%20Sources%3A%20(link%20here)%0AApplication%20Video%20or%20Reviews%3A%20(link%20here)%0A%0ACheers")
+            }
         }
     }
 }

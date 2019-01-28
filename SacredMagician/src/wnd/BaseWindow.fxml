@@ -136,6 +136,15 @@
                         </accelerator>
                     </MenuItem>
                 </Menu>
+                <Menu mnemonicParsing="false" text="Recommend to Use">
+                    <MenuItem fx:id="applicationSuMenuItem" mnemonicParsing="false" text="SacredUtils Project">
+                    </MenuItem>
+                    <MenuItem fx:id="applicationSlMenuItem" mnemonicParsing="false" text="SacredLumina Project">
+                    </MenuItem>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem fx:id="applicationAddNewMenuItem" mnemonicParsing="false" text="Add your Utility">
+                    </MenuItem>
+                </Menu>
             </MenuBar>
             <TreeView fx:id="baseTreeView" disable="true" editable="true" focusTraversable="false" layoutY="65.0"
                       prefHeight="509.0" prefWidth="201.0" showRoot="false" styleClass="tree-cell"/>
@@ -724,7 +733,7 @@
                         </font>
                     </Label>
                     <Label layoutX="31.0" layoutY="78.0"
-                           text="SacredMagician Version: 1.0.1.1.291218.R3" textFill="WHITE">
+                           text="SacredMagician Version: 1.0.1.2.280119.R4" textFill="WHITE">
                         <font>
                             <Font name="Segoe UI" size="16.0"/>
                         </font>

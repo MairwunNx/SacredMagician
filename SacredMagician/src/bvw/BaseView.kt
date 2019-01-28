@@ -135,6 +135,10 @@ class BaseView : View(ApplicationSummary.name) {
     val donateMenuItem: MenuItem by fxid("donateMenuItem")
     val applicationAboutMenuItem: MenuItem by fxid("applicationAboutMenuItem")
 
+    val applicationSuMenuItem: MenuItem by fxid("applicationSuMenuItem")
+    val applicationSlMenuItem: MenuItem by fxid("applicationSlMenuItem")
+    val applicationAddNewMenuItem: MenuItem by fxid("applicationAddNewMenuItem")
+
     val currentPathLabel: Label by fxid("currentPathLabel")
     val openInExplorer: MenuItem by fxid("openInExplorer")
 
